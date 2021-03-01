@@ -1,1 +1,280 @@
-body {}
+:root {
+    --navy: #000224;
+    --dark-blue: #000330;
+    --gray: #505147;
+}
+
+body {
+    background-color: var(--navy);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+html.open,
+body.open {
+    overflow: hidden;
+}
+.bg-dark-blue {
+    background-color: var(--dark-blue);
+}
+.bg-gray {
+    background-color: var(--gray);
+}
+
+.main-navigation {
+    padding: 39px 72px;
+    z-index: 2;
+}
+.menu-navigation {
+    padding: 0 72px 0 263px;
+    flex: 1;
+}
+.menu-share {
+    padding: 0 72px;
+}
+.menu {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 272px 0 0 0;
+    flex-direction: column;
+    display: flex;
+
+}
+.menu-list li {
+    margin: 15px 0;
+}
+.menu-list a {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 0.8;
+    letter-spacing: 0.96px;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+}
+.menu-list .active a:before {
+    background-color: rgba(104, 106, 90, 0.46);
+    position: absolute;
+    left: 0;
+    top: 25px;
+    content: "";
+    height: 11px;
+    width: 140%;
+}
+.hero-content {
+    padding: 205px 72px 176px;
+}
+.hero h1 {
+    font-size: 100px;
+    line-height: 114px;
+    font-weight: bold;
+}
+.hero-info-box {
+    padding: 87px 65px 80px;
+}
+.hero-info-box a {
+    font-size: 25px;
+    line-height: 39px;
+    font-weight: bold;
+}
+.custom-container {
+    max-width: 1663px;
+}
+.what-we-do {
+    padding:203px 72px 146px 263px;
+}
+.what-we-do-box {
+    padding: 80px 0;
+}
+.what-we-do-box h4 {
+    font-size: 35px;
+    line-height: 46px;
+    font-weight: 600;
+    color: #FBFBFF;
+    margin: 28px 0;
+}
+.what-we-do p {
+    margin: 23px 0;
+}
+.what-we-do p,
+.what-we-do a {
+    line-height: 30px;
+    color: #FBFBFF;
+}
+.what-we-do a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.number {
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 56px;
+    color: #FBFBFF;
+}
+.what-we-do-box-custom-width {
+    width: 382px;
+}
+
+.loading-screen {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: #4BEDC2;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0) skewX(0);
+    transform-origin: top left;
+}
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.get-in-touch {
+    transform: translateX(152px) rotateZ(-90deg);
+    display: inline-block;
+}
+footer {
+    padding: 290px 0 134px;
+}
+.footer-navigation {
+    padding: 0 72px 0 263px;
+}
+.footer-copyright {
+    padding: 0 72px;
+}
+footer p {
+    line-height: 35px;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer .footer-navigation a {
+    line-height: 50px;
+}
+footer h6 {
+    line-height: 50px;
+    color: #9E9E9E;
+}
+footer h2 {
+    font-size: 100px;
+    line-height: 109px;
+    -webkit-text-stroke:1px white;
+    -webkit-text-fill-color:transparent;
+}
+.footer-copyright {
+    margin-top: 170px;
+}
+.copyright {
+    line-height: 32px;
+    font-weight: 600;
+    color: #686A5A;
+}
+.share-holder {
+    width: 47px;
+}
+
+@media screen and (min-width: 1367px) {
+    .hero-title {
+        width: 1300px;
+        margin-left: 120px;
+    }
+    .copyright-text {
+        margin-left: 120px;
+    }
+}
+
+
+.menu-icon {
+    height: 30px;
+    width: 30px;
+    z-index: 2;
+    cursor: pointer;
+}
+.menu-icon__line {
+    height: 2px;
+    width: 30px;
+    display: block;
+    background-color: #ffffff;
+    margin-bottom: 4px;
+    transition: transform 0.2s ease, background-color 0.5s ease;
+}
+.menu-icon__line-left {
+    width: 15px;
+}
+.menu-icon__line-right {
+    width: 15px;
+    float: right;
+}
+.menu:before,
+.menu:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 3, 48, 0.2);
+    z-index: -1;
+    transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+    transform: translateX(0%) translateY(-100%);
+}
+.menu:after {
+    background: var(--gray);
+    transition-delay: 0s;
+}
+.menu:before {
+    transition-delay: 0.1s;
+}
+body.open .menu-icon__line {
+    transform: translateX(0px) rotate(-45deg);
+}
+body.open .menu-icon__line-left {
+    transform: translateX(1px) rotate(45deg);
+}
+body.open .menu-icon__line-right {
+    transform: translateX(-2px) rotate(45deg);
+}
+.menu.open {
+    visibility: visible;
+}
+.menu.open:before,
+.menu.open:after {
+    transform: translateX(0%) translateY(0%);
+}
+.menu.open:after {
+    transition-delay: 0.1s;
+}
+.menu.open:before {
+    transition-delay: 0s;
+}
+.menu-navigation,
+.menu-share {
+    transition-delay: 0.8s;
+    opacity: 0;
+    transform: translate(0%, 100%);
+    transition: opacity 0.2s ease, transform 0.3s ease;
+}
+.menu.open .menu-navigation,
+.menu.open .menu-share {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+.menu.open .menu-navigation {
+    transition-delay: 0.8s;
+}
+.menu.open .menu-share {
+    transition-delay: 1.4s;
+}

@@ -65,8 +65,9 @@ function register_scripts()
     wp_enqueue_script('popper', get_template_directory_uri() . "/assets/js/popper.js", [], $version, "all");
     wp_enqueue_script('bootstrap', get_template_directory_uri() . "/assets/js/bootstrap.min.js", [], $version, "all");
     wp_enqueue_script('aos', get_template_directory_uri() . "/assets/js/aos.js", [], $version, "all");
+    wp_enqueue_script('barba', get_template_directory_uri() . "/assets/js/barba.min.js", [], $version, "all");
+    wp_enqueue_script('gsap', get_template_directory_uri() . "/assets/js/gsap.min.js", [], $version, "all");
     wp_enqueue_script('custom', get_template_directory_uri() . "/assets/js/custom.js", [], $version, "all");
-
 }
 
 /**
