@@ -94,6 +94,42 @@
             </div>
             <div class="custom-container"></div>
         </section>
+        <section class="">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="custom-padding">
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-9">
+                                        <h3>Insurance Borderaux Reporting Software</h3>
+                                        <p>Our unique RPA solutions are specifically <br> designed for complex insurance processes.</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <img src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="custom-padding">
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-9">
+                                        <h3>Insurance Borderaux Reporting Software</h3>
+                                        <p>Our unique RPA solutions are specifically <br> designed for complex insurance processes.</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <img src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="product custom-padding">
             <div class="container-fluid">
                 <div class="row">

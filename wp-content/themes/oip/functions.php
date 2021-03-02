@@ -49,6 +49,7 @@ function register_styles()
 
     wp_enqueue_style('bootstrap', get_template_directory_uri() . "/assets/css/bootstrap.min.css", [], $version, "all");
     wp_enqueue_style('aos', get_template_directory_uri() . "/assets/css/aos.css", [], $version, "all");
+    wp_enqueue_style('swiper', get_template_directory_uri() . "/assets/css/swiper-bundle.min.css", [], $version, "all");
     wp_enqueue_style('styles', get_template_directory_uri() . "/style.css", [], $version, "all");
 }
 
@@ -67,6 +68,7 @@ function register_scripts()
     wp_enqueue_script('aos', get_template_directory_uri() . "/assets/js/aos.js", [], $version, "all");
     wp_enqueue_script('barba', get_template_directory_uri() . "/assets/js/barba.min.js", [], $version, "all");
     wp_enqueue_script('gsap', get_template_directory_uri() . "/assets/js/gsap.min.js", [], $version, "all");
+    wp_enqueue_script('swiper', get_template_directory_uri() . "/assets/js/swiper-bundle.min.js", [], $version, "all");
     wp_enqueue_script('custom', get_template_directory_uri() . "/assets/js/custom.js", [], $version, "all");
 }
 

@@ -59,6 +59,8 @@
 </footer>
 
 <?php wp_footer(); ?>
-
+<script>
+    var swiper = new Swiper('.swiper-container');
+</script>
 </body>
 </html>

@@ -100,3 +100,7 @@ jQuery(function() {
 jQuery(".btn-menu").on("click", function () {
     jQuery("html, body, .menu").toggleClass("open");
 });
+jQuery(".menu-navigation a").on("click", function () {
+    jQuery(".sub-menu").css("display", "none");
+    jQuery(this).siblings().slideToggle(300);
+});
