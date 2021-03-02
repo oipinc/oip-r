@@ -2,7 +2,7 @@
 
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="home">
-        <section class="hero d-none">
+        <section class="hero">
             <div class="hero-content">
                 <div class="container-fluid">
                     <div class="row align-items-center">
@@ -43,7 +43,7 @@
                 </div>
             </div>
         </section>
-        <section class="what-we-do d-none">
+        <section class="what-we-do custom-padding">
             <div class="container-fluid">
                 <p>What we do the best</p>
                 <h4>Whatever the challenge, <br> we always deliver a solution.</h4>
@@ -93,6 +93,48 @@
                 </div>
             </div>
             <div class="custom-container"></div>
+        </section>
+        <section class="product custom-padding">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="product-holder">
+                            <h4>ARIES in <br>Submissions</h4>
+                            <p>When the availability of skilled technology professionals in-house becomes a
+                                challenge, innovative product and service provider companies seek assistance.</p>
+                            <img class="product-img" src="http://placehold.it/680x680" alt="Product 1">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <a href="#">Read more</a>
+                                </div>
+                                <div class="col text-end">
+                                    <a href="#">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-holder">
+                            <h4>Multiquoting without <br>a human touch</h4>
+                            <p>When the availability of skilled technology professionals in-house becomes a
+                                challenge, innovative product and service provider companies seek assistance.</p>
+                            <img class="product-img" src="http://placehold.it/680x680" alt="Product 1">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <a href="#">Read more</a>
+                                </div>
+                                <div class="col text-end">
+                                    <a href="#">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 </div>

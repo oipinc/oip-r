@@ -32,9 +32,12 @@
         </div>
         <div class="menu-share">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row align-items-end">
                     <div class="col-auto">
                         <?php get_template_part('template-parts/share'); ?>
+                    </div>
+                    <div class="col text-end">
+                        <span>office@oip.bz</span>
                     </div>
                 </div>
             </div>

@@ -1,10 +1,12 @@
 
 <footer class="bg-gray">
-    <div class="footer-navigation">
+    <div class="footer-navigation custom-padding">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
                     <h2>Get in <br>touch</h2>
+                    <span class="footer-email d-block">office@oip.bz</span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow">
                 </div>
                 <div class="col-md-2">
                     <h6>Useful links</h6>
@@ -25,7 +27,9 @@
                     </ul>
                 </div>
                 <div class="col-md-2">
-                    <p>Terazije 5, 11000 Belgrade <br> + 381 11 324 81 80</p>
+                    <div class="address-info">
+                        <p>Terazije 5, 11000 Belgrade <br> + 381 11 324 81 80</p>
+                    </div>
                 </div>
             </div>
         </div>
