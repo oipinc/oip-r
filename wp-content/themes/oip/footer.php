@@ -4,30 +4,36 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Get in <br>touch</h2>
-                    <span class="footer-email d-block">office@oip.bz</span>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow">
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <h2>Get in <br>touch</h2>
+                        <span class="footer-email d-block">office@oip.bz</span>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow">
+                    </div>
                 </div>
                 <div class="col-md-2">
-                    <h6>Useful links</h6>
-                    <ul class="list-unstyled my-0">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Use Cases</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                    <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <h6>Useful links</h6>
+                        <ul class="list-unstyled my-0">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Use Cases</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-md-2">
-                    <h6>Legal</h6>
-                    <ul class="list-unstyled my-0">
-                        <li><a href="#">Terms and Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Copyright</a></li>
-                    </ul>
+                    <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <h6>Legal</h6>
+                        <ul class="list-unstyled my-0">
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Copyright</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-md-2">
-                    <div class="address-info">
+                    <div class="address-info" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <p>Terazije 5, 11000 Belgrade <br> + 381 11 324 81 80</p>
                     </div>
                 </div>
@@ -43,12 +49,12 @@
                 <div class="col">
                     <div class="row align-items-end">
                         <div class="col-lg-7">
-                            <div class="copyright-text">
+                            <div class="copyright-text" data-aos="fade-up" data-aos-duration="1000">
                                 <p class="my-0">We are working hard Monday to Friday, starting bright <br> and early with a cup of lightly creamed coffee. Feel
                                     <br>free to get in touch with us.</p>
                             </div>
                         </div>
-                        <div class="col copyright text-end">
+                        <div class="col copyright text-end" data-aos="fade-up" data-aos-duration="1000">
                             © <?php echo date('Y'); ?> Copyright: OIP Robotics
                         </div>
                     </div>
@@ -60,7 +66,56 @@
 
 <?php wp_footer(); ?>
 <script>
-    var swiper = new Swiper('.swiper-container');
+    const aosSelector = jQuery('.swiper-wrapper h3, .swiper-wrapper p, .swiper-wrapper img');
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        mousewheel: true,
+        on: {
+            slideChangeTransitionStart: function () {
+                aosSelector.css("visibility", "hidden");
+                aosSelector.removeClass('aos-init').removeClass('aos-animate');
+            },
+            slideChangeTransitionEnd: function () {
+                aosSelector.css("visibility", "visible");
+                AOS.init();
+            },
+        }
+    });
+
+    swiper.on("reachBeginning", function () {
+        setTimeout(function () {
+            localStorage.setItem("start", "left-end")
+        }, 1000);
+    });
+    swiper.on("reachEnd", function () {
+        setTimeout(function () {
+            localStorage.setItem("end", "right-end")
+        }, 1000);
+    });
+    swiper.on("fromEdge", function () {
+        localStorage.removeItem("start")
+        localStorage.removeItem("end")
+    });
+
+    jQuery(".product").bind('mousewheel DOMMouseScroll', function(event){
+        if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+            const value = localStorage.getItem("start");
+            if (value === "left-end") {
+                jQuery('html, body').animate({
+                    scrollTop: jQuery(".what-we-do").offset().top
+                }, 1500);
+            }
+        } else {
+            const value = localStorage.getItem("end");
+            if (value === "right-end") {
+                jQuery('html, body').animate({
+                    scrollTop: jQuery(".case").offset().top
+                }, 1500);
+            }
+        }
+    });
+
+    AOS.init();
 </script>
 </body>
 </html>
