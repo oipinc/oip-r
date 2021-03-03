@@ -24,11 +24,14 @@
                 <div class="col">
                     <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <h6>Legal</h6>
-                        <ul class="list-unstyled my-0">
-                            <li><a href="#">Terms and Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Copyright</a></li>
-                        </ul>
+                        <?php
+                        wp_nav_menu([
+                            'menu' => 'legal',
+                            'container' => '',
+                            'theme_location' => 'legal',
+                            'items_wrap' => '<ul class="list-unstyled my-0">%3$s</ul>'
+                        ])
+                        ?>
                     </div>
                 </div>
                 <div class="col">

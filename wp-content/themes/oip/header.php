@@ -61,7 +61,7 @@
     <header>
         <nav class="navbar navbar-expand-lg main-navigation">
             <div class="container-fluid">
-                <a href="#">
+                <a href="/">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo">
                 </a>
                 <div class="menu-icon btn-menu">

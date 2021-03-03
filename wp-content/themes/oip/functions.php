@@ -82,6 +82,7 @@ function register_menu()
     $menu = [
         'header' => 'Header menu',
         'footer' => 'Footer menu',
+        'legal' => 'Legal menu',
     ];
 
     register_nav_menus($menu);

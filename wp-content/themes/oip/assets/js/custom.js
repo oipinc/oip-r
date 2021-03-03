@@ -80,7 +80,9 @@ jQuery(function() {
             },
 
             async enter(data) {
-                await pageTransitionOut(data.next.container)
+                jQuery(window).scrollTop(0);
+                await pageTransitionOut(data.next.container);
+                AOS.init();
             },
             // Variations for didactical purpose…
             // Better browser support than async/await
