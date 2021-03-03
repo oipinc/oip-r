@@ -225,6 +225,19 @@ body.open .menu-icon__line-right {
     color: #FBFBFF;
     margin: 28px 0;
 }
+.what-we-do-box a {
+    position: relative;
+}
+.what-we-do-box a:hover:before {
+    position: absolute;
+    content: "";
+    background-image: url("assets/images/arrow-right.svg");
+    width: 30px;
+    height: 30px;
+    right: -60px;
+    top: -4px;
+    background-size: contain;
+}
 .what-we-do p {
     margin: 23px 0;
 }
@@ -242,6 +255,10 @@ body.open .menu-icon__line-right {
     font-size: 80px;
     line-height: 56px;
     color: #FBFBFF;
+}
+.hovered .number {
+    -webkit-text-stroke:1px white;
+    -webkit-text-fill-color:transparent;
 }
 .what-we-do-box-custom-width {
     max-width: 382px;

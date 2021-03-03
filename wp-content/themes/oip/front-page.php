@@ -45,7 +45,7 @@
                 </div>
             </div>
         </section>
-        <section class="what-we-do custom-padding d-none">
+        <section class="what-we-do custom-padding">
             <div class="container-fluid">
                 <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <p>What we do the best</p>
