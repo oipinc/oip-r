@@ -12,6 +12,11 @@
     <div class="menu">
         <div class="menu-navigation">
             <div class="container-fluid">
+                <div class="get-in-touch">
+                    <a class="text-white" href="#">
+                        Get in touch
+                    </a>
+                </div>
                 <div class="row align-items-center">
                     <div class="col-9">
                         <ul class="list-unstyled menu-list">
@@ -36,11 +41,6 @@
                                 </ul>
                             </li>
                         </ul>
-                    </div>
-                    <div class="col text-center">
-                        <a class="text-white get-in-touch" href="#">
-                            Get in touch
-                        </a>
                     </div>
                 </div>
             </div>

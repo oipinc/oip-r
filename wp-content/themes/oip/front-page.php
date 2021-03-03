@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-sm-6">
                         <div class="what-we-do-box" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             <span class="number">01</span>
                             <h4>Insurance Automation - ARIES</h4>
@@ -62,7 +62,7 @@
                             <a href="#">Read more</a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-sm-6">
                         <div class="what-we-do-box" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             <span class="number">02</span>
                             <h4>Software (Co) Development</h4>
@@ -70,7 +70,7 @@
                             <a href="#">Read more</a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-6 col-lg-4">
                         <div class="what-we-do-box what-we-do-box-custom-width" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             <span class="number">03</span>
                             <h4>Managed Staff Augmentation</h4>
@@ -78,7 +78,7 @@
                             <a href="#">Read more</a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-6 col-lg-4">
                         <div class="what-we-do-box what-we-do-box-custom-width" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             <span class="number">04</span>
                             <h4>IT Support</h4>
@@ -86,7 +86,7 @@
                             <a href="#">Read more</a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-6 col-lg-4">
                         <div class="what-we-do-box what-we-do-box-custom-width" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             <span class="number">05</span>
                             <h4>Big Data & ML</h4>
