@@ -16,8 +16,8 @@
                                 <h1>We are reinventing the way the $55.5 billion E&S Industry works every day</h1>
                             </div>
                         </div>
-                        <div class="col">
-                            <a class="text-white get-in-touch" href="#">
+                        <div class="col-auto get-in-touch">
+                            <a class="text-white" href="#">
                                 Get in touch
                             </a>
                         </div>
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </section>
-        <section class="what-we-do custom-padding">
+        <section class="what-we-do custom-padding d-none">
             <div class="container-fluid">
                 <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <p>What we do the best</p>
@@ -105,14 +105,14 @@
                         <div class="custom-padding">
                             <div class="container-fluid">
                                 <div class="row align-items-center">
-                                    <div class="col-lg-9">
+                                    <div class="col-9">
                                         <h3 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Insurance Borderaux Reporting Software</h3>
                                         <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                                             Our unique RPA solutions are specifically <br> designed for complex insurance processes.
                                         </p>
                                     </div>
-                                    <div class="col-lg-3">
-                                        <img data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
+                                    <div class="col-3">
+                                        <img class="img-fluid" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
                                     </div>
                                 </div>
                             </div>
@@ -122,14 +122,14 @@
                         <div class="custom-padding">
                             <div class="container-fluid">
                                 <div class="row align-items-center">
-                                    <div class="col-lg-9">
+                                    <div class="col-9">
                                         <h3 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Insurance Borderaux Reporting Software</h3>
                                         <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                                             Our unique RPA solutions are specifically <br> designed for complex insurance processes.
                                         </p>
                                     </div>
-                                    <div class="col-lg-3">
-                                        <img data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
+                                    <div class="col-3">
+                                        <img class="img-fluid" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +141,7 @@
         <section class="case custom-padding">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-5 mb-md-0">
                         <div class="case-holder">
                             <h4 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="300">ARIES in <br>Submissions</h4>
                             <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
@@ -149,7 +149,7 @@
                                     challenge, innovative product and service provider companies seek assistance.</p>
                             </div>
                             <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="900">
-                                <img class="case-img" src="http://placehold.it/680x680" alt="Product 1">
+                                <img class="case-img" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Product 1">
                                 <div class="row align-items-center">
                                     <div class="col">
                                         <a href="#">Read more</a>
@@ -171,7 +171,7 @@
                                     challenge, innovative product and service provider companies seek assistance.</p>
                             </div>
                             <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="900">
-                                <img class="case-img" src="http://placehold.it/680x680" alt="Product 1">
+                                <img class="case-img" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Product 1">
                                 <div class="row align-items-center">
                                     <div class="col">
                                         <a href="#">Read more</a>

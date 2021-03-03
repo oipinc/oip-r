@@ -1,16 +1,15 @@
-
 <footer class="bg-gray">
     <div class="footer-navigation custom-padding">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-lg-4 col-xxl-6">
                     <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <h2>Get in <br>touch</h2>
                         <span class="footer-email d-block">office@oip.bz</span>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow">
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col">
                     <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <h6>Useful links</h6>
                         <ul class="list-unstyled my-0">
@@ -22,7 +21,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col">
                     <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <h6>Legal</h6>
                         <ul class="list-unstyled my-0">
@@ -32,7 +31,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col">
                     <div class="address-info" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <p>Terazije 5, 11000 Belgrade <br> + 381 11 324 81 80</p>
                     </div>
