@@ -3,17 +3,15 @@
         <section class="case-study-wrapper">
             <div class="case-study-intro">
                 <h6 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Case Study</h6>
-                <h1 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">ARIES in <br>Submissions</h1>
+                <h1 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"><?php echo the_title(); ?></h1>
                 <h6 data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">Overview</h6>
                 <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <p>Being an MGA, or back-office process owner means constant pressure to <br>
-                        raise the bar. Whether you are improving the customer journeys,<br>
-                        increasing the geographic footprint, or improving levels of service, the<br>
-                        main objective is to advance while keeping the overall cost of operations<br>
-                        low. After exhausting all traditional mechanisms, the question our client<br>
-                        wanted to solve was what can they implement now that will exceed<br>
-                        traditional improvement approaches.<br>
-                        The answer was ARIES.</p>
+                    <?php while ( have_posts() ) : the_post(); ?>
+                        <?php the_content(); ?>
+                    <?php
+                    endwhile;
+                    wp_reset_query();
+                    ?>
                 </div>
             </div>
         </section>
@@ -24,29 +22,37 @@
                         <h2>Problem statement</h2>
                     </div>
                 </div>
-                <div class="row case-study-problem-divider">
-                    <div class="col-lg-6 case-study-text-nav">
-                        <div class="d-flex align-items-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <span class="fw-bold">Problem statement</span>
-                            <span class="line"></span>
+
+                <?php $count = 0; ?>
+                <?php if( have_rows('problem_solution') ): ?>
+                    <?php while( have_rows('problem_solution') ): the_row(); $count++;
+                        $image = get_sub_field('image');
+                        $retinaImage = get_sub_field('retina_image');
+                        $content = get_sub_field('content');
+                        ?>
+                        <div class="row <?php echo $count === 1 ? "case-study-problem-divider" : "" ?>">
+                            <?php if ($count === 1) { ?>
+                                <div class="col-lg-6 case-study-text-nav">
+                                    <div class="d-flex align-items-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                        <span class="fw-bold">Problem statement</span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                            <?php } else { ?>
+                                <div class="col-lg-6 text-center">
+                                    <?php if ($image && $retinaImage) { ?>
+                                        <img class="img-fluid" src="<?php echo $image; ?>" srcset="<?php echo $retinaImage; ?> 2x" alt="Image" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                    <?php }?>
+                                </div>
+                            <?php } ?>
+                            <div class="col-lg-6">
+                                <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                    <?php echo $content; ?>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <p>One of our clients, a leading wholesaler on the E&S market, had difficulties keeping up with hundreds of daily received submissions, n terms of quality and turnaround times. Subject matter and automation experts were all in agreement that submissions are not quite in the scope for automation technology due to a huge number of variables, unstructured data,  arious high-level decisionmaking points, lack of standardization, and of course, quality of the application. The very low RPA adoption rates within our industry, as well as its inability to scale or meet the business case, were also to be thought about.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-lg-6 text-center">
-                        <img class="img-fluid" src="http://localhost:8000/wp-content/uploads/2021/03/areas-e1614855868338.png" srcset="http://localhost:8000/wp-content/uploads/2021/03/areas@2x-e1614855929688.png 2x" alt="Image" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    </div>
-                    <div class="col-lg-6">
-                        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <p>Using experience and foresight, OIP Robotics undertook the first two essentials needed for this mission: smart technology and a forward-thinking client. Using text extraction and process automation tools powered by artificial intelligence, OIP Robotics created ARIES, a customized specialty bot that augments and learns from the employee’s workflow. Sharing in the skepticism of extracting credible data from unstructured documents, a second validation level was created through partnering ARIES with chatbots. In the cases of blank fields or indecipherable handwriting, the chatbot obtains employee validation before continuing the process.</p>
-                        </div>
-                    </div>
-                </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </section>
         <section class="case-study-wrapper case-study-solution">
@@ -56,19 +62,23 @@
                         <h2>Our Solution</h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6 case-study-text-nav">
-                        <div class="d-flex align-items-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <span class="fw-bold">Our Solution</span>
-                            <span class="line"></span>
+                <?php
+                $ourSolutionTop = get_field('our_solution_top');
+                if($ourSolutionTop): ?>
+                    <div class="row">
+                        <div class="col-lg-6 case-study-text-nav">
+                            <div class="d-flex align-items-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <span class="fw-bold"><?php echo $ourSolutionTop['label']; ?></span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <?php echo $ourSolutionTop['content']; ?>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <p>OIPR combined cutting-edge technology and coupled it with the wealth of insurance knowhow accumulated  throughout the years and solved our client’s burning issue. We came up with a subscription-based RPA model  that combines several components. </p>
-                        </div>
-                    </div>
-                </div>
+                <?php endif; ?>
             </div>
         </section>
         <section class="app-img-wrapper">
@@ -76,24 +86,23 @@
         </section>
         <section class="case-study-wrapper case-study-solution">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 case-study-text-nav">
-                        <div class="d-flex align-items-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <span class="fw-bold">How did we do it?</span>
-                            <span class="line"></span>
+                <?php
+                $ourSolutionBottom = get_field('our_solution_bottom');
+                if($ourSolutionBottom): ?>
+                    <div class="row">
+                        <div class="col-lg-6 case-study-text-nav">
+                            <div class="d-flex align-items-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <span class="fw-bold"><?php echo $ourSolutionBottom['label']; ?></span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <?php echo $ourSolutionBottom['content']; ?>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <p>Insurance native Business Analysts carefully analyzed the entire process, business rules and logic, data capture points. The result was the streamlined process yielding higher efficiencies and a future process map of end-to-end automation.</p>
-                            <p>OIPR End to end automation, known as ARIES, is set up to listen to the client's mailbox and take the data from PDF documents as soon as it arrives and run them through NT Extractor, a custom-built, insurance document text extraction tool, which converts tons of unstructured data into a structured format readable by robots</p>
-                            <p>The client’s legacy database is searched for duplicates, already existing submissions, making sure the received submission is unique Once the data is cleansed through our AI-based component, the RPA technology takes
-                                it over and transcribes the data to web and/or Windows applications, in unattended or attended mode.</p>
-                            <p>Robot makes all decisions per predefined, insurance industry-specific set of rules, verifies if all data is correct, and checks for exceptions and missing data. When accurate and sufficient data is received, the submission is logged. In case of exceptions, the Chatbot feature is there to interact with the user, through an interactive interface, asks for a decision or missing data, and moves along.</p>
-                            <p>To streamline the process even further for the UWs, we have created a widget, available in mobile version as well, allowing underwriters to quickly correct the data and send it back for automation</p>
-                        </div>
-                    </div>
-                </div>
+                <?php endif; ?>
             </div>
         </section>
         <section>
