@@ -107,9 +107,12 @@
                                 <div class="row align-items-center">
                                     <div class="col-9">
                                         <h3 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Insurance Borderaux Reporting Software</h3>
-                                        <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                                            Our unique RPA solutions are specifically <br> designed for complex insurance processes.
-                                        </p>
+                                        <div class="slide-content mb-5">
+                                            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                                                Our unique RPA solutions are specifically <br> designed for complex insurance processes.
+                                            </p>
+                                        </div>
+                                        <a href="#"><img class="me-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"> Read more</a>
                                     </div>
                                     <div class="col-3">
                                         <img class="img-fluid" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
@@ -124,9 +127,12 @@
                                 <div class="row align-items-center">
                                     <div class="col-9">
                                         <h3 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Insurance Borderaux Reporting Software</h3>
-                                        <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                                            Our unique RPA solutions are specifically <br> designed for complex insurance processes.
-                                        </p>
+                                        <div class="slide-content mb-5">
+                                            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                                                Our unique RPA solutions are specifically <br> designed for complex insurance processes.
+                                            </p>
+                                        </div>
+                                        <a href="#"><img class="me-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"> Read more</a>
                                     </div>
                                     <div class="col-3">
                                         <img class="img-fluid" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
@@ -152,7 +158,7 @@
                                 <img class="case-img" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Product 1">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <a href="#">Read more</a>
+                                        <a href="http://localhost:8000/aries-in-submissions/">Read more</a>
                                     </div>
                                     <div class="col text-end">
                                         <a href="#">

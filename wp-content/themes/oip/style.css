@@ -2,6 +2,8 @@
     --navy: #000224;
     --dark-blue: #000330;
     --gray: #505147;
+    --light-gray: #d2d2d2;
+    --gray-secondary: #686a5a;
 }
 
 body {
@@ -23,6 +25,12 @@ body.open {
 }
 .bg-gray {
     background-color: var(--gray);
+}
+.bg-gray-secondary {
+    background-color: var(--gray-secondary);
+}
+.bg-light-gray {
+    background-color: var(--light-gray);
 }
 p {
     font-size: 14px;
@@ -379,7 +387,7 @@ footer h2 {
     height: 100%;
 }
 .swiper-slide {
-    background-color: var(--gray);
+    background-color: var(--gray-secondary);
     padding: 50px 0;
 }
 .swiper-wrapper h3 {
@@ -387,8 +395,85 @@ footer h2 {
     font-weight: bold;
     margin-bottom: 30px;
 }
+.swiper-wrapper a {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    line-height: 2.56;
+    text-decoration: none;
+}
 .legal-wrapper a {
     color: white;
+}
+.case-study-wrapper {
+    padding: 0 278px;
+}
+.case-study-wrapper h1 {
+    font-weight: bold;
+    font-size: 150px;
+    line-height: 0.88;
+    margin-bottom: 160px;
+}
+.case-study-wrapper h6 {
+    font-weight: normal;
+}
+.case-study-intro {
+    padding: 190px 0;
+}
+.case-study-intro p {
+    font-size: 30px;
+    line-height: 1.47;
+}
+.app-img-wrapper {
+    padding: 150px;
+    background-color: #f8f7f5;
+}
+.use-case-img-holder {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.recommended-case-study {
+    height: 100vh;
+}
+.recommended-case-study h2 {
+    font-size: 120px;
+    font-weight: 600;
+    line-height: 0.89;
+}
+.recommended-case-study a {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    line-height: 1.84;
+    text-decoration: none;
+}
+.case-study-problem,
+.case-study-solution {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.case-study-text-nav h2 {
+    font-size: 120px;
+    font-weight: bold;
+    color: rgba(255,255,255, 0.05);
+    line-height: 0.83;
+    margin-bottom: 30px;
+}
+.case-study-text-nav .line {
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    margin-left: 30px;
+}
+.case-study-text-nav span {
+    white-space: nowrap;
+}
+.case-study-problem p {
+    line-height: 1.83;
+    font-size: 18px;
+}
+.case-study-problem-divider {
+    margin-bottom: 228px;
 }
 
 @media screen and (min-width: 992px) {
@@ -478,5 +563,9 @@ footer h2 {
     }
     .number {
         font-size: 80px;
+    }
+    .use-case-img-holder {
+        padding-top: 150px;
+        padding-bottom: 150px;
     }
 }
