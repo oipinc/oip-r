@@ -409,7 +409,10 @@ footer h2 {
 .legal-wrapper a {
     color: white;
 }
-.case-study-wrapper {
+
+/* Case study view */
+.case-study-wrapper,
+.service-wrapper {
     padding: 0 278px;
 }
 .case-study-wrapper h1 {
@@ -418,13 +421,15 @@ footer h2 {
     line-height: 0.88;
     margin-bottom: 160px;
 }
-.case-study-wrapper h6 {
+.case-study-wrapper h6,
+.service-wrapper h6 {
     font-weight: normal;
 }
 .case-study-intro {
     padding: 190px 0;
 }
-.case-study-intro p {
+.case-study-intro p,
+.service-intro p{
     font-size: 30px;
     line-height: 1.47;
 }
@@ -517,6 +522,53 @@ footer h2 {
     right: 95px;
     bottom: 35px;
 }
+.service-recommendation .recommended-case-study {
+    padding: 0 150px;
+}
+/* end */
+
+/* Service view */
+.service-wrapper h1 {
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 1.14;
+    margin-bottom: 102px;
+}
+.service-intro {
+    padding: 120px 0 217px;
+}
+.contact-us-link {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-top: 44px;
+    display: inline-block;
+}
+.service-content {
+    padding-bottom: 286px;
+}
+.service-content-holder {
+    padding: 80px 0;
+}
+.content-number {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 3.16;
+}
+.service-content-holder p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+.relation-number {
+    line-height: 4.39;
+    font-size: 18px;
+    font-weight: 800;
+}
+.service-recommendation h2 {
+    margin-bottom: 62px;
+}
+/* end */
 
 @media screen and (min-width: 992px) {
     .swiper-wrapper h3 {
