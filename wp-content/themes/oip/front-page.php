@@ -59,7 +59,7 @@
                             <span class="number">01</span>
                             <h4>Insurance Automation - ARIES</h4>
                             <p>Our unique RPA solutions are specifically designed for complex insurance processes.</p>
-                            <a href="#">Read more</a>
+                            <a href="http://localhost:8000/insurance-automation">Read more</a>
                         </div>
                     </div>
                     <div class="col-sm-6">

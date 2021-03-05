@@ -69,6 +69,7 @@ function register_scripts()
     wp_enqueue_script('barba', get_template_directory_uri() . "/assets/js/barba.min.js", [], $version, "all");
     wp_enqueue_script('gsap', get_template_directory_uri() . "/assets/js/gsap.min.js", [], $version, "all");
     wp_enqueue_script('swiper', get_template_directory_uri() . "/assets/js/swiper-bundle.min.js", [], $version, "all");
+    wp_enqueue_script('matchHeight', get_template_directory_uri() . "/assets/js/jquery.matchHeight.js", [], $version, "all");
     wp_enqueue_script('custom', get_template_directory_uri() . "/assets/js/custom.js", [], $version, "all");
 }
 

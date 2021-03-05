@@ -90,11 +90,11 @@
             </section>
         <?php endif; ?>
 
-        <section class="case-study-wrapper case-study-solution">
-            <div class="container-fluid">
-                <?php
-                $ourSolutionBottom = get_field('our_solution_bottom');
-                if($ourSolutionBottom): ?>
+        <?php
+        $ourSolutionBottom = get_field('our_solution_bottom');
+        if($ourSolutionBottom['label'] && $ourSolutionBottom['content']): ?>
+            <section class="case-study-wrapper case-study-solution">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-6 case-study-text-nav">
                             <div class="d-flex align-items-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -108,9 +108,28 @@
                             </div>
                         </div>
                     </div>
-                <?php endif; ?>
-            </div>
-        </section>
+                </div>
+            </section>
+        <?php endif; ?>
+
+        <?php if( have_rows('slider') ): ?>
+            <section class="case-study-slider-wrapper">
+                <div class="case-study-slider">
+                    <?php while( have_rows('slider') ): the_row();
+                        $image = get_sub_field('image');
+                        $retinaImage = get_sub_field('retina_image');
+                        $caption = get_sub_field('caption');
+                    ?>
+                        <div class="bg-transparent-blue case-study-slide-item" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                            <img class="img-fluid" src="<?php echo $image; ?>" srcset="<?php echo $retinaImage; ?> 2x" alt="Slide">
+                            <div class="case-study-slide-caption">
+                                <?php echo $caption; ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            </section>
+        <?php endif; ?>
 
         <?php if( have_rows('app_image_examples') ): ?>
             <section>

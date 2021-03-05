@@ -67,6 +67,8 @@
 </footer>
 
 <?php wp_footer(); ?>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 <script>
     const aosSelector = jQuery('.swiper-wrapper h3, .swiper-wrapper p, .swiper-wrapper img');
     var swiper = new Swiper('.swiper-container', {
@@ -118,6 +120,38 @@
     });
 
     AOS.init();
+
+    jQuery(document).ready(function () {
+        jQuery('.case-study-slider').slick({
+            centerMode: true,
+            centerPadding: '250px',
+            slidesToShow: 1,
+            prevArrow:"<img class='prev-arrow' src='<?php echo get_template_directory_uri(); ?>/assets/images/left-arrow-small.svg' />",
+            nextArrow:"<img class='next-arrow' src='<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow-small.svg' />",
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+        jQuery('.case-study-slide-item').matchHeight({ property: 'min-height' });
+    });
 </script>
 </body>
 </html>

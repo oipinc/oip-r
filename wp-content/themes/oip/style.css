@@ -1,6 +1,7 @@
 :root {
     --navy: #000224;
     --dark-blue: #000330;
+    --transparent-blue: #141631;
     --gray: #505147;
     --light-gray: #d2d2d2;
     --gray-secondary: #686a5a;
@@ -31,6 +32,9 @@ body.open {
 }
 .bg-light-gray {
     background-color: var(--light-gray);
+}
+.bg-transparent-blue {
+    background-color: var(--transparent-blue);
 }
 p {
     font-size: 14px;
@@ -453,6 +457,10 @@ footer h2 {
     padding-top: 150px;
     padding-bottom: 150px;
 }
+.case-study-slider-wrapper {
+    padding-top: 80px;
+    padding-bottom: 150px;
+}
 .case-study-text-nav h2 {
     font-size: 120px;
     font-weight: bold;
@@ -480,6 +488,34 @@ footer h2 {
 }
 .case-study-problem-divider {
     margin-bottom: 228px;
+}
+.case-study-slide-item {
+    padding: 70px 150px;
+    margin: 0 25px;
+    border-radius: 10px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.case-study-slide-item img {
+    display: inline-block !important;
+}
+.prev-arrow,
+.next-arrow {
+    cursor: pointer;
+    position: absolute;
+    bottom: -31px;
+}
+.prev-arrow {
+    left: 14.5%;
+}
+.next-arrow {
+    left: 16.5%;
+}
+.case-study-slide-caption {
+    position: absolute;
+    right: 95px;
+    bottom: 35px;
 }
 
 @media screen and (min-width: 992px) {
