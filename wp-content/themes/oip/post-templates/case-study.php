@@ -81,9 +81,15 @@
                 <?php endif; ?>
             </div>
         </section>
-        <section class="app-img-wrapper">
-            <img class="img-fluid" src="http://localhost:8000/wp-content/uploads/2021/03/app.png" srcset="http://localhost:8000/wp-content/uploads/2021/03/app@2x.png 2x" alt="App image" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
-        </section>
+
+        <?php
+        $appImage = get_field('app_image');
+        if($appImage['image'] && $appImage['retina_image']): ?>
+            <section class="app-img-wrapper">
+                <img class="img-fluid" src="<?php echo $appImage['image']; ?>" srcset="<?php echo $appImage['retina_image']; ?> 2x" alt="App image" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            </section>
+        <?php endif; ?>
+
         <section class="case-study-wrapper case-study-solution">
             <div class="container-fluid">
                 <?php
@@ -105,30 +111,72 @@
                 <?php endif; ?>
             </div>
         </section>
-        <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 bg-light-gray use-case-img-holder text-center">
-                        <img class="img-fluid" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" srcset="http://localhost:8000/wp-content/uploads/2021/03/iphone@2x-e1614687650872.png 2x" alt="App image" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    </div>
-                    <div class="col-md-6 bg-white use-case-img-holder text-center">
-                        <img class="img-fluid" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" srcset="http://localhost:8000/wp-content/uploads/2021/03/iphone@2x-e1614687650872.png 2x" alt="App image" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+
+        <?php if( have_rows('app_image_examples') ): ?>
+            <section>
+                <div class="container-fluid">
+                    <div class="row">
+                        <?php while( have_rows('app_image_examples') ): the_row();
+                            $image = get_sub_field('image');
+                            $retinaImage = get_sub_field('retina_image');
+                            $animationEffect = get_sub_field('animation_effect');
+                            $backgroundColor = get_sub_field('background_color');
+                            ?>
+                            <div class="col-md-6 use-case-img-holder text-center" style="background-color: <?php echo $backgroundColor; ?>">
+                                <img class="img-fluid" src="<?php echo $image; ?>" srcset="<?php echo $retinaImage; ?> 2x" alt="App image" data-aos="<?php echo $animationEffect; ?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                            </div>
+                        <?php endwhile; ?>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="recommended-case-study bg-gray-secondary case-study-wrapper">
-            <div class="container-fluid h-100">
-                <div class="row justify-content-center align-items-center h-100">
-                    <div class="col">
-                        <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <h2>Multiquoting without
-                                a human touch</h2>
-                            <a href="#">Read Use Case <img class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"></a>
+            </section>
+        <?php endif; ?>
+
+        <?php
+        $result = get_field('results');
+        if($result['label'] && $result['content']): ?>
+            <section class="case-study-wrapper case-study-result">
+                <div class="container-fluid">
+                    <div class="row" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <div class="col-lg-8 case-study-text-nav">
+                            <h2>Results</h2>
+                        </div>
+                    </div>
+                    <div class="row case-study-problem-divider">
+                        <div class="col-lg-6 case-study-text-nav">
+                            <div class="d-flex align-items-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <span class="fw-bold"><?php echo $result['label']; ?></span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <?php echo $result['content']; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="custom-link" href="/contact-us">Want to discuss a project? <img class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow"></a>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+
+        <?php
+        $recommendedPost = get_field('recommended_case_study');
+        if($recommendedPost): ?>
+        <?php $permalink = get_permalink($recommendedPost->ID); ?>
+            <section class="recommended-case-study bg-gray-secondary case-study-wrapper">
+                <div class="container-fluid h-100">
+                    <div class="row justify-content-center align-items-center h-100">
+                        <div class="col">
+                            <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <h2><?php echo esc_html($recommendedPost->post_title); ?></h2>
+                                <a href="<?php echo esc_url($permalink); ?>">Read Use Case <img class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php endif; ?>
     </main>
 </div>

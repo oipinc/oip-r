@@ -448,7 +448,8 @@ footer h2 {
     text-decoration: none;
 }
 .case-study-problem,
-.case-study-solution {
+.case-study-solution,
+.case-study-result {
     padding-top: 150px;
     padding-bottom: 150px;
 }
@@ -458,6 +459,11 @@ footer h2 {
     color: rgba(255,255,255, 0.05);
     line-height: 0.83;
     margin-bottom: 30px;
+}
+.custom-link {
+    font-size: 50px;
+    color: white;
+    text-decoration: none;
 }
 .case-study-text-nav .line {
     background-color: white;
