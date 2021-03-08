@@ -46,8 +46,6 @@
             </section>
         <?php endif; ?>
 
-
-
         <?php
         $relations = get_field('case_study_recommendation');
         if($relations): ?>

@@ -52,6 +52,37 @@ function contentAnimation(container) {
         .from(mainNavigation, { duration: .5, translateY: -10, opacity: 0})
 }
 
+function initSlickSlider()
+{
+    jQuery('.case-study-slider').slick({
+        centerMode: true,
+        centerPadding: '250px',
+        slidesToShow: 1,
+        prevArrow:"<img class='prev-arrow' src='/wp-content/themes/oip/assets/images/left-arrow-small.svg' />",
+        nextArrow:"<img class='next-arrow' src='/wp-content/themes/oip/assets/images/right-arrow-small.svg' />",
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+}
+
 jQuery(function() {
     barba.init({
         // We don't want "synced transition"
@@ -80,9 +111,17 @@ jQuery(function() {
             },
 
             async enter(data) {
-                jQuery(window).scrollTop(0);
                 await pageTransitionOut(data.next.container);
+                jQuery(window).scrollTop(0);
                 AOS.init();
+                initSlickSlider();
+                const vid = document.getElementById("background_animation");
+                if (vid) {
+                    vid.autoplay = true;
+                    vid.loop = true;
+                    vid.load();
+                }
+                jQuery('.case-study-slide-item').matchHeight({ property: 'min-height' });
             },
             // Variations for didactical purpose…
             // Better browser support than async/await
@@ -94,6 +133,8 @@ jQuery(function() {
 
             async once(data) {
                 await contentAnimation(data.next.container);
+                initSlickSlider();
+                jQuery('.case-study-slide-item').matchHeight({ property: 'min-height' });
             }
         }]
     });

@@ -525,6 +525,12 @@ footer h2 {
 .service-recommendation .recommended-case-study {
     padding: 0 150px;
 }
+#background_animation {
+    position: absolute;
+    top: 0;
+    right: -150px;
+    z-index: -1;
+}
 /* end */
 
 /* Service view */
