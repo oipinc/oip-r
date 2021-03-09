@@ -59,7 +59,7 @@
                             <span class="number">01</span>
                             <h4>Insurance Automation - ARIES</h4>
                             <p>Our unique RPA solutions are specifically designed for complex insurance processes.</p>
-                            <a href="http://localhost:8000/insurance-automation/">Read more</a>
+                            <a href="/insurance-automation/">Read more</a>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -115,7 +115,7 @@
                                         <a href="#"><img class="me-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"> Read more</a>
                                     </div>
                                     <div class="col-3">
-                                        <img class="img-fluid" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
+                                        <img class="img-fluid" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
                                     </div>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
                                         <a href="#"><img class="me-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"> Read more</a>
                                     </div>
                                     <div class="col-3">
-                                        <img class="img-fluid" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
+                                        <img class="img-fluid" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
                                     </div>
                                 </div>
                             </div>
@@ -156,10 +156,10 @@
                                     challenge, innovative product and service provider companies seek assistance.</p>
                             </div>
                             <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="900">
-                                <img class="case-img" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Product 1">
+                                <img class="case-img" src="/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Product 1">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <a href="http://localhost:8000/aries-in-submissions/">Read more</a>
+                                        <a href="/aries-in-submissions/">Read more</a>
                                     </div>
                                     <div class="col text-end">
                                         <a href="#">
@@ -178,7 +178,7 @@
                                     challenge, innovative product and service provider companies seek assistance.</p>
                             </div>
                             <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="900">
-                                <img class="case-img" src="http://localhost:8000/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Product 1">
+                                <img class="case-img" src="/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Product 1">
                                 <div class="row align-items-center">
                                     <div class="col">
                                         <a href="#">Read more</a>
