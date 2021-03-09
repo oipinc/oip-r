@@ -142,6 +142,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
         <section class="case custom-padding">

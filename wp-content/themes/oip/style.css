@@ -406,6 +406,13 @@ footer h2 {
     line-height: 2.56;
     text-decoration: none;
 }
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--navy);
+}
 .legal-wrapper a {
     color: white;
 }
