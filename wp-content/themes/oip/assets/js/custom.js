@@ -138,6 +138,13 @@ jQuery(function() {
             }
         }]
     });
+
+    setTimeout(function () {
+        jQuery("html, body").removeClass("init");
+        setTimeout(function () {
+            AOS.init();
+        },200)
+    }, 2000);
 });
 
 jQuery(".btn-menu").on("click", function () {

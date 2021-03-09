@@ -72,20 +72,6 @@
 
 <script>
     const aosSelector = jQuery('.swiper-wrapper h3, .swiper-wrapper p, .swiper-wrapper img');
-    // var swiper = new Swiper('.swiper-container', {
-    //     slidesPerView: 1,
-    //     mousewheel: true,
-    //     on: {
-    //         slideChangeTransitionStart: function () {
-    //             aosSelector.css("visibility", "hidden");
-    //             aosSelector.removeClass('aos-init').removeClass('aos-animate');
-    //         },
-    //         slideChangeTransitionEnd: function () {
-    //             aosSelector.css("visibility", "visible");
-    //             AOS.init();
-    //         },
-    //     }
-    // });
 
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
@@ -107,41 +93,6 @@
             },
         }
     });
-
-    // swiper.on("reachBeginning", function () {
-    //     setTimeout(function () {
-    //         localStorage.setItem("start", "left-end")
-    //     }, 1000);
-    // });
-    // swiper.on("reachEnd", function () {
-    //     setTimeout(function () {
-    //         localStorage.setItem("end", "right-end")
-    //     }, 1000);
-    // });
-    // swiper.on("fromEdge", function () {
-    //     localStorage.removeItem("start")
-    //     localStorage.removeItem("end")
-    // });
-
-    // jQuery(".product").bind('mousewheel DOMMouseScroll', function(event){
-    //     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-    //         const value = localStorage.getItem("start");
-    //         if (value === "left-end") {
-    //             jQuery('html, body').animate({
-    //                 scrollTop: jQuery(".what-we-do").offset().top
-    //             }, 1500);
-    //         }
-    //     } else {
-    //         const value = localStorage.getItem("end");
-    //         if (value === "right-end") {
-    //             jQuery('html, body').animate({
-    //                 scrollTop: jQuery(".case").offset().top
-    //             }, 1500);
-    //         }
-    //     }
-    // });
-
-    AOS.init();
 </script>
 </body>
 </html>

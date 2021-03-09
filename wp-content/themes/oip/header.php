@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html class="init">
 <head>
     <?php wp_head(); ?>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
-<body>
+<body class="init">
     <div class="loading-container">
         <div class="loading-screen"></div>
+    </div>
+    <div class="init-container d-flex position-fixed align-items-center justify-content-center">
+        <a class="init-logo" href="/">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo">
+        </a>
+        <h1 class="my-0">OIP Robotics</h1>
     </div>
     <div class="menu">
         <div class="menu-navigation">
