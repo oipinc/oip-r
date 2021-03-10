@@ -700,6 +700,105 @@ footer h2 {
 }
 /* end */
 
+/* Career */
+.career-number {
+    color: #fbfbff;
+    font-weight: bold;
+    line-height: 3.5;
+}
+.career-values {
+    color: #fbfbff;
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+.career-values h4 {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.26;
+    margin-bottom: 30px;
+}
+.section-title {
+    margin-bottom: 50px;
+}
+.board-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 106px;
+}
+.board-row {
+    padding: 75px 112px;
+    border-top: 1px solid #505147;
+}
+.board-row:last-child {
+    border-bottom: 1px solid #505147;
+}
+.board-row * {
+    margin: 0;
+}
+.career-board {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.board-day p {
+    white-space: nowrap;
+}
+.board-redirection-box {
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 135px;
+}
+.board-redirection-box .custom-link {
+    font-size: 40px;
+    font-weight: normal;
+}
+.board-redirection-box h3 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.88;
+    color: #191b3a;
+}
+.board-redirection-box p {
+    font-size: 18px;
+}
+.career-open-position {
+    padding-top: 30px;
+    padding-bottom: 245px;
+}
+.career-job-box {
+    padding: 81px;
+    background-color: var(--dark-blue);
+}
+.career-job-box:hover {
+    background-color: var(--gray-secondary);
+}
+.career-job-box h3 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 33px;
+}
+.career-job-box p {
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0;
+}
+.career-job-box .career-job-box-small-title {
+    color: var(--gray-secondary);
+}
+.career-job-box:hover * {
+    color: white;
+}
+.career-open-position-section-title {
+    margin-bottom: 106px;
+    max-width: 568px;
+}
+.career-open-position-section-title h2 {
+    line-height: 0.9;
+}
+/* end */
+
 @media screen and (min-width: 992px) {
     .swiper-wrapper h3 {
         font-size: 50px;
