@@ -93,6 +93,25 @@
             },
         }
     });
+
+    // let test = 0;
+    // jQuery(".product").bind('mousewheel DOMMouseScroll', function(event, delta) {
+    //     test = test + 1;
+    //
+    //     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+    //         const left = test * (100) + "px";
+    //         const top = test * (-100) + "px";
+    //         const translate3d = "translate3d("+left+", "+top+", 0px)";
+    //         jQuery(".product").css({"transform": translate3d});
+    //     } else {
+    //         const left = test * (-100) + "px";
+    //         const top = test * (100) + "px";
+    //         const translate3d = "translate3d("+left+", "+top+", 0px)";
+    //         jQuery(".product").css({"transform": translate3d});
+    //
+    //     }
+    //
+    // });
 </script>
 </body>
 </html>

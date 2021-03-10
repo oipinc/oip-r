@@ -325,10 +325,15 @@ body.open .menu-icon__line-right {
 
 @keyframes slideInFromLeft {
     0% {
-        transform: translateX(-100%);
+        transition-delay: 0.8s;
+        opacity: 0;
+        transform: translate(0%, 100%);
+        transition: opacity 0.2s ease, transform 0.3s ease;
     }
     100% {
-        transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0%);
+        transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
     }
 }
 
