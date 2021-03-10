@@ -12,13 +12,14 @@
                 <div class="col">
                     <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <h6>Useful links</h6>
-                        <ul class="list-unstyled my-0">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Use Cases</a></li>
-                            <li><a href="#">Career</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
+                        <?php
+                        wp_nav_menu([
+                            'menu' => 'footer',
+                            'container' => '',
+                            'theme_location' => 'footer',
+                            'items_wrap' => '<ul class="list-unstyled my-0">%3$s</ul>'
+                        ])
+                        ?>
                     </div>
                 </div>
                 <div class="col">

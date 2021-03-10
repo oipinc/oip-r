@@ -622,6 +622,84 @@ footer h2 {
 }
 /* end */
 
+/* Contact us */
+.contact-us-intro {
+    padding-top: 180px;
+    padding-bottom: 180px;
+    font-size: 18px;
+    color: var(--navy);
+    line-height: 1.83;
+    position: relative;
+}
+.contact-us-intro-bg h2 {
+    opacity: 0.05;
+    font-size: 350px;
+    font-weight: bold;
+    color: var(--navy);
+}
+.contact-us-intro-bg {
+    position: absolute;
+    right: 0;
+    left: -150px;
+    bottom: 0;
+    white-space: nowrap;
+}
+.contact-email {
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.1;
+    color: var(--navy);
+}
+.contact-us-hero-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.contact-us-hero-content h1 {
+    font-size: 150px;
+}
+.contact-us-hero-content p {
+    color: #fbfbff;
+}
+.contact-us-office {
+    padding-top: 144px;
+    padding-bottom: 144px;
+}
+.office-box {
+    width: 563px;
+    height: 563px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 2, 36, 0.2);
+    background-blend-mode: multiply;
+    padding: 80px 67px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+.office-box h5 {
+    font-size: 35px;
+    font-weight: bold;
+}
+.office-box:hover {
+    background-color: rgba(0, 2, 36, 0.8);
+}
+.office-bg:before {
+    background-color: rgba(0, 2, 36, 0.05);
+    position: absolute;
+    top: 45px;
+    right: 0;
+    left: -25px;
+    bottom: 69px;
+    content: "";
+}
+/* end */
+
 @media screen and (min-width: 992px) {
     .swiper-wrapper h3 {
         font-size: 50px;
