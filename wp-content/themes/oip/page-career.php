@@ -52,45 +52,58 @@
             </section>
         <?php endif; ?>
 
-        <section class="career-open-position custom-padding">
-            <div class="container-fluid">
-                <div class="career-open-position-section-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <div class="case-study-text-nav">
-                        <h2>Open positions</h2>
-                        <div class="d-flex align-items-center">
-                            <span class="fw-bold">Open positions</span>
-                            <span class="line"></span>
+        <?php
+        $openPosition = get_field('open_positions');
+        if ($openPosition): ?>
+            <section class="career-open-position custom-padding">
+                <div class="container-fluid">
+                    <div class="career-open-position-section-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <div class="case-study-text-nav">
+                            <h2>Open positions</h2>
+                            <div class="d-flex align-items-center">
+                                <span class="fw-bold">Open positions</span>
+                                <span class="line"></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="career-job-box">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h3>DevOps</h3>
+
+                    <?php foreach($openPosition as $post):
+                        $permalink = get_permalink($post->ID);
+                        $title = get_the_title($post->ID);
+                        $condition = get_field( 'condition', $post->ID );
+                        ?>
+                        <div class="career-job-box">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h3><?php echo $title; ?></h3>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p class="career-job-box-small-title">Place of employment:</p>
+                                            <p class="text-uppercase"><?php echo $condition['place_of_employment']; ?></p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p class="career-job-box-small-title">Application due date:</p>
+                                            <p class="text-uppercase"><?php echo $condition['application_due_date']; ?></p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p class="career-job-box-small-title">Type of employment:</p>
+                                            <p class="text-uppercase"><?php echo $condition['type_of_employment']; ?></p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <p class="career-job-box-small-title">Place of employment:</p>
-                                    <p class="text-uppercase">Remote</p>
-                                </div>
-                                <div class="col-md-4">
-                                    <p class="career-job-box-small-title">Application due date:</p>
-                                    <p class="text-uppercase">Open until filled</p>
-                                </div>
-                                <div class="col-md-4">
-                                    <p class="career-job-box-small-title">Type of employment:</p>
-                                    <p class="text-uppercase">Full time job</p>
+                                <div class="col-auto">
+                                    <a class="custom-link" href="<?php echo esc_url( $permalink ); ?>">
+                                        <img width="30" class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <a class="custom-link" href="#"><img width="30" class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow"></a>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php endif; ?>
 
         <section class="board-redirection-link">
             <div class="container-fluid">

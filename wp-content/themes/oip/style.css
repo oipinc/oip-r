@@ -779,7 +779,8 @@ footer h2 {
     font-weight: 600;
     margin-bottom: 33px;
 }
-.career-job-box p {
+.career-job-box p,
+.job-hero .career-job-box-small-title {
     font-size: 21px;
     font-weight: 600;
     margin: 0;
@@ -796,6 +797,118 @@ footer h2 {
 }
 .career-open-position-section-title h2 {
     line-height: 0.9;
+}
+/* end */
+
+/* Job */
+.job-wrapper p {
+    font-size: 18px;
+    line-height: 1.67;
+}
+.job-wrapper .lead p,
+.job-section-title {
+    font-size: 30px;
+    line-height: 1.47;
+}
+.job-wrapper li {
+    list-style: none;
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2.17;
+}
+.job-wrapper li:before {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: absolute;
+    left: -30px;
+    content: "";
+    top: 34%;
+}
+.job-holder {
+    margin-bottom: 140px;
+}
+.border-top-line {
+    border-top: 2px solid white;
+    padding: 55px 0;
+    margin: 55px 0;
+}
+.border-top-line h6 {
+    margin-bottom: 20px;
+}
+.job-section-small-title {
+    margin-bottom: 48px;
+}
+.job-hero {
+    height: 87vh;
+}
+.job-hero h1 {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1.65;
+}
+.job-hero .career-job-box-small-title {
+    color: var(--gray-secondary);
+}
+.job-form {
+    padding: 160px 280px;
+    background-color: rgba(255,255,255,0.05);
+}
+.job-form h4 {
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--gray-secondary);
+    margin-bottom: 25px;
+}
+.job-form p {
+    font-size: 18px;
+}
+.form-holder .form-control {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--gray-secondary);
+    padding-left: 0;
+    background-color: transparent;
+}
+.form-holder {
+    margin-top: 50px;
+}
+.form-holder label {
+    font-size: 12px;
+    line-height: 3.67;
+}
+.form-holder input {
+    font-size: 30px;
+    line-height: 1.47;
+    color: white !important;
+}
+.form-holder input:focus,
+.form-holder input:active {
+    box-shadow: none;
+}
+.btn-apply {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2.17;
+    color: white;
+    width: 281px;
+    height: 84px;
+    background-color: var(--gray-secondary);
+}
+.btn-upload {
+    width: 450px;
+    height: 84px;
+    border: 1px solid #505147;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    background-color: rebeccapurple;
+    z-index: 1;
 }
 /* end */
 
