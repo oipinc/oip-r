@@ -1,9 +1,9 @@
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="case-study-view">
-        <section class="case-study-wrapper">
+        <section class="case-study-wrapper custom-wrapper">
             <video
                     id="background_animation"
-                    style="width: 100%; height: 800px;"
+                    style="width: 100%; height: 100vh;"
                     src="<?php echo get_template_directory_uri(); ?>/assets/video/background-animation.mp4"
                     autoplay="true"
                     loop="true"
@@ -23,7 +23,7 @@
                 </div>
             </div>
         </section>
-        <section class="case-study-wrapper case-study-problem">
+        <section class="case-study-wrapper case-study-problem custom-wrapper">
             <div class="container-fluid">
                 <div class="row" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <div class="col-lg-8 case-study-text-nav">
@@ -63,7 +63,7 @@
                 <?php endif; ?>
             </div>
         </section>
-        <section class="case-study-wrapper case-study-solution">
+        <section class="case-study-wrapper case-study-solution custom-wrapper">
             <div class="container-fluid">
                 <div class="row" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <div class="col-lg-8 case-study-text-nav">
@@ -101,7 +101,7 @@
         <?php
         $ourSolutionBottom = get_field('our_solution_bottom');
         if($ourSolutionBottom['label'] && $ourSolutionBottom['content']): ?>
-            <section class="case-study-wrapper case-study-solution">
+            <section class="case-study-wrapper case-study-solution custom-wrapper">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-6 case-study-text-nav">
@@ -161,7 +161,7 @@
         <?php
         $result = get_field('results');
         if($result['label'] && $result['content']): ?>
-            <section class="case-study-wrapper case-study-result">
+            <section class="case-study-wrapper case-study-result custom-wrapper">
                 <div class="container-fluid">
                     <div class="row" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div class="col-lg-8 case-study-text-nav">
@@ -192,7 +192,7 @@
         $recommendedPost = get_field('recommended_case_study');
         if($recommendedPost): ?>
         <?php $permalink = get_permalink($recommendedPost->ID); ?>
-            <section class="recommended-case-study bg-gray-secondary case-study-wrapper">
+            <section class="recommended-case-study bg-gray-secondary case-study-wrapper custom-wrapper">
                 <div class="container-fluid h-100">
                     <div class="row justify-content-center align-items-center h-100">
                         <div class="col">

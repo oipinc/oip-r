@@ -2,6 +2,16 @@
 
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="home">
+        <?php
+            $services = array(
+                'numberposts'      => 1000,
+                'category'         => 4,
+                'orderby'          => 'date',
+                'order'            => 'ASC',
+                'post_type'        => 'post',
+            );
+        ?>
+
         <section class="hero">
             <div class="hero-content">
                 <div class="container-fluid">
@@ -54,46 +64,16 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-6">
-                        <div class="what-we-do-box" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <span class="number">01</span>
-                            <h4>Insurance Automation - ARIES</h4>
-                            <p>Our unique RPA solutions are specifically designed for complex insurance processes.</p>
-                            <a href="/insurance-automation/">Read more</a>
+                    <?php foreach (get_posts($services) as $key => $service): ?>
+                        <div class="<?php echo $key > 1 ? 'col-sm-4' : 'col-sm-6'?>">
+                            <div class="what-we-do-box" data-aos="<?php echo $key % 2 ? 'fade-right' : 'fade-left'; ?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <span class="number">0<?php echo $key + 1; ?></span>
+                                <h4><?php echo $service->post_title; ?></h4>
+                                <p>Our unique RPA solutions are specifically designed for complex insurance processes.</p>
+                                <a href="<?php echo get_permalink($service->ID); ?>">Read more</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="what-we-do-box" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <span class="number">02</span>
-                            <h4>Software (Co) Development</h4>
-                            <p>There isn’t one system satisfying the needs of all insurance players.</p>
-                            <a href="#">Read more</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="what-we-do-box what-we-do-box-custom-width" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <span class="number">03</span>
-                            <h4>Managed Staff Augmentation</h4>
-                            <p>When the availability of skilled technology professionals in-house becomes a challenge, innovative product and service provider companies seek assistance.</p>
-                            <a href="#">Read more</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="what-we-do-box what-we-do-box-custom-width" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <span class="number">04</span>
-                            <h4>IT Support</h4>
-                            <p>Empower your business with turnkey IT support services.</p>
-                            <a href="#">Read more</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="what-we-do-box what-we-do-box-custom-width" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <span class="number">05</span>
-                            <h4>Big Data & ML</h4>
-                            <p>When Big Data meets Machine Learning the models flourish.</p>
-                            <a href="#">Read more</a>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <div class="custom-container"></div>

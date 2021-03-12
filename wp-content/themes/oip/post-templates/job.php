@@ -6,7 +6,7 @@
                 <div class="container-fluid h-100">
                     <video
                             id="background_animation"
-                            style="width: 100%; height: 800px;"
+                            style="width: 100%; height: 100vh;"
                             src="<?php echo get_template_directory_uri(); ?>/assets/video/background-animation.mp4"
                             autoplay="true"
                             loop="true"

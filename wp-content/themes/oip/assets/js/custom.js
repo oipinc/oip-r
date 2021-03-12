@@ -139,10 +139,23 @@ jQuery(function() {
         }]
     });
 
+    function getMaxHeight(domEl) {
+        let maxHeight = 0;
+        jQuery(domEl).each(function(){
+            if (jQuery(this).outerHeight() > maxHeight) { maxHeight = jQuery(this).outerHeight(); }
+        });
+
+        return maxHeight;
+    }
+
+    const el = jQuery('.service-benefits.view-2 ul li');
+    el.css("height", getMaxHeight('.service-benefits.view-2 ul li'));
+
     setTimeout(function () {
         jQuery("html, body").removeClass("init");
         setTimeout(function () {
             AOS.init();
+
         },200)
     }, 2000);
 });

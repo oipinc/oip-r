@@ -8,6 +8,16 @@
 
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="career">
+        <?php
+        $hero = get_field('hero');
+        if ($hero): ?>
+            <section class="career-hero custom-padding d-flex align-items-center">
+                <div class="container-fluid" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <?php echo $hero['content']; ?>
+                </div>
+            </section>
+        <?php endif; ?>
+
         <?php if( have_rows('our_values') ): ?>
             <section class="career-values custom-padding">
                 <div class="container-fluid">
@@ -19,7 +29,7 @@
                         <?php while( have_rows('our_values') ): the_row(); $count++;
                             $content = get_sub_field('content');
                             ?>
-                            <div class="col-lg-4">
+                            <div class="col-lg-4" data-aos="<?php echo $count % 2 ? 'fade-right' : 'fade-left'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <span class="career-number">0<?php echo $count; ?></span>
                                 <?php echo $content; ?>
                             </div>
@@ -29,15 +39,28 @@
             </section>
         <?php endif; ?>
 
+        <?php
+        $benefits = get_field('benefits');
+        if ($benefits): ?>
+            <section class="career-benefit custom-padding">
+                <div class="container-fluid">
+                    <h2 class="board-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Our Benefits</h2>
+                    <div class="career-benefit-holder" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <?php echo $benefits; ?>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+
         <?php if( have_rows('board') ): ?>
             <section class="career-board custom-padding">
                 <div class="container-fluid">
-                    <h2 class="board-title">Getting on board</h2>
+                    <h2 class="board-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Getting on board</h2>
                     <?php $count = -1; ?>
                     <?php while( have_rows('board') ): the_row(); $count++;
                         $content = get_sub_field('content');
                         ?>
-                        <div class="board-row">
+                        <div class="board-row" data-aos="<?php echo $count % 2 ? 'fade-right' : 'fade-left'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             <div class="d-flex align-items-center">
                                 <div class="flex-grow-0 me-5 board-day">
                                     <p>Day <?php echo $count; ?></p>
@@ -67,12 +90,12 @@
                         </div>
                     </div>
 
-                    <?php foreach($openPosition as $post):
+                    <?php foreach($openPosition as $key => $post):
                         $permalink = get_permalink($post->ID);
                         $title = get_the_title($post->ID);
                         $condition = get_field( 'condition', $post->ID );
                         ?>
-                        <div class="career-job-box">
+                        <div class="career-job-box" data-aos="<?php echo $key % 2 ? 'fade-right' : 'fade-left'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             <div class="row align-items-center">
                                 <div class="col">
                                     <div class="row">

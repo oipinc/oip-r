@@ -8,6 +8,7 @@
 
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="contact-us">
+
         <?php
         $hero = get_field('hero');
         if ($hero): ?>
@@ -32,22 +33,13 @@
                 <div class="contact-us-intro-bg">
                     <h2 class="my-0">Drop us a line.</h2>
                 </div>
+                <div class="container-fluid contact-us-section-title">
+                    <p>Work with us</p>
+                </div>
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <p>Work with us</p>
-                        </div>
-                        <div class="col-lg-6">
-                            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                                <?php echo $intro['left_content']; ?>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                                <?php echo $intro['right_content']; ?>
-                                <span class="contact-email">office@oip.bz</span>
-                            </div>
-                        </div>
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <?php echo $intro['left_content']; ?>
+                        <span class="contact-email">office@oip.bz</span>
                     </div>
                 </div>
             </section>
@@ -55,6 +47,12 @@
 
         <?php if( have_rows('office') ): ?>
             <section class="contact-us-office custom-padding bg-white">
+                <div class="container-fluid contact-us-section-title">
+                    <p>Offices</p>
+                    <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <?php echo $intro['right_content']; ?>
+                    </div>
+                </div>
                 <div class="office-bg position-relative">
                     <div class="container-fluid">
                         <div class="row">
