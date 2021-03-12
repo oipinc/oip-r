@@ -663,20 +663,46 @@ footer h2 {
 .service-recommendation h2 {
     margin-bottom: 62px;
 }
-.service-how-we-do h2 {
+.service-impact {
+    counter-reset: section;
+}
+.service-impact h2 {
     font-size: 60px;
     margin-bottom: 45px;
 }
-.service-how-we-do p {
+.service-impact p {
     font-size: 18px;
 }
-.service-how-we-do h6 {
+.service-impact h6 {
     font-size: 100px;
     color: rgba(255,255,255,0.05);
     line-height: 0.98;
 }
-.service-how-we-do h6 .active {
+.service-impact h6 .active {
     color: white;
+}
+.service-impact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.service-impact li {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 15px 0;
+    margin: 36px 0;
+    position: relative;
+    counter-increment: section;
+}
+.service-impact li:before {
+    content: '0'counter(section);
+    font-size: 16px;
+    line-height: 3.5;
+    color: #fbfbff;
+    position: absolute;
+    left: 0;
+    top: -35px;
+    font-weight: bold;
 }
 .service-benefits h5 {
     font-size: 20px;

@@ -3,11 +3,12 @@
         <?php
             $caseStudyRecommendationBlock = get_field('case_study_recommendation_block');
             $serviceIntroBlock            = get_field('service_intro_block');
-            $howWeDoBlock                 = get_field('how_we_do_block');
+            $serviceImpactBlock           = get_field('service_impact_block');
             $serviceBenefitsBlock         = get_field('service_benefits_block');
+
             $relations                    = get_field('case_study_recommendation');
             $serviceIntro                 = get_field('service_intro');
-            $howWeDo                      = get_field('how_we_do');
+            $serviceImpact                = get_field('service_impact');
             $serviceBenefitsBlockView1    = $serviceBenefitsBlock['checkbox_service_benefits_view_1'];
             $serviceBenefitsBlockView2    = $serviceBenefitsBlock['checkbox_service_benefits_view_2'];
             $serviceBenefitsView1         = $serviceBenefitsBlock['service_benefits_view_1'];
@@ -62,10 +63,10 @@
         <?php endif; ?>
         <!-- end -->
 
-        <!-- Block group 3 -->
-        <?php if ($howWeDoBlock && $howWeDo): ?>
-            <section class="service-how-we-do custom-padding block">
-                <?php echo $howWeDo; ?>
+        <!-- Block Impact -->
+        <?php if ($serviceImpactBlock): ?>
+            <section class="service-impact custom-padding block">
+                <?php echo $serviceImpact; ?>
             </section>
         <?php endif; ?>
         <!-- end -->

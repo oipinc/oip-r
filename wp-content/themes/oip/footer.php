@@ -72,28 +72,7 @@
 <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>-->
 
 <script>
-    const aosSelector = jQuery('.swiper-wrapper h3, .swiper-wrapper p, .swiper-wrapper img');
 
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '"></span>';
-            },
-        },
-        on: {
-            slideChangeTransitionStart: function () {
-                aosSelector.css("visibility", "hidden");
-                aosSelector.removeClass('aos-init').removeClass('aos-animate');
-            },
-            slideChangeTransitionEnd: function () {
-                aosSelector.css("visibility", "visible");
-                AOS.init();
-            },
-        }
-    });
 
     // let test = 0;
     // jQuery(".product").bind('mousewheel DOMMouseScroll', function(event, delta) {

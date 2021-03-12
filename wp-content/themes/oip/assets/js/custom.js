@@ -52,8 +52,7 @@ function contentAnimation(container) {
         .from(mainNavigation, { duration: .5, translateY: -10, opacity: 0})
 }
 
-function initSlickSlider()
-{
+function initSlickSlider() {
     jQuery('.case-study-slider').slick({
         centerMode: true,
         centerPadding: '250px',
@@ -80,6 +79,31 @@ function initSlickSlider()
                 }
             }
         ]
+    });
+}
+
+function swipeSliderInit() {
+    const aosSelector = jQuery('.swiper-wrapper h3, .swiper-wrapper p, .swiper-wrapper img');
+
+    new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+        },
+        on: {
+            slideChangeTransitionStart: function () {
+                aosSelector.css("visibility", "hidden");
+                aosSelector.removeClass('aos-init').removeClass('aos-animate');
+            },
+            slideChangeTransitionEnd: function () {
+                aosSelector.css("visibility", "visible");
+                AOS.init();
+            },
+        }
     });
 }
 
@@ -115,6 +139,7 @@ jQuery(function() {
                 jQuery(window).scrollTop(0);
                 AOS.init();
                 initSlickSlider();
+                swipeSliderInit();
                 const vid = document.getElementById("background_animation");
                 if (vid) {
                     vid.autoplay = true;
@@ -134,6 +159,7 @@ jQuery(function() {
             async once(data) {
                 await contentAnimation(data.next.container);
                 initSlickSlider();
+                swipeSliderInit();
                 jQuery('.case-study-slide-item').matchHeight({ property: 'min-height' });
             }
         }]
