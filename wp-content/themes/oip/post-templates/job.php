@@ -4,14 +4,14 @@
         <?php $condition = get_field( "condition", get_the_ID()); ?>
             <section class="job-hero custom-padding">
                 <div class="container-fluid h-100">
-                    <video
-                            id="background_animation"
-                            style="width: 100%; height: 100vh;"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/video/background-animation.mp4"
-                            autoplay="true"
-                            loop="true"
-                            muted="muted">
-                    </video>
+<!--                    <video-->
+<!--                            id="background_animation"-->
+<!--                            style="width: 100%; height: 100vh;"-->
+<!--                            src="--><?php //echo get_template_directory_uri(); ?><!--/assets/video/background-animation.mp4"-->
+<!--                            autoplay="true"-->
+<!--                            loop="true"-->
+<!--                            muted="muted">-->
+<!--                    </video>-->
                     <div class="h-100 d-flex align-items-center">
                         <div class="job-intro w-100">
                             <h1> <?php the_title(); ?></h1>

@@ -969,20 +969,23 @@ footer h2 {
 
 /* Job */
 .job-wrapper p {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.67;
 }
 .job-wrapper .lead p,
 .job-section-title {
-    font-size: 30px;
+    font-size: 14px;
     line-height: 1.47;
+}
+.job-wrapper .lead p br {
+    display: none;
 }
 .job-wrapper li {
     list-style: none;
     position: relative;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
-    line-height: 2.17;
+    line-height: 30px;
 }
 .job-wrapper li:before {
     width: 12px;
@@ -995,12 +998,12 @@ footer h2 {
     top: 34%;
 }
 .job-holder {
-    margin-bottom: 140px;
+    margin-bottom: 50px;
 }
 .border-top-line {
     border-top: 2px solid white;
-    padding: 55px 0;
-    margin: 55px 0;
+    padding: 25px 0 0 0;
+    margin: 25px 0 0 0;
 }
 .border-top-line h6 {
     margin-bottom: 20px;
@@ -1012,7 +1015,7 @@ footer h2 {
     height: 87vh;
 }
 .job-hero h1 {
-    font-size: 80px;
+    font-size: 30px;
     font-weight: bold;
     line-height: 1.65;
 }
@@ -1020,17 +1023,17 @@ footer h2 {
     color: var(--gray-secondary);
 }
 .job-form {
-    padding: 160px 280px;
+    padding: 30px 15px;
     background-color: rgba(255,255,255,0.05);
 }
 .job-form h4 {
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 600;
     color: var(--gray-secondary);
     margin-bottom: 25px;
 }
 .job-form p {
-    font-size: 18px;
+    font-size: 14px;
 }
 .form-holder .form-control {
     border-radius: 0;
@@ -1047,7 +1050,7 @@ footer h2 {
     line-height: 3.67;
 }
 .form-holder input {
-    font-size: 30px;
+    font-size: 14px;
     line-height: 1.47;
     color: white !important;
 }
@@ -1060,13 +1063,13 @@ footer h2 {
     font-weight: bold;
     line-height: 2.17;
     color: white;
-    width: 281px;
-    height: 84px;
+    width: 150px;
+    height: 50px;
     background-color: var(--gray-secondary);
 }
 .btn-upload {
-    width: 450px;
-    height: 84px;
+    width: 200px;
+    height: 50px;
     border: 1px solid #505147;
     display: flex;
     align-items: center;
@@ -1235,7 +1238,12 @@ footer h2 {
 /* end */
 @media screen and (min-width: 768px) {
     .career-job-box p,
-    .job-hero .career-job-box-small-title {
+    .job-hero .career-job-box-small-title,
+    .job-wrapper p,
+    .job-wrapper .lead p,
+    .job-section-title,
+    .job-wrapper li,
+    .job-form p {
         font-size: 16px;
     }
     .board-redirection-box {
@@ -1244,7 +1252,8 @@ footer h2 {
     }
 }
 @media screen and (min-width: 992px) {
-    .swiper-wrapper h3 {
+    .swiper-wrapper h3,
+    .job-hero h1 {
         font-size: 50px;
     }
     p {
@@ -1280,6 +1289,21 @@ footer h2 {
     }
     .career-hero h1 {
         font-size: 40px;
+    }
+    .job-wrapper .lead p,
+    .job-section-title {
+        font-size: 21px;
+    }
+    .job-wrapper li {
+        font-size: 18px;
+        line-height: 2.17;
+    }
+    .job-wrapper p {
+        font-size: 18px;
+    }
+    .border-top-line {
+        padding: 55px 0;
+        margin: 55px 0;
     }
 }
 @media screen and (min-width: 1367px) {
@@ -1356,7 +1380,8 @@ footer h2 {
     .what-we-do {
         padding:203px 0 146px 0;
     }
-    .number {
+    .number,
+    .job-hero h1 {
         font-size: 80px;
     }
     .use-case-img-holder {
@@ -1369,7 +1394,8 @@ footer h2 {
     .career-values h4 {
         font-size: 35px;
     }
-    .career-values br {
+    .career-values br,
+    .job-wrapper .lead p br {
         display: block;
     }
     .career-values {
@@ -1426,5 +1452,32 @@ footer h2 {
     }
     .init-container h1 {
         font-size: 150px;
+    }
+    .job-wrapper .lead p,
+    .job-section-title {
+        font-size: 30px;
+    }
+    .job-holder {
+        margin-bottom: 140px;
+    }
+    .job-form {
+        padding: 160px 280px;
+    }
+    .job-form h4 {
+        font-size: 60px;
+    }
+    .job-form p {
+        font-size: 18px;
+    }
+    .form-holder input {
+        font-size: 30px;
+    }
+    .btn-apply {
+        width: 281px;
+        height: 84px;
+    }
+    .btn-upload {
+        width: 450px;
+        height: 84px;
     }
 }
