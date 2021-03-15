@@ -766,7 +766,7 @@ footer h2 {
 
 /* Contact us */
 .contact-us-intro {
-    padding-top: 180px;
+    padding-top: 50px;
     font-size: 18px;
     color: var(--navy);
     line-height: 1.83;
@@ -774,22 +774,22 @@ footer h2 {
 }
 .contact-us-intro-bg h2 {
     opacity: 0.05;
-    font-size: 350px;
+    font-size: 150px;
     font-weight: bold;
     color: var(--navy);
 }
 .contact-us-intro p {
-    font-size: 18px;
+    font-size: 14px;
 }
 .contact-us-intro-bg {
     position: absolute;
     right: 0;
-    left: -150px;
+    left: -30px;
     bottom: 0;
     white-space: nowrap;
 }
 .contact-email {
-    font-size: 120px;
+    font-size: 40px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -804,31 +804,31 @@ footer h2 {
     align-items: center;
 }
 .contact-us-hero-content h1 {
-    font-size: 150px;
+    font-size: 50px;
 }
 .contact-us-hero-content p {
     color: #fbfbff;
 }
 .contact-us-office {
-    padding-top: 180px;
-    padding-bottom: 144px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .office-box {
-    width: 563px;
-    height: 563px;
+    width: calc(100vw - 24px);
+    height: 250px;
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgba(0, 2, 36, 0.2);
     background-blend-mode: multiply;
-    padding: 80px 67px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;
+    background-size: cover;
 }
 .office-box h5 {
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 25px;
 }
 .office-box:hover {
     background-color: rgba(0, 2, 36, 0.8);
@@ -844,10 +844,10 @@ footer h2 {
 }
 .contact-us-section-title {
     color: var(--navy);
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 .contact-us-section-title h4 {
-    font-size: 30px;
+    font-size: 20px;
 }
 .contact-us-section-title p {
     margin-bottom: 50px;
@@ -1236,6 +1236,13 @@ footer h2 {
     background-color: var(--transparent-blue);
 }
 /* end */
+
+@media screen and (min-width: 568px) {
+    .office-box {
+        width: calc((100vw / 2) - 24px);
+        height: calc((100vw / 2) - 24px);
+    }
+}
 @media screen and (min-width: 768px) {
     .career-job-box p,
     .job-hero .career-job-box-small-title,
@@ -1243,7 +1250,8 @@ footer h2 {
     .job-wrapper .lead p,
     .job-section-title,
     .job-wrapper li,
-    .job-form p {
+    .job-form p,
+    .contact-us-intro p {
         font-size: 16px;
     }
     .board-redirection-box {
@@ -1298,12 +1306,22 @@ footer h2 {
         font-size: 18px;
         line-height: 2.17;
     }
-    .job-wrapper p {
+    .job-wrapper p,
+    .contact-us-intro p {
         font-size: 18px;
     }
     .border-top-line {
         padding: 55px 0;
         margin: 55px 0;
+    }
+    .office-box {
+        padding: 80px 67px;
+    }
+    .office-box h5 {
+        font-size: 35px;
+    }
+    .contact-us-section-title {
+        margin-bottom: 60px;
     }
 }
 @media screen and (min-width: 1367px) {
@@ -1384,9 +1402,8 @@ footer h2 {
     .job-hero h1 {
         font-size: 80px;
     }
-    .use-case-img-holder {
-        padding-top: 150px;
-        padding-bottom: 150px;
+    .contact-us-hero-content h1 {
+        font-size: 150px;
     }
     .career-hero h1 {
         font-size: 60px;
@@ -1403,7 +1420,8 @@ footer h2 {
         padding-bottom: 250px;
     }
     .career-benefit,
-    .career-board {
+    .career-board,
+    .use-case-img-holder {
         padding-top: 150px;
         padding-bottom: 150px;
     }
@@ -1479,5 +1497,28 @@ footer h2 {
     .btn-upload {
         width: 450px;
         height: 84px;
+    }
+    .office-box {
+        width: 563px;
+        height: 563px;
+    }
+    .contact-email {
+        font-size: 120px;
+    }
+    .contact-us-intro {
+        padding-top: 180px;
+    }
+    .contact-us-office {
+        padding-top: 180px;
+        padding-bottom: 144px;
+    }
+    .contact-us-intro-bg {
+        left: -150px;
+    }
+    .contact-us-intro-bg h2 {
+        font-size: 350px;
+    }
+    .contact-us-section-title h4 {
+        font-size: 30px;
     }
 }
