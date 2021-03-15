@@ -107,6 +107,15 @@ function swipeSliderInit() {
     });
 }
 
+function getMaxHeight(domEl) {
+    let maxHeight = 0;
+    jQuery(domEl).each(function(){
+        if (jQuery(this).outerHeight() > maxHeight) { maxHeight = jQuery(this).outerHeight(); }
+    });
+
+    return maxHeight;
+}
+
 jQuery(function() {
     barba.init({
         // We don't want "synced transition"
@@ -147,6 +156,8 @@ jQuery(function() {
                     vid.load();
                 }
                 jQuery('.case-study-slide-item').matchHeight({ property: 'min-height' });
+                const el = jQuery('.service-benefits.view-2 ul li');
+                el.css("height", getMaxHeight('.service-benefits.view-2 ul li'));
             },
             // Variations for didactical purpose…
             // Better browser support than async/await
@@ -164,15 +175,6 @@ jQuery(function() {
             }
         }]
     });
-
-    function getMaxHeight(domEl) {
-        let maxHeight = 0;
-        jQuery(domEl).each(function(){
-            if (jQuery(this).outerHeight() > maxHeight) { maxHeight = jQuery(this).outerHeight(); }
-        });
-
-        return maxHeight;
-    }
 
     const el = jQuery('.service-benefits.view-2 ul li');
     el.css("height", getMaxHeight('.service-benefits.view-2 ul li'));

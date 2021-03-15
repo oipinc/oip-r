@@ -6,6 +6,8 @@
    get_template_part('post-templates/service');
 } elseif (in_category('6')) {
    get_template_part('post-templates/job');
+} elseif (in_category('7')) {
+   get_template_part('post-templates/product');
 } ?>
 
 <?php get_footer(); ?>
