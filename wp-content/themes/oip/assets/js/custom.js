@@ -82,6 +82,36 @@ function initSlickSlider() {
     });
 }
 
+function initProductSlickSlider() {
+    jQuery('.product-stories-slider').slick({
+        centerMode: true,
+        centerPadding: '95px',
+        slidesToShow: 1,
+        prevArrow:"<img class='prev-arrow' src='/wp-content/themes/oip/assets/images/left-arrow-small.svg' />",
+        nextArrow:"<img class='next-arrow' src='/wp-content/themes/oip/assets/images/right-arrow-small.svg' />",
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+}
+
 function swipeSliderInit() {
     const aosSelector = jQuery('.swiper-wrapper h3, .swiper-wrapper p, .swiper-wrapper img');
 
@@ -148,6 +178,7 @@ jQuery(function() {
                 jQuery(window).scrollTop(0);
                 AOS.init();
                 initSlickSlider();
+                initProductSlickSlider();
                 swipeSliderInit();
                 const vid = document.getElementById("background_animation");
                 if (vid) {
@@ -155,7 +186,8 @@ jQuery(function() {
                     vid.loop = true;
                     vid.load();
                 }
-                jQuery('.case-study-slide-item').matchHeight({ property: 'min-height' });
+                jQuery('.case-study-slide-item, .product-story-item').matchHeight({ property: 'min-height' });
+                jQuery('.product-values-box').matchHeight({ property: 'min-height' });
                 const el = jQuery('.service-benefits.view-2 ul li');
                 el.css("height", getMaxHeight('.service-benefits.view-2 ul li'));
             },
@@ -170,8 +202,10 @@ jQuery(function() {
             async once(data) {
                 await contentAnimation(data.next.container);
                 initSlickSlider();
+                initProductSlickSlider();
                 swipeSliderInit();
-                jQuery('.case-study-slide-item').matchHeight({ property: 'min-height' });
+                jQuery('.case-study-slide-item, .product-story-item').matchHeight({ property: 'min-height' });
+                jQuery('.product-values-box').matchHeight({ property: 'min-height' });
             }
         }]
     });

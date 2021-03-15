@@ -1125,6 +1125,7 @@ footer h2 {
 }
 .product-features-title h2 {
     margin-bottom: 38px;
+    line-height: normal;
 }
 .product-request-form {
     padding-left: 152px;
@@ -1149,6 +1150,94 @@ footer h2 {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+.product-spotlight .number {
+    font-size: 40px;
+    margin-bottom: 28px;
+    display: inline-block;
+}
+.product-spotlight-title,
+.product-spotlight-box {
+    margin-bottom: 80px;
+}
+.product-spotlight-title h2 {
+    line-height: normal;
+}
+.text-nav-subtitle {
+    position: absolute;
+    bottom: 25px;
+    left: 10px;
+}
+.btn-demo {
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 0;
+    background-color: var(--gray-secondary);
+    width: 351px;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+.btn-demo:after {
+    position: absolute;
+    content: "";
+    right: 20px;
+    top: 44%;
+    background-image: url("assets/images/right-arrow-small.svg");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 16px;
+}
+.product-values h2 {
+    font-size: 60px;
+    font-weight: normal;
+    margin-bottom: 115px;
+}
+.product-values .number {
+    font-size: 25px;
+    display: inline-block;
+    margin-bottom: 18px;
+}
+.product-values p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+.product-values-box {
+    margin-bottom: 115px;
+    max-width: 300px;
+    border-bottom: 1px solid #505147;
+}
+.product-story-item {
+    padding: 184px 142px;
+    margin: 0 25px;
+}
+.product-story-item h3 {
+    font-size: 60px;
+    font-weight: 600;
+}
+.product-story-item p {
+    line-height: 1.78;
+    font-size: 18px;
+}
+.product-stories-title h2 {
+    font-size: 60px;
+    margin-bottom: 56px;
+    font-weight: normal;
+}
+.product-stories-title p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.78;
+}
+.product-stories-slider {
+    margin-top: 76px;
+}
+.product-story-item.slick-active.slick-current {
+    background-color: var(--transparent-blue);
 }
 /* end */
 
