@@ -29,7 +29,7 @@
                         <?php while( have_rows('our_values') ): the_row(); $count++;
                             $content = get_sub_field('content');
                             ?>
-                            <div class="col-lg-4" data-aos="<?php echo $count % 2 ? 'fade-right' : 'fade-left'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                            <div class="col-md-6 col-lg-4" data-aos="<?php echo $count % 2 ? 'fade-right' : 'fade-left'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <span class="career-number">0<?php echo $count; ?></span>
                                 <?php echo $content; ?>
                             </div>
@@ -61,8 +61,8 @@
                         $content = get_sub_field('content');
                         ?>
                         <div class="board-row" data-aos="<?php echo $count % 2 ? 'fade-right' : 'fade-left'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-grow-0 me-5 board-day">
+                            <div class="d-lg-flex align-items-center">
+                                <div class="flex-grow-0 me-5 board-day mb-3 mb-lg-0">
                                     <p>Day <?php echo $count; ?></p>
                                 </div>
                                 <div class="flex-grow-1">
@@ -141,8 +141,8 @@
                             <div>
                                 <h3>Meet the team</h3>
                                 <p>One of our clients, a leading wholesaler on the E&S market, had difficulties keeping up with hundreds of daily rece.</p>
-                                <div class="d-block text-end">
-                                    <a class="custom-link" href="#"><img width="30" class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow"></a>
+                                <div class="d-block text-md-end pb-4 pb-md-0">
+                                    <a class="custom-link" href="#"><img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow"></a>
                                 </div>
                             </div>
                         </div>
