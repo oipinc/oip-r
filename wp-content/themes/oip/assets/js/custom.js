@@ -194,6 +194,13 @@ jQuery(function() {
 
                 el.css("height", getMaxHeight('.service-benefits.view-2 ul li'));
                 caseStudy.css("height", getMaxHeight('.case h4'));
+
+                const url = window.location.pathname.split('/');
+                if (url[1] !== "product") {
+                    jQuery("body").removeClass("bg-dark-blue");
+                } else {
+                    jQuery("body").addClass("bg-dark-blue");
+                }
             },
             // Variations for didactical purpose…
             // Better browser support than async/await
@@ -214,6 +221,8 @@ jQuery(function() {
                 const url = window.location.pathname.split('/');
                 if (url[1] !== "product") {
                     jQuery("body").removeClass("bg-dark-blue");
+                } else {
+                    jQuery("body").addClass("bg-dark-blue");
                 }
             }
         }]
