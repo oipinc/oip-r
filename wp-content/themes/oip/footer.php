@@ -90,28 +90,5 @@
 <?php wp_footer(); ?>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>-->
-
-<script>
-
-
-    // let test = 0;
-    // jQuery(".product").bind('mousewheel DOMMouseScroll', function(event, delta) {
-    //     test = test + 1;
-    //
-    //     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-    //         const left = test * (100) + "px";
-    //         const top = test * (-100) + "px";
-    //         const translate3d = "translate3d("+left+", "+top+", 0px)";
-    //         jQuery(".product").css({"transform": translate3d});
-    //     } else {
-    //         const left = test * (-100) + "px";
-    //         const top = test * (100) + "px";
-    //         const translate3d = "translate3d("+left+", "+top+", 0px)";
-    //         jQuery(".product").css({"transform": translate3d});
-    //
-    //     }
-    //
-    // });
-</script>
 </body>
 </html>

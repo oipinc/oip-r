@@ -117,12 +117,9 @@ function swipeSliderInit() {
 
     new Swiper('.swiper-container', {
         slidesPerView: 1,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '"></span>';
-            },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         on: {
             slideChangeTransitionStart: function () {
@@ -255,6 +252,6 @@ jQuery(".menu-navigation a").on("click", function () {
         jQuery(this).parent().addClass("current_page_item");
     }
 });
-jQuery(".what-we-do-box a").hover(function () {
+jQuery(".home-service-box a").hover(function () {
     jQuery(this).parent().toggleClass("hovered");
 });

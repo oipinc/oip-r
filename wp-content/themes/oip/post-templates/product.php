@@ -11,16 +11,8 @@
         ?>
 
         <?php while ( have_posts() ) : the_post(); ?>
-            <section class="product-hero custom-padding">
+            <section class="product-hero custom-padding hero-gif">
                 <div class="container-fluid">
-                    <video
-                            id="background_animation"
-                            style="width: 100%; height: 100vh;"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/video/background-animation.mp4"
-                            autoplay="true"
-                            loop="true"
-                            muted="muted">
-                    </video>
                     <div class="product-hero-content" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <p>Product</p>
                         <h1><?php the_title(); ?></h1>

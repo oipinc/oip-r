@@ -10,12 +10,20 @@
                 'order'            => 'ASC',
                 'post_type'        => 'post',
             ];
+            $products  = [
+                'numberposts'      => 1000,
+                'category'         => 7,
+                'orderby'          => 'date',
+                'order'            => 'ASC',
+                'post_type'        => 'post',
+            ];
+
             $caseStudy = get_field('case_study');
         ?>
 
         <!-- Hero -->
         <?php while ( have_posts() ) : the_post(); ?>
-            <section class="hero">
+            <section class="hero hero-gif">
                 <div class="hero-content">
                     <div class="container-fluid">
                         <div class="row align-items-center">
@@ -62,7 +70,7 @@
         <!-- end -->
 
         <!-- Service -->
-        <?php if (!empty($services)): ?>
+        <?php if (!empty(get_posts($services))): ?>
             <section class="home-service custom-padding">
                 <div class="container-fluid">
                     <div class="home-service-title" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -88,53 +96,37 @@
         <?php endif; ?>
         <!-- end -->
 
-        <section class="product">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="custom-padding">
-                            <div class="container-fluid">
-                                <div class="row align-items-center">
-                                    <div class="col-9">
-                                        <h3 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Insurance Borderaux Reporting Software</h3>
-                                        <div class="slide-content mb-5">
-                                            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                                                Our unique RPA solutions are specifically <br> designed for complex insurance processes.
-                                            </p>
+        <!-- Products -->
+        <?php if (!empty(get_posts($products))): ?>
+            <section class="product">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <?php foreach (get_posts($products) as $key => $product): ?>
+                            <div class="swiper-slide" style="background-color: <?php echo $key % 2 ? '#505147' : '#686a5a' ?>">
+                                <div class="custom-padding">
+                                    <div class="container-fluid">
+                                        <div class="row align-items-center">
+                                            <div class="col-9">
+                                                <div class="slide-content mb-5" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                                                    <?php echo get_field('short_description', $product->ID)['content']; ?>
+                                                </div>
+                                                <a href="<?php echo get_permalink($product->ID); ?>"><img class="me-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"> Read more</a>
+                                            </div>
+                                            <div class="col-3">
+                                                <img class="img-fluid" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="<?php echo get_field('short_description', $product->ID)['feature_image']['image']; ?>" srcset="<?php echo get_field('short_description', $product->ID)['feature_image']['retina_image']; ?> 2x" alt="Image">
+                                            </div>
                                         </div>
-                                        <a href="#"><img class="me-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"> Read more</a>
-                                    </div>
-                                    <div class="col-3">
-                                        <img class="img-fluid" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="custom-padding">
-                            <div class="container-fluid">
-                                <div class="row align-items-center">
-                                    <div class="col-9">
-                                        <h3 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Insurance Borderaux Reporting Software</h3>
-                                        <div class="slide-content mb-5">
-                                            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                                                Our unique RPA solutions are specifically <br> designed for complex insurance processes.
-                                            </p>
-                                        </div>
-                                        <a href="#"><img class="me-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"> Read more</a>
-                                    </div>
-                                    <div class="col-3">
-                                        <img class="img-fluid" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500" src="/wp-content/uploads/2021/03/iphone-e1614687678703.png" alt="Image">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
+            </section>
+        <?php endif; ?>
+        <!-- end -->
 
         <!-- Case Study -->
         <?php if ($caseStudy): ?>

@@ -15,15 +15,7 @@
             $serviceBenefitsView2         = $serviceBenefitsBlock['service_benefits_view_2'];
         ?>
 
-        <section class="service-hero custom-wrapper">
-            <video
-                    id="background_animation"
-                    style="width: 100%; height: 100vh;"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/video/background-animation.mp4"
-                    autoplay="true"
-                    loop="true"
-                    muted="muted">
-            </video>
+        <section class="service-hero custom-wrapper hero-gif">
             <div class="service-hero-content">
                 <h6 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Services</h6>
                 <h1 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"><?php echo the_title(); ?></h1>

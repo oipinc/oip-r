@@ -1,14 +1,6 @@
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="case-study-view">
-        <section class="case-study-wrapper custom-wrapper">
-            <video
-                    id="background_animation"
-                    style="width: 100%; height: 100vh;"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/video/background-animation.mp4"
-                    autoplay="true"
-                    loop="true"
-                    muted="muted">
-            </video>
+        <section class="case-study-wrapper custom-wrapper hero-gif">
             <div class="case-study-intro">
                 <h6 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Case Study</h6>
                 <h1 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"><?php echo the_title(); ?></h1>

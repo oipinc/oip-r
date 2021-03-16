@@ -56,7 +56,11 @@ p {
     padding-top: 100px;
     padding-bottom: 100px;
 }
-
+header {
+    position: absolute;
+    right: 0;
+    left: 0;
+}
 .main-navigation {
     padding: 39px 0;
     z-index: 2;
@@ -210,7 +214,7 @@ body.open .menu-icon__line-right {
 .sub-menu li {
     margin: 0;
 }
-.sub-menu a:hover:before {
+.sub-menu a:hover:after {
     content: "";
     background-image: url("assets/images/right-arrow.svg");
     position: absolute;
@@ -220,6 +224,11 @@ body.open .menu-icon__line-right {
     height: 14px;
     background-size: contain;
     background-repeat: no-repeat;
+}
+.hero-gif {
+    background-image: url("assets/images/oip.gif");
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 .hero-content {
     padding: 100px 0 150px;
@@ -457,7 +466,9 @@ footer h2 {
     height: 100%;
 }
 .swiper-slide {
-    background-color: var(--gray-secondary);
+    background-image: url("assets/images/oip-bg.svg");
+    background-repeat: no-repeat;
+    background-position: 92% center;
     padding: 50px 0;
 }
 .swiper-wrapper h3 {
@@ -479,6 +490,12 @@ footer h2 {
 .swiper-pagination-bullet-active {
     background-color: var(--navy);
 }
+/*.swiper-button-next:after {*/
+/*    font-family: none;*/
+/*}*/
+/*.swiper-button-prev:after {*/
+/*    font-family: none;*/
+/*}*/
 .legal-wrapper a {
     color: white;
 }
@@ -609,7 +626,7 @@ footer h2 {
 
 /* Service view */
 .service-hero {
-    height: 87vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -1106,7 +1123,7 @@ footer h2 {
 
 /* Product */
 .product-hero {
-    height: 87vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
