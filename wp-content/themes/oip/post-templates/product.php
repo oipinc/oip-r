@@ -45,9 +45,11 @@
                     </div>
                     <div class="row">
                         <?php foreach ($features['product_features'] as $key => $feature): ?>
-                            <div class="col-lg-4 product-features-box" data-aos="<?php echo $key % 2 ? 'fade-left' : 'fade-right'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                                <span class="number">0<?php echo $key + 1; ?></span>
-                                <?php echo $feature['content']; ?>
+                            <div class="col-sm-6 col-xl-4" data-aos="<?php echo $key % 2 ? 'fade-left' : 'fade-right'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <div class="product-features-box">
+                                    <span class="number">0<?php echo $key + 1; ?></span>
+                                    <?php echo $feature['content']; ?>
+                                </div>
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -58,7 +60,7 @@
 
         <!-- Spotlight -->
         <?php if ($spotlight['product_spotlight_block']): ?>
-            <section class="product-spotlight custom-padding block">
+            <section class="product-spotlight custom-padding block d-none">
                 <div class="container-fluid">
                     <div class="product-spotlight-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div class="case-study-text-nav position-relative">
@@ -82,7 +84,7 @@
 
         <!-- Values -->
         <?php if ($productValues['product_values_block']): ?>
-            <section class="product-values custom-padding block">
+            <section class="product-values custom-padding block d-none">
                 <div class="container-fluid">
                     <h2>What value does it create for your business?</h2>
                     <div class="row">
@@ -102,7 +104,7 @@
 
         <!-- Stories -->
         <?php if ($productStories['product_stories_block']): ?>
-            <section class="product-stories block">
+            <section class="product-stories block d-none">
                 <div class="custom-wrapper product-stories-title">
                     <h2>Success stories</h2>
                     <p>Our client has one of the largest Lloyds books in the Delegated Authority <br>market. With GWP in tens of millions allocated on more than 15 active
@@ -145,7 +147,7 @@
 
         <!-- Related Product -->
         <?php if ($relatedProduct['related_product_block']): ?>
-            <section class="related-product board-redirection-link bg-navy">
+            <section class="related-product board-redirection-link bg-navy d-none">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">

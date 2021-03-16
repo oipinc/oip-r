@@ -53,8 +53,8 @@ p {
     font-size: 14px;
 }
 .block {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 header {
     position: absolute;
@@ -229,6 +229,7 @@ body.open .menu-icon__line-right {
     background-image: url("assets/images/oip.gif");
     background-repeat: no-repeat;
     background-position: top right;
+    background-size: cover;
 }
 .hero-content {
     padding: 100px 0 150px;
@@ -502,8 +503,6 @@ footer h2 {
 
 /* Case study view */
 .custom-wrapper {
-    padding-left: 263px;
-    padding-right: 263px;
     position: relative;
 }
 .case-study-wrapper h1 {
@@ -1146,17 +1145,21 @@ footer h2 {
     position: relative;
 }
 .product-hero h1 {
-    font-size: 150px;
+    font-size: 50px;
 }
 .product-hero h2 {
-    font-size: 60px;
+    font-size: 30px;
 }
 .product-hero p {
     font-size: 18px;
 }
 .product-intro p {
-    font-size: 30px;
+    font-size: 16px;
     line-height: 1.47;
+}
+.product-intro p br,
+.product-hero p br {
+    display: none;
 }
 .product-features .number {
     font-size: 25px;
@@ -1167,29 +1170,25 @@ footer h2 {
     margin-bottom: 16px;
 }
 .product-features-box {
-    margin-bottom: 120px;
+    margin-bottom: 20px;
+}
+.product-request-form p br {
+    display: none;
 }
 .product-features-title {
-    margin-bottom: 105px;
+    margin-bottom: 50px;
 }
 .product-features-title h2 {
     margin-bottom: 38px;
     line-height: normal;
 }
-.product-request-form {
-    padding-left: 152px;
-    padding-right: 152px;
-}
 .product-request-form h2 {
     font-weight: 600;
-    font-size: 60px;
+    font-size: 30px;
     line-height: 1.6;
 }
-.product-request-form p {
-    font-size: 18px;
-}
 .product-request-form-holder {
-    padding: 128px;
+    padding: 15px;
 }
 .related-product h3 {
     color: var(--gray-secondary);
@@ -1214,8 +1213,8 @@ footer h2 {
 }
 .text-nav-subtitle {
     position: absolute;
-    bottom: 25px;
-    left: 10px;
+    bottom: 0;
+    left: 5px;
 }
 .btn-demo {
     font-size: 18px;
@@ -1311,6 +1310,10 @@ footer h2 {
         height: 260px;
         justify-content: center;
     }
+    .product-intro p br,
+    .product-hero p br {
+        display: block;
+    }
 }
 @media screen and (min-width: 992px) {
     .swiper-wrapper h3,
@@ -1384,6 +1387,26 @@ footer h2 {
     }
     footer {
         padding: 100px 0;
+    }
+    .text-nav-subtitle {
+        bottom: 25px;
+        left: 10px;
+    }
+    .product-features-box {
+        margin-bottom: 50px;
+    }
+    .product-features-box {
+        max-width: 400px;
+    }
+    .block {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .product-request-form-holder {
+        padding: 50px;
+    }
+    .product-request-form p {
+        font-size: 18px;
     }
 }
 @media screen and (min-width: 1367px) {
@@ -1592,5 +1615,44 @@ footer h2 {
         bottom: 63px;
         top: auto;
         left: 330px;
+    }
+    .product-hero h1 {
+        font-size: 150px;
+    }
+    .product-hero h2 {
+        font-size: 60px;
+    }
+    .hero-gif {
+        background-size: contain;
+    }
+    .product-intro p {
+        font-size: 30px;
+    }
+    .custom-wrapper {
+        padding-left: 263px;
+        padding-right: 263px;
+    }
+    .block {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .product-features-title {
+        margin-bottom: 105px;
+    }
+    .product-features-box {
+        margin-bottom: 120px;
+    }
+    .product-request-form {
+        padding-left: 152px;
+        padding-right: 152px;
+    }
+    .product-request-form-holder {
+        padding: 128px;
+    }
+    .product-request-form h2 {
+        font-size: 60px;
+    }
+    .product-request-form p br {
+        display: block;
     }
 }
