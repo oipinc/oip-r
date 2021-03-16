@@ -24,7 +24,7 @@ function pageTransitionIn() {
 function pageTransitionOut(container) {
     // GSAP methods can be chained and return directly a promise
     return gsap
-        .timeline({ delay: 1 }) // More readable to put it here
+        .timeline({ delay: 1}) // More readable to put it here
         .add('start') // Use a label to sync screen and content animation
         .to(loadingScreen, {
             duration: 0.5,
@@ -168,7 +168,6 @@ jQuery(function() {
 
                 // Not needed with async/await or promises
                 // done()
-
                 // Loading screen is hiding everything, time to remove old content!
                 data.current.container.remove()
             },
@@ -188,8 +187,12 @@ jQuery(function() {
                 }
                 jQuery('.case-study-slide-item, .product-story-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
+
                 const el = jQuery('.service-benefits.view-2 ul li');
+                const caseStudy = jQuery('.case h4');
+
                 el.css("height", getMaxHeight('.service-benefits.view-2 ul li'));
+                caseStudy.css("height", getMaxHeight('.case h4'));
             },
             // Variations for didactical purpose…
             // Better browser support than async/await
@@ -211,7 +214,10 @@ jQuery(function() {
     });
 
     const el = jQuery('.service-benefits.view-2 ul li');
+    const caseStudy = jQuery('.case h4');
+
     el.css("height", getMaxHeight('.service-benefits.view-2 ul li'));
+    caseStudy.css("height", getMaxHeight('.case h4'));
 
     setTimeout(function () {
         jQuery("html, body").removeClass("init");

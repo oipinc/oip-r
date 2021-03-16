@@ -2,9 +2,11 @@
     --navy: #000224;
     --dark-blue: #000330;
     --transparent-blue: #141631;
+    --transparent-dark-blue: rgba(0, 3, 48, 0.71);
     --gray: #505147;
     --light-gray: #d2d2d2;
     --gray-secondary: #686a5a;
+    --transparent-gray: rgba(80, 81, 71, 0.67);
 }
 
 body {
@@ -40,6 +42,12 @@ body.init {
 }
 .bg-transparent-blue {
     background-color: var(--transparent-blue);
+}
+.bg-transparent-gray {
+    background-color: var(--transparent-gray);
+}
+.bg-transparent-dark-blue {
+    background-color: var(--transparent-dark-blue);
 }
 p {
     font-size: 14px;
@@ -232,27 +240,27 @@ body.open .menu-icon__line-right {
 .custom-container {
     max-width: 100%;
 }
-.what-we-do {
+.home-service {
     padding:50px 0;
 }
 /*.custom-padding {*/
 /*    padding-left: 263px !important;*/
 /*    padding-right: 72px !important;*/
 /*}*/
-.what-we-do-box {
+.home-service-box {
     padding: 20px 0;
 }
-.what-we-do-box h4 {
+.home-service-box h4 {
     font-size: 25px;
     line-height: 35px;
     font-weight: 600;
     color: #FBFBFF;
     margin: 28px 0;
 }
-.what-we-do-box a {
+.home-service-box a {
     position: relative;
 }
-.what-we-do-box a:hover:before {
+.home-service-box a:hover:before {
     position: absolute;
     content: "";
     background-image: url("assets/images/arrow-right.svg");
@@ -262,17 +270,24 @@ body.open .menu-icon__line-right {
     top: -4px;
     background-size: contain;
 }
-.what-we-do p {
+.home-service p {
     margin: 23px 0;
 }
-.what-we-do p,
-.what-we-do a {
+.home-service-title {
+    margin-bottom: 70px;
+}
+.home-service p,
+.home-service a {
     line-height: 20px;
     color: #FBFBFF;
 }
-.what-we-do a {
+.home-service a {
     text-decoration: none;
     font-weight: bold;
+}
+.home-service .lead {
+    font-size: 35px;
+    line-height: 1.6;
 }
 .number {
     font-weight: bold;
@@ -284,7 +299,7 @@ body.open .menu-icon__line-right {
     -webkit-text-stroke:1px white;
     -webkit-text-fill-color:transparent;
 }
-.what-we-do-box-custom-width {
+.home-service-box-custom-width {
     max-width: 382px;
 }
 
@@ -420,6 +435,9 @@ footer h2 {
     font-size: 25px;
     font-weight: 600;
     line-height: 1.25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .case a {
     font-size: 18px;
@@ -1384,18 +1402,18 @@ footer h2 {
     footer {
         padding: 290px 0 134px;
     }
-    .what-we-do-box h4 {
+    .home-service-box h4 {
         font-size: 35px;
         line-height: 46px;
     }
-    .what-we-do p,
-    .what-we-do a {
+    .home-service p,
+    .home-service a {
         line-height: 30px;
     }
-    .what-we-do-box {
+    .home-service-box {
         padding: 80px 0;
     }
-    .what-we-do {
+    .home-service {
         padding:203px 0 146px 0;
     }
     .number,
