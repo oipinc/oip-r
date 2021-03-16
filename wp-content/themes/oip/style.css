@@ -634,7 +634,13 @@ footer h2 {
     font-size: 100px;
     font-weight: bold;
     line-height: 1.14;
-    margin-bottom: 102px;
+    margin-bottom: 37px;
+}
+.service-hero h3 {
+    font-size: 40px;
+}
+.service-hero p {
+    font-size: 18px;
 }
 .btn-contact-us {
     font-size: 18px;
@@ -797,6 +803,17 @@ footer h2 {
     left: 0;
     top: -35px;
     font-weight: bold;
+}
+.service-benefits-title {
+    margin-bottom: 150px;
+}
+.service-benefits-title p {
+    font-size: 18px;
+}
+.service-benefits-title .line {
+    background-color: white;
+    width: 100%;
+    height: 1px;
 }
 /* end */
 
@@ -1565,5 +1582,15 @@ footer h2 {
     }
     .contact-us-section-title h4 {
         font-size: 30px;
+    }
+    .swiper-button-prev {
+        bottom: 63px;
+        top: auto;
+        left: 278px;
+    }
+    .swiper-button-next {
+        bottom: 63px;
+        top: auto;
+        left: 330px;
     }
 }
