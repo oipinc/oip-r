@@ -111,8 +111,7 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="custom-wrapper product-stories-title">
-                                <h2>Success stories</h2>
-                                <p>Our client has one of the largest Lloyds books in the Delegated Authority market. With GWP in tens of millions allocated on more than 15 active contracts they wanted to</p>
+                                <?php echo $productStories['product_stories_intro']; ?>
                             </div>
                         </div>
                     </div>
