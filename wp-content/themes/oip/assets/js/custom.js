@@ -210,6 +210,11 @@ jQuery(function() {
                 swipeSliderInit();
                 jQuery('.case-study-slide-item, .product-story-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
+
+                const url = window.location.pathname.split('/');
+                if (url[1] !== "product") {
+                    jQuery("body").removeClass("bg-dark-blue");
+                }
             }
         }]
     });
