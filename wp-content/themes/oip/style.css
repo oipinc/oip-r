@@ -852,10 +852,7 @@ footer h2 {
 .office-box {
     width: calc(100vw - 24px);
     height: 250px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 2, 36, 0.2);
-    background-blend-mode: multiply;
+    background-color: var(--navy);
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -863,11 +860,14 @@ footer h2 {
     z-index: 1;
     background-size: cover;
 }
+.office-box p {
+    opacity: 0.4;
+}
 .office-box h5 {
     font-size: 25px;
 }
-.office-box:hover {
-    background-color: rgba(0, 2, 36, 0.8);
+.office-box:hover p {
+    opacity: 1;
 }
 .office-bg:before {
     background-color: rgba(0, 2, 36, 0.05);
