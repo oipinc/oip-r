@@ -162,7 +162,7 @@ jQuery(function() {
                 // const done = this.async();
 
                 await pageTransitionIn()
-                jQuery("html, body, .menu").toggleClass("open");
+                jQuery("html, body, .menu").removeClass("open");
                 // No more needed as we "await" for pageTransition
                 // And i we change the transition duration, no need to update the delay…
                 // await delay(1000)
