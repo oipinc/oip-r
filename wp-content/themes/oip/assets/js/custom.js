@@ -91,20 +91,11 @@ function initProductSlickSlider() {
         nextArrow:"<img class='next-arrow' src='/wp-content/themes/oip/assets/images/right-arrow-small.svg' />",
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
+                    centerPadding: '15px',
                     slidesToShow: 1
                 }
             }

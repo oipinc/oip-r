@@ -60,7 +60,7 @@
 
         <!-- Spotlight -->
         <?php if ($spotlight['product_spotlight_block']): ?>
-            <section class="product-spotlight custom-padding block d-none">
+            <section class="product-spotlight custom-padding block">
                 <div class="container-fluid">
                     <div class="product-spotlight-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div class="case-study-text-nav position-relative">
@@ -70,9 +70,11 @@
                     </div>
                     <div class="row">
                         <?php foreach ($spotlight['product_spotlight'] as $key => $productSpotlight): ?>
-                            <div class="col-lg-3 product-spotlight-box" data-aos="<?php echo $key % 2 ? 'fade-left' : 'fade-right'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                                <span class="number">0<?php echo $key + 1; ?></span>
-                                <?php echo $productSpotlight['content']; ?>
+                            <div class="col-sm-6 col-md-4 col-lg-3" data-aos="<?php echo $key % 2 ? 'fade-left' : 'fade-right'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <div class="product-spotlight-box">
+                                    <span class="number">0<?php echo $key + 1; ?></span>
+                                    <?php echo $productSpotlight['content']; ?>
+                                </div>
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -84,12 +86,12 @@
 
         <!-- Values -->
         <?php if ($productValues['product_values_block']): ?>
-            <section class="product-values custom-padding block d-none">
+            <section class="product-values custom-padding block">
                 <div class="container-fluid">
                     <h2>What value does it create for your business?</h2>
                     <div class="row">
                         <?php foreach ($productValues['product_values'] as $key => $value): ?>
-                            <div class="col-lg-3" data-aos="<?php echo $key % 2 ? 'fade-left' : 'fade-right'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                            <div class="col-sm-6 col-md-4 col-lg-3" data-aos="<?php echo $key % 2 ? 'fade-left' : 'fade-right'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <div class="product-values-box">
                                     <span class="number">0<?php echo $key + 1; ?></span>
                                     <?php echo $value['content']; ?>
@@ -104,11 +106,16 @@
 
         <!-- Stories -->
         <?php if ($productStories['product_stories_block']): ?>
-            <section class="product-stories block d-none">
-                <div class="custom-wrapper product-stories-title">
-                    <h2>Success stories</h2>
-                    <p>Our client has one of the largest Lloyds books in the Delegated Authority <br>market. With GWP in tens of millions allocated on more than 15 active
-                        <br> contracts they wanted to</p>
+            <section class="product-stories block">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="custom-wrapper product-stories-title">
+                                <h2>Success stories</h2>
+                                <p>Our client has one of the largest Lloyds books in the Delegated Authority market. With GWP in tens of millions allocated on more than 15 active contracts they wanted to</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="product-stories-slider">
                     <?php foreach ($productStories['product_stories'] as $key => $story): ?>

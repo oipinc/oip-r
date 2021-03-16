@@ -602,10 +602,10 @@ footer h2 {
     bottom: -31px;
 }
 .prev-arrow {
-    left: 14.5%;
+    left: 175px;
 }
 .next-arrow {
-    left: 16.5%;
+    left: 215px;
 }
 .case-study-slide-caption {
     position: absolute;
@@ -1117,6 +1117,7 @@ footer h2 {
     color: white;
     width: 150px;
     height: 50px;
+    border-radius: 0;
     background-color: var(--gray-secondary);
 }
 .btn-upload {
@@ -1201,15 +1202,15 @@ footer h2 {
 }
 .product-spotlight .number {
     font-size: 40px;
-    margin-bottom: 28px;
+    margin-bottom: 5px;
     display: inline-block;
 }
 .product-spotlight-title,
 .product-spotlight-box {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
-.product-spotlight-title h2 {
-    line-height: normal;
+.product-spotlight-box p {
+    margin: 0;
 }
 .text-nav-subtitle {
     position: absolute;
@@ -1217,12 +1218,12 @@ footer h2 {
     left: 5px;
 }
 .btn-demo {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     border-radius: 0;
     background-color: var(--gray-secondary);
-    width: 351px;
-    height: 84px;
+    width: 250px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1233,51 +1234,44 @@ footer h2 {
     position: absolute;
     content: "";
     right: 20px;
-    top: 44%;
+    top: 42%;
     background-image: url("assets/images/right-arrow-small.svg");
     background-repeat: no-repeat;
     width: 25px;
     height: 16px;
 }
 .product-values h2 {
-    font-size: 60px;
+    font-size: 30px;
     font-weight: normal;
-    margin-bottom: 115px;
+    margin-bottom: 40px;
 }
 .product-values .number {
     font-size: 25px;
     display: inline-block;
     margin-bottom: 18px;
+    line-height: normal;
 }
 .product-values p {
-    font-size: 20px;
     line-height: 1.6;
     margin-bottom: 28px;
 }
 .product-values-box {
-    margin-bottom: 115px;
-    max-width: 300px;
+    margin-bottom: 20px;
     border-bottom: 1px solid #505147;
 }
 .product-story-item {
-    padding: 184px 142px;
-    margin: 0 25px;
+    padding: 15px;
 }
 .product-story-item h3 {
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 600;
 }
-.product-story-item p {
-    line-height: 1.78;
-    font-size: 18px;
-}
 .product-stories-title h2 {
-    font-size: 60px;
-    margin-bottom: 56px;
+    font-size: 30px;
+    margin-bottom: 15px;
     font-weight: normal;
 }
 .product-stories-title p {
-    font-size: 18px;
     font-weight: 600;
     line-height: 1.78;
 }
@@ -1286,6 +1280,9 @@ footer h2 {
 }
 .product-story-item.slick-active.slick-current {
     background-color: var(--transparent-blue);
+}
+.product-spotlight-title h2 {
+    line-height: normal;
 }
 /* end */
 
@@ -1314,6 +1311,9 @@ footer h2 {
     .product-hero p br {
         display: block;
     }
+    .product-values-box {
+        max-width: 260px;
+    }
 }
 @media screen and (min-width: 992px) {
     .swiper-wrapper h3,
@@ -1337,6 +1337,7 @@ footer h2 {
     }
     .case-study-text-nav h2 {
         font-size: 75px;
+        line-height: 90px;
     }
     .board-title {
         font-size: 40px;
@@ -1388,10 +1389,8 @@ footer h2 {
     footer {
         padding: 100px 0;
     }
-    .text-nav-subtitle {
-        bottom: 25px;
-        left: 10px;
-    }
+    .product-spotlight-title,
+    .product-spotlight-box,
     .product-features-box {
         margin-bottom: 50px;
     }
@@ -1407,6 +1406,26 @@ footer h2 {
     }
     .product-request-form p {
         font-size: 18px;
+    }
+    .btn-demo {
+        font-size: 18px;
+        width: 351px;
+        height: 84px;
+    }
+    .btn-demo:after {
+        top: 44%;
+    }
+    .product-spotlight .number {
+        margin-bottom: 28px;
+    }
+    .product-spotlight-box {
+        max-width: 260px;
+    }
+    .product-story-item {
+        margin: 0 25px;
+    }
+    .product-story-item {
+        padding: 50px;
     }
 }
 @media screen and (min-width: 1367px) {
@@ -1654,5 +1673,45 @@ footer h2 {
     }
     .product-request-form p br {
         display: block;
+    }
+    .product-spotlight-title,
+    .product-spotlight-box {
+        margin-bottom: 80px;
+    }
+    .text-nav-subtitle {
+        bottom: -18px;
+    }
+    .product-values p {
+        font-size: 20px;
+    }
+    .product-values-box {
+        margin-bottom: 115px;
+    }
+    .product-values h2 {
+        font-size: 60px;
+        margin-bottom: 115px;
+    }
+    .product-story-item {
+        padding: 184px 142px;
+    }
+    .product-story-item h3 {
+        font-size: 60px;
+    }
+    .product-story-item p {
+        line-height: 1.78;
+        font-size: 18px;
+    }
+    .product-stories-title h2 {
+        font-size: 60px;
+        margin-bottom: 56px;
+    }
+    .product-stories-title p {
+        font-size: 18px;
+    }
+    .prev-arrow {
+        left: 265px;
+    }
+    .next-arrow {
+        left: 300px;
     }
 }
