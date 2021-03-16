@@ -94,7 +94,7 @@ p {
     text-decoration: none;
     position: relative;
 }
-.menu-list .active a:before {
+.menu-list .current_page_item a:before {
     background-color: rgba(104, 106, 90, 0.46);
     position: absolute;
     left: 0;
@@ -197,6 +197,7 @@ body.open .menu-icon__line-right {
     margin-right: 15px;
 }
 .sub-menu {
+    list-style: none;
     display: none;
     padding-left: 15px;
 }

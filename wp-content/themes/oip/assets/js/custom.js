@@ -162,6 +162,7 @@ jQuery(function() {
                 // const done = this.async();
 
                 await pageTransitionIn()
+                jQuery("html, body, .menu").toggleClass("open");
                 // No more needed as we "await" for pageTransition
                 // And i we change the transition duration, no need to update the delay…
                 // await delay(1000)
@@ -232,7 +233,13 @@ jQuery(".btn-menu").on("click", function () {
     jQuery("html, body, .menu").toggleClass("open");
 });
 jQuery(".menu-navigation a").on("click", function () {
-    jQuery(this).siblings().slideToggle(300);
+    const href = jQuery(this).attr("href");
+    if (href === "#") {
+        jQuery(this).siblings().slideToggle(300);
+    } else {
+        jQuery(".menu-navigation li").removeClass("current_page_item");
+        jQuery(this).parent().addClass("current_page_item");
+    }
 });
 jQuery(".what-we-do-box a").hover(function () {
     jQuery(this).parent().toggleClass("hovered");

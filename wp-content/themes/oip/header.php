@@ -31,28 +31,14 @@
                 </div>
                 <div class="row align-items-center">
                     <div class="col-9">
-                        <ul class="list-unstyled menu-list">
-                            <li class="active"><a href="#">About us</a></li>
-                            <li><a href="#">Career</a></li>
-                            <li><a href="#">Meet the team</a></li>
-                            <li>
-                                <a href="#">Case studies</a>
-                                <ul class="list-unstyled sub-menu">
-                                    <li><a href="#">Case 1</a></li>
-                                    <li><a href="#">Case 2</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Services</a>
-                                <ul class="list-unstyled sub-menu">
-                                    <li><a href="#">Automation</a></li>
-                                    <li><a href="#">Software (Co) Development</a></li>
-                                    <li><a href="#">Managed Staff Augmentation</a></li>
-                                    <li><a href="#">IT Support</a></li>
-                                    <li><a href="#">Big Data & ML</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <?php
+                            wp_nav_menu([
+                                'menu' => 'header',
+                                'container' => '',
+                                'theme_location' => 'header',
+                                'items_wrap' => '<ul class="list-unstyled menu-list">%3$s</ul>'
+                            ])
+                        ?>
                     </div>
                 </div>
             </div>
