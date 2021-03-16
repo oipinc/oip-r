@@ -61,28 +61,33 @@
         <?php endwhile; wp_reset_query(); ?>
         <!-- end -->
 
-        <section class="home-service custom-padding">
-            <div class="container-fluid">
-                <div class="home-service-title" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <p>Services</p>
-                    <p class="lead">Being at a crossroads of Insurance and Technology allows us to offer prime digital services that will make digital transformation a reality for your business.</p>
-                </div>
+        <!-- Service -->
+        <?php if (!empty($services)): ?>
+            <section class="home-service custom-padding">
+                <div class="container-fluid">
+                    <div class="home-service-title" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <p>Services</p>
+                        <p class="lead">Being at a crossroads of Insurance and Technology allows us to offer prime digital services that will make digital transformation a reality for your business.</p>
+                    </div>
 
-                <div class="row">
-                    <?php foreach (get_posts($services) as $key => $service): ?>
-                        <div class="<?php echo $key > 1 ? 'col-sm-4' : 'col-sm-6'?>">
-                            <div class="home-service-box" data-aos="<?php echo $key % 2 ? 'fade-right' : 'fade-left'; ?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                                <span class="number">0<?php echo $key + 1; ?></span>
-                                <h4><?php echo $service->post_title; ?></h4>
-                                <?php echo get_field('short_description', $service->ID)['content']; ?>
-                                <a href="<?php echo get_permalink($service->ID); ?>">Read more</a>
+                    <div class="row">
+                        <?php foreach (get_posts($services) as $key => $service): ?>
+                            <div class="<?php echo $key > 1 ? 'col-sm-4' : 'col-sm-6'?>">
+                                <div class="home-service-box" data-aos="<?php echo $key % 2 ? 'fade-right' : 'fade-left'; ?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                    <span class="number">0<?php echo $key + 1; ?></span>
+                                    <h4><?php echo $service->post_title; ?></h4>
+                                    <?php echo get_field('short_description', $service->ID)['content']; ?>
+                                    <a href="<?php echo get_permalink($service->ID); ?>">Read more</a>
+                                </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
-            </div>
-            <div class="custom-container"></div>
-        </section>
+                <div class="custom-container"></div>
+            </section>
+        <?php endif; ?>
+        <!-- end -->
+
         <section class="product">
             <div class="swiper-container">
                 <div class="swiper-wrapper">

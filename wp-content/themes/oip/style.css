@@ -383,7 +383,7 @@ body.open .menu-icon__line-right {
     display: inline-block;
 }
 footer {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 footer p {
     line-height: 35px;
@@ -411,10 +411,10 @@ footer h2 {
     margin-top: 30px;
 }
 .address-info {
-    margin-top: 65px;
+    margin-top: 20px;
 }
 .footer-copyright {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .copyright {
     line-height: 32px;
@@ -1340,6 +1340,15 @@ footer h2 {
     }
     .contact-us-section-title {
         margin-bottom: 60px;
+    }
+    .footer-copyright {
+        margin-top: 100px;
+    }
+    .address-info {
+        margin-top: 65px;
+    }
+    footer {
+        padding: 100px 0;
     }
 }
 @media screen and (min-width: 1367px) {
