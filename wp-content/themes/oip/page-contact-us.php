@@ -9,8 +9,7 @@
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="contact-us">
 
-        <?php
-        $hero = get_field('hero');
+        <?php $hero = get_field('hero');
         if ($hero): ?>
             <section class="contact-us-hero position-relative">
                 <img class="img-fluid" src="<?php echo $hero['image'] ?>" srcset=" <?php echo $hero['retina_image'] ?> 2x" alt="OIP group">

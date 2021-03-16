@@ -23,6 +23,9 @@ html.init,
 body.init {
     overflow: hidden;
 }
+.bg-navy {
+    background-color: var(--navy);
+}
 .bg-dark-blue {
     background-color: var(--dark-blue);
 }
@@ -313,9 +316,10 @@ body.open .menu-icon__line-right {
     transform: translateX(-100%);
     height: 100vh;
     transition: .3s ease-in-out;
+    padding: 0 15px;
 }
 .init-container h1 {
-    font-size: 150px;
+    font-size: 50px;
     animation: 0.5s ease-out 0s 1 slideInFromLeft;
 }
 .init .init-container {
@@ -324,7 +328,7 @@ body.open .menu-icon__line-right {
 .init-logo {
     position: absolute;
     top: 39px;
-    left: 87px;
+    left: 15px;
 }
 
 @keyframes slideInFromLeft {
@@ -518,7 +522,7 @@ footer h2 {
     padding-bottom: 150px;
 }
 .case-study-text-nav h2 {
-    font-size: 120px;
+    font-size: 50px;
     font-weight: bold;
     color: rgba(255,255,255, 0.05);
     line-height: 0.83;
@@ -762,7 +766,7 @@ footer h2 {
 
 /* Contact us */
 .contact-us-intro {
-    padding-top: 180px;
+    padding-top: 50px;
     font-size: 18px;
     color: var(--navy);
     line-height: 1.83;
@@ -770,22 +774,22 @@ footer h2 {
 }
 .contact-us-intro-bg h2 {
     opacity: 0.05;
-    font-size: 350px;
+    font-size: 150px;
     font-weight: bold;
     color: var(--navy);
 }
 .contact-us-intro p {
-    font-size: 18px;
+    font-size: 14px;
 }
 .contact-us-intro-bg {
     position: absolute;
     right: 0;
-    left: -150px;
+    left: -30px;
     bottom: 0;
     white-space: nowrap;
 }
 .contact-email {
-    font-size: 120px;
+    font-size: 40px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -800,31 +804,31 @@ footer h2 {
     align-items: center;
 }
 .contact-us-hero-content h1 {
-    font-size: 150px;
+    font-size: 50px;
 }
 .contact-us-hero-content p {
     color: #fbfbff;
 }
 .contact-us-office {
-    padding-top: 180px;
-    padding-bottom: 144px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .office-box {
-    width: 563px;
-    height: 563px;
+    width: calc(100vw - 24px);
+    height: 250px;
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgba(0, 2, 36, 0.2);
     background-blend-mode: multiply;
-    padding: 80px 67px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;
+    background-size: cover;
 }
 .office-box h5 {
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 25px;
 }
 .office-box:hover {
     background-color: rgba(0, 2, 36, 0.8);
@@ -840,10 +844,10 @@ footer h2 {
 }
 .contact-us-section-title {
     color: var(--navy);
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 .contact-us-section-title h4 {
-    font-size: 30px;
+    font-size: 20px;
 }
 .contact-us-section-title p {
     margin-bottom: 50px;
@@ -855,7 +859,7 @@ footer h2 {
     height: 87vh;
 }
 .career-hero h1 {
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 600
 }
 .career-number {
@@ -865,26 +869,27 @@ footer h2 {
 }
 .career-values {
     color: #fbfbff;
-    padding-top: 100px;
-    padding-bottom: 250px;
 }
 .career-values h4 {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 600;
     line-height: 1.26;
     margin-bottom: 30px;
+}
+.career-values br {
+    display: none;
 }
 .section-title {
     margin-bottom: 50px;
 }
 .board-title {
-    font-size: 40px;
+    font-size: 25px;
     font-weight: bold;
     color: white;
-    margin-bottom: 106px;
+    margin-bottom: 30px;
 }
 .board-row {
-    padding: 75px 112px;
+    padding: 15px 0;
     border-top: 1px solid #505147;
 }
 .board-row:last-child {
@@ -893,52 +898,48 @@ footer h2 {
 .board-row * {
     margin: 0;
 }
-.career-board {
-    padding-top: 150px;
-    padding-bottom: 150px;
+.career-board,
+.career-values,
+.career-open-position,
+.career-benefit {
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 .board-day p {
     white-space: nowrap;
 }
 .board-redirection-box {
-    height: 430px;
+    height: 100%;
+    min-height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0 135px;
+    justify-content: start;
 }
 .board-redirection-box .custom-link {
-    font-size: 40px;
+    font-size: 25px;
     font-weight: normal;
 }
 .board-redirection-box h3 {
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 600;
     line-height: 1.88;
     color: #191b3a;
 }
-.board-redirection-box p {
-    font-size: 18px;
-}
-.career-open-position {
-    padding-top: 30px;
-    padding-bottom: 245px;
-}
 .career-job-box {
-    padding: 81px;
+    padding: 30px 15px;
     background-color: var(--dark-blue);
 }
 .career-job-box:hover {
     background-color: var(--gray-secondary);
 }
 .career-job-box h3 {
-    font-size: 60px;
+    font-size: 25px;
     font-weight: 600;
-    margin-bottom: 33px;
+    margin-bottom: 20px;
 }
 .career-job-box p,
 .job-hero .career-job-box-small-title {
-    font-size: 21px;
+    font-size: 12px;
     font-weight: 600;
     margin: 0;
 }
@@ -949,21 +950,16 @@ footer h2 {
     color: white;
 }
 .career-open-position-section-title {
-    margin-bottom: 106px;
+    margin-bottom: 30px;
     max-width: 568px;
 }
 .career-open-position-section-title h2 {
     line-height: 0.9;
 }
-.career-benefit {
-    padding-top: 150px;
-    padding-bottom: 150px;
-}
 .career-benefit-holder ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    column-count: 2;
 }
 .career-benefit-holder ul li {
     border-bottom: 1px solid #505147;
@@ -973,20 +969,23 @@ footer h2 {
 
 /* Job */
 .job-wrapper p {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.67;
 }
 .job-wrapper .lead p,
 .job-section-title {
-    font-size: 30px;
+    font-size: 14px;
     line-height: 1.47;
+}
+.job-wrapper .lead p br {
+    display: none;
 }
 .job-wrapper li {
     list-style: none;
     position: relative;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
-    line-height: 2.17;
+    line-height: 30px;
 }
 .job-wrapper li:before {
     width: 12px;
@@ -999,12 +998,12 @@ footer h2 {
     top: 34%;
 }
 .job-holder {
-    margin-bottom: 140px;
+    margin-bottom: 50px;
 }
 .border-top-line {
     border-top: 2px solid white;
-    padding: 55px 0;
-    margin: 55px 0;
+    padding: 25px 0 0 0;
+    margin: 25px 0 0 0;
 }
 .border-top-line h6 {
     margin-bottom: 20px;
@@ -1016,7 +1015,7 @@ footer h2 {
     height: 87vh;
 }
 .job-hero h1 {
-    font-size: 80px;
+    font-size: 30px;
     font-weight: bold;
     line-height: 1.65;
 }
@@ -1024,17 +1023,17 @@ footer h2 {
     color: var(--gray-secondary);
 }
 .job-form {
-    padding: 160px 280px;
+    padding: 30px 15px;
     background-color: rgba(255,255,255,0.05);
 }
 .job-form h4 {
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 600;
     color: var(--gray-secondary);
     margin-bottom: 25px;
 }
 .job-form p {
-    font-size: 18px;
+    font-size: 14px;
 }
 .form-holder .form-control {
     border-radius: 0;
@@ -1051,7 +1050,7 @@ footer h2 {
     line-height: 3.67;
 }
 .form-holder input {
-    font-size: 30px;
+    font-size: 14px;
     line-height: 1.47;
     color: white !important;
 }
@@ -1064,13 +1063,13 @@ footer h2 {
     font-weight: bold;
     line-height: 2.17;
     color: white;
-    width: 281px;
-    height: 84px;
+    width: 150px;
+    height: 50px;
     background-color: var(--gray-secondary);
 }
 .btn-upload {
-    width: 450px;
-    height: 84px;
+    width: 200px;
+    height: 50px;
     border: 1px solid #505147;
     display: flex;
     align-items: center;
@@ -1086,8 +1085,183 @@ footer h2 {
 }
 /* end */
 
+/* Product */
+.product-hero {
+    height: 87vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.product-hero h1 {
+    font-size: 150px;
+}
+.product-hero h2 {
+    font-size: 60px;
+}
+.product-hero p {
+    font-size: 18px;
+}
+.product-intro p {
+    font-size: 30px;
+    line-height: 1.47;
+}
+.product-features .number {
+    font-size: 25px;
+    margin-bottom: 23px;
+}
+.product-features h5 {
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+.product-features-box {
+    margin-bottom: 120px;
+}
+.product-features-title {
+    margin-bottom: 105px;
+}
+.product-features-title h2 {
+    margin-bottom: 38px;
+    line-height: normal;
+}
+.product-request-form {
+    padding-left: 152px;
+    padding-right: 152px;
+}
+.product-request-form h2 {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 1.6;
+}
+.product-request-form p {
+    font-size: 18px;
+}
+.product-request-form-holder {
+    padding: 128px;
+}
+.related-product h3 {
+    color: var(--gray-secondary);
+}
+.related-product .related-link {
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.product-spotlight .number {
+    font-size: 40px;
+    margin-bottom: 28px;
+    display: inline-block;
+}
+.product-spotlight-title,
+.product-spotlight-box {
+    margin-bottom: 80px;
+}
+.product-spotlight-title h2 {
+    line-height: normal;
+}
+.text-nav-subtitle {
+    position: absolute;
+    bottom: 25px;
+    left: 10px;
+}
+.btn-demo {
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 0;
+    background-color: var(--gray-secondary);
+    width: 351px;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+.btn-demo:after {
+    position: absolute;
+    content: "";
+    right: 20px;
+    top: 44%;
+    background-image: url("assets/images/right-arrow-small.svg");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 16px;
+}
+.product-values h2 {
+    font-size: 60px;
+    font-weight: normal;
+    margin-bottom: 115px;
+}
+.product-values .number {
+    font-size: 25px;
+    display: inline-block;
+    margin-bottom: 18px;
+}
+.product-values p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+.product-values-box {
+    margin-bottom: 115px;
+    max-width: 300px;
+    border-bottom: 1px solid #505147;
+}
+.product-story-item {
+    padding: 184px 142px;
+    margin: 0 25px;
+}
+.product-story-item h3 {
+    font-size: 60px;
+    font-weight: 600;
+}
+.product-story-item p {
+    line-height: 1.78;
+    font-size: 18px;
+}
+.product-stories-title h2 {
+    font-size: 60px;
+    margin-bottom: 56px;
+    font-weight: normal;
+}
+.product-stories-title p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.78;
+}
+.product-stories-slider {
+    margin-top: 76px;
+}
+.product-story-item.slick-active.slick-current {
+    background-color: var(--transparent-blue);
+}
+/* end */
+
+@media screen and (min-width: 568px) {
+    .office-box {
+        width: calc((100vw / 2) - 24px);
+        height: calc((100vw / 2) - 24px);
+    }
+}
+@media screen and (min-width: 768px) {
+    .career-job-box p,
+    .job-hero .career-job-box-small-title,
+    .job-wrapper p,
+    .job-wrapper .lead p,
+    .job-section-title,
+    .job-wrapper li,
+    .job-form p,
+    .contact-us-intro p {
+        font-size: 16px;
+    }
+    .board-redirection-box {
+        height: 260px;
+        justify-content: center;
+    }
+}
 @media screen and (min-width: 992px) {
-    .swiper-wrapper h3 {
+    .swiper-wrapper h3,
+    .job-hero h1 {
         font-size: 50px;
     }
     p {
@@ -1098,6 +1272,56 @@ footer h2 {
     }
     .hero-info-box {
         padding: 30px 65px;
+    }
+    .init-container h1 {
+        font-size: 100px;
+    }
+    .career-open-position-section-title {
+        margin-bottom: 106px;
+    }
+    .case-study-text-nav h2 {
+        font-size: 75px;
+    }
+    .board-title {
+        font-size: 40px;
+    }
+    .career-board,
+    .career-values,
+    .career-open-position,
+    .career-benefit {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .board-row {
+        padding: 30px 15px;
+    }
+    .career-hero h1 {
+        font-size: 40px;
+    }
+    .job-wrapper .lead p,
+    .job-section-title {
+        font-size: 21px;
+    }
+    .job-wrapper li {
+        font-size: 18px;
+        line-height: 2.17;
+    }
+    .job-wrapper p,
+    .contact-us-intro p {
+        font-size: 18px;
+    }
+    .border-top-line {
+        padding: 55px 0;
+        margin: 55px 0;
+    }
+    .office-box {
+        padding: 80px 67px;
+    }
+    .office-box h5 {
+        font-size: 35px;
+    }
+    .contact-us-section-title {
+        margin-bottom: 60px;
     }
 }
 @media screen and (min-width: 1367px) {
@@ -1174,11 +1398,127 @@ footer h2 {
     .what-we-do {
         padding:203px 0 146px 0;
     }
-    .number {
+    .number,
+    .job-hero h1 {
         font-size: 80px;
     }
+    .contact-us-hero-content h1 {
+        font-size: 150px;
+    }
+    .career-hero h1 {
+        font-size: 60px;
+    }
+    .career-values h4 {
+        font-size: 35px;
+    }
+    .career-values br,
+    .job-wrapper .lead p br {
+        display: block;
+    }
+    .career-values {
+        padding-top: 100px;
+        padding-bottom: 250px;
+    }
+    .career-benefit,
+    .career-board,
     .use-case-img-holder {
         padding-top: 150px;
         padding-bottom: 150px;
+    }
+    .board-row {
+        padding: 75px 112px;
+    }
+    .case-study-text-nav h2 {
+        font-size: 120px;
+    }
+    .career-job-box {
+        padding: 81px;
+    }
+    .career-job-box h3 {
+        font-size: 60px;
+        margin-bottom: 33px;
+    }
+    .career-job-box p,
+    .job-hero .career-job-box-small-title {
+        font-size: 21px;
+    }
+    .career-open-position {
+        padding-top: 30px;
+        padding-bottom: 245px;
+    }
+    .board-title {
+        margin-bottom: 106px;
+    }
+    .board-redirection-box .custom-link {
+        font-size: 40px;
+    }
+    .board-redirection-box {
+        height: 430px;
+        padding: 0 135px;
+    }
+    .board-redirection-box p {
+        font-size: 18px;
+    }
+    .career-benefit-holder ul {
+        column-count: 2;
+    }
+    .board-redirection-box h3 {
+        font-size: 40px;
+    }
+    .init-logo {
+        left: 87px;
+    }
+    .init-container h1 {
+        font-size: 150px;
+    }
+    .job-wrapper .lead p,
+    .job-section-title {
+        font-size: 30px;
+    }
+    .job-holder {
+        margin-bottom: 140px;
+    }
+    .job-form {
+        padding: 160px 280px;
+    }
+    .job-form h4 {
+        font-size: 60px;
+    }
+    .job-form p {
+        font-size: 18px;
+    }
+    .form-holder input {
+        font-size: 30px;
+    }
+    .btn-apply {
+        width: 281px;
+        height: 84px;
+    }
+    .btn-upload {
+        width: 450px;
+        height: 84px;
+    }
+    .office-box {
+        width: 563px;
+        height: 563px;
+    }
+    .contact-email {
+        font-size: 120px;
+    }
+    .contact-us-intro {
+        padding-top: 180px;
+    }
+    .contact-us-office {
+        padding-top: 180px;
+        padding-bottom: 144px;
+    }
+    .contact-us-intro-bg {
+        left: -150px;
+    }
+    .contact-us-intro-bg h2 {
+        font-size: 350px;
+    }
+    .contact-us-section-title h4 {
+        font-size: 30px;
     }
 }
