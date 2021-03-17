@@ -112,7 +112,7 @@ function initProductSlider() {
         nextArrow:"<img class='next-arrow' src='/wp-content/themes/oip/assets/images/right-arrow-small.svg' />",
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 1200,
                 settings: {
                     arrows: false,
                     centerMode: true,

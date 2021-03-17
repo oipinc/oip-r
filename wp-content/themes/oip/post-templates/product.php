@@ -84,7 +84,7 @@
                         <?php foreach ($slider as $key => $item): ?>
                             <div class="product-item bg-transparent-blue" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <img class="img-fluid" src="<?php echo $item['image']; ?>" alt="Slide <?php echo $key; ?>">
-                                <div class="item-caption">
+                                <div class="item-caption mt-3">
                                     <?php echo $item['caption']; ?>
                                 </div>
                             </div>
@@ -168,7 +168,7 @@
                         <?php foreach ($slider as $key => $item): ?>
                             <div class="product-item bg-transparent-blue">
                                 <img class="img-fluid" src="<?php echo $item['image']; ?>" alt="Slide <?php echo $key; ?>">
-                                <div class="item-caption">
+                                <div class="item-caption mt-3">
                                     <?php echo $item['caption']; ?>
                                 </div>
                             </div>
