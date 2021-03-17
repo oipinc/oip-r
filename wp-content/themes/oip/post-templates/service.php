@@ -75,7 +75,7 @@
         <?php endif; ?>
 
         <?php if ($serviceBenefitsBlockView2): ?>
-            <section class="service-benefits custom-padding block view-2 d-none">
+            <section class="service-benefits custom-padding block view-2">
                 <div class="container-fluid">
                     <?php echo $serviceBenefitsView2; ?>
                     <div class="clearfix"></div>
