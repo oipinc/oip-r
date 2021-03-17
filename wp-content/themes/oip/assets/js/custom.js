@@ -24,7 +24,7 @@ function pageTransitionIn() {
 function pageTransitionOut(container) {
     // GSAP methods can be chained and return directly a promise
     return gsap
-        .timeline({ delay: 1 }) // More readable to put it here
+        .timeline({ delay: 1}) // More readable to put it here
         .add('start') // Use a label to sync screen and content animation
         .to(loadingScreen, {
             duration: 0.5,
@@ -91,20 +91,11 @@ function initProductSlickSlider() {
         nextArrow:"<img class='next-arrow' src='/wp-content/themes/oip/assets/images/right-arrow-small.svg' />",
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
+                    centerPadding: '15px',
                     slidesToShow: 1
                 }
             }
@@ -117,12 +108,9 @@ function swipeSliderInit() {
 
     new Swiper('.swiper-container', {
         slidesPerView: 1,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '"></span>';
-            },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         on: {
             slideChangeTransitionStart: function () {
@@ -162,13 +150,13 @@ jQuery(function() {
                 // const done = this.async();
 
                 await pageTransitionIn()
+                jQuery("html, body, .menu").removeClass("open");
                 // No more needed as we "await" for pageTransition
                 // And i we change the transition duration, no need to update the delay…
                 // await delay(1000)
 
                 // Not needed with async/await or promises
                 // done()
-
                 // Loading screen is hiding everything, time to remove old content!
                 data.current.container.remove()
             },
@@ -188,8 +176,19 @@ jQuery(function() {
                 }
                 jQuery('.case-study-slide-item, .product-story-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
+
                 const el = jQuery('.service-benefits.view-2 ul li');
+                const caseStudy = jQuery('.case h4');
+
                 el.css("height", getMaxHeight('.service-benefits.view-2 ul li'));
+                caseStudy.css("height", getMaxHeight('.case h4'));
+
+                const url = window.location.pathname.split('/');
+                if (url[1] !== "product") {
+                    jQuery("body").removeClass("bg-dark-blue");
+                } else {
+                    jQuery("body").addClass("bg-dark-blue");
+                }
             },
             // Variations for didactical purpose…
             // Better browser support than async/await
@@ -206,12 +205,22 @@ jQuery(function() {
                 swipeSliderInit();
                 jQuery('.case-study-slide-item, .product-story-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
+
+                const url = window.location.pathname.split('/');
+                if (url[1] !== "product") {
+                    jQuery("body").removeClass("bg-dark-blue");
+                } else {
+                    jQuery("body").addClass("bg-dark-blue");
+                }
             }
         }]
     });
 
     const el = jQuery('.service-benefits.view-2 ul li');
+    const caseStudy = jQuery('.case h4');
+
     el.css("height", getMaxHeight('.service-benefits.view-2 ul li'));
+    caseStudy.css("height", getMaxHeight('.case h4'));
 
     setTimeout(function () {
         jQuery("html, body").removeClass("init");
@@ -226,8 +235,14 @@ jQuery(".btn-menu").on("click", function () {
     jQuery("html, body, .menu").toggleClass("open");
 });
 jQuery(".menu-navigation a").on("click", function () {
-    jQuery(this).siblings().slideToggle(300);
+    const href = jQuery(this).attr("href");
+    if (href === "#") {
+        jQuery(this).siblings().slideToggle(300);
+    } else {
+        jQuery(".menu-navigation li").removeClass("current_page_item");
+        jQuery(this).parent().addClass("current_page_item");
+    }
 });
-jQuery(".what-we-do-box a").hover(function () {
+jQuery(".home-service-box a").hover(function () {
     jQuery(this).parent().toggleClass("hovered");
 });

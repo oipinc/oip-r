@@ -13,20 +13,16 @@
             $serviceBenefitsBlockView2    = $serviceBenefitsBlock['checkbox_service_benefits_view_2'];
             $serviceBenefitsView1         = $serviceBenefitsBlock['service_benefits_view_1'];
             $serviceBenefitsView2         = $serviceBenefitsBlock['service_benefits_view_2'];
+            $serviceBenefitsTitle         = $serviceBenefitsBlock['service_benefit_title'];
         ?>
 
-        <section class="service-hero custom-wrapper">
-            <video
-                    id="background_animation"
-                    style="width: 100%; height: 100vh;"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/video/background-animation.mp4"
-                    autoplay="true"
-                    loop="true"
-                    muted="muted">
-            </video>
+        <section class="service-hero custom-padding hero-gif">
             <div class="service-hero-content">
                 <h6 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Services</h6>
                 <h1 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"><?php echo the_title(); ?></h1>
+                <?php while ( have_posts() ) : the_post(); ?>
+                    <?php the_content(); ?>
+                <?php endwhile; wp_reset_query(); ?>
             </div>
         </section>
 
@@ -42,6 +38,23 @@
         <?php if ($serviceBenefitsBlockView1): ?>
             <section class="service-benefits custom-wrapper block view-1">
                 <div class="container-fluid">
+                    <?php if ($serviceBenefitsTitle): ?>
+                        <div class="row service-benefits-title">
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-0 me-4">
+                                        <h6 class="my-0"><?php echo $serviceBenefitsTitle['title']; ?></h6>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <?php echo $serviceBenefitsTitle['content']; ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                     <div class="row">
                         <?php foreach ($serviceBenefitsView1 as $key => $view): ?>
                             <div class="col-4 <?php echo $view['position']; ?>" data-aos="<?php echo $key % 2 ? 'fade-right' : 'fade-left'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
