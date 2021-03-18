@@ -209,6 +209,7 @@ jQuery(function() {
                 }
                 jQuery('.case-study-slide-item, .product-story-item, .product-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
+                jQuery('.product .swiper-slide, .case-mob .swiper-slide').matchHeight();
 
                 const url = window.location.pathname.split('/');
                 if (url[1] !== "product") {
@@ -236,6 +237,7 @@ jQuery(function() {
 
                 jQuery('.case-study-slide-item, .product-story-item, .product-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
+                jQuery('.product .swiper-slide, .case-mob .swiper-slide').matchHeight();
 
                 const url = window.location.pathname.split('/');
                 if (url[1] !== "product") {
@@ -274,5 +276,7 @@ jQuery(".home-service-box a").hover(function () {
 });
 
 jQuery(window).resize(function() {
+    elMaxHeight();
     jQuery('.service-benefits.view-2 ul li').matchHeight();
+    jQuery('.product .swiper-slide, .case-mob .swiper-slide').matchHeight();
 });

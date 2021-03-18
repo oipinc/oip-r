@@ -109,7 +109,7 @@
                     <div class="recommended-case-study <?php echo $key % 2 ? 'bg-gray-secondary' : 'bg-dark-blue'; ?>" style="background-image: url(<?php echo $description['feature_image']['image']; ?>)">
                         <div class="container-fluid h-100">
                             <div class="row justify-content-xxl-center align-items-center h-100">
-                                <div class="col-9">
+                                <div class="col-lg-9">
                                     <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                         <span class="relation-number">0<?php echo $key + 1; ?></span>
                                         <h2><?php echo $title; ?></h2>

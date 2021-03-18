@@ -244,12 +244,11 @@ body.open .menu-icon__line-right {
     max-width: 100%;
 }
 .home-service {
-    padding:50px 0;
+    padding: 50px 0;
 }
-/*.custom-padding {*/
-/*    padding-left: 263px !important;*/
-/*    padding-right: 72px !important;*/
-/*}*/
+.meet-us-img {
+    margin: 30px 0;
+}
 .home-service-box {
     padding: 20px 0;
 }
@@ -287,10 +286,6 @@ body.open .menu-icon__line-right {
 .home-service a {
     text-decoration: none;
     font-weight: bold;
-}
-.home-service .lead {
-    font-size: 35px;
-    line-height: 1.6;
 }
 .number {
     font-weight: bold;
@@ -459,15 +454,14 @@ footer h2 {
     height: 100%;
 }
 .swiper-slide {
-    background-image: url("assets/images/oip-bg.svg");
     background-repeat: no-repeat;
-    background-position: 92% center;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-size: auto 90%;
     padding: 50px 0;
-    min-height: 100vh;
 }
 .swiper-wrapper h3 {
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 40px;
     margin-bottom: 30px;
 }
 .swiper-wrapper a {
@@ -483,6 +477,10 @@ footer h2 {
 }
 .swiper-pagination-bullet-active {
     background-color: var(--navy);
+}
+.swiper-button-next,
+.swiper-button-prev {
+    display: none;
 }
 .swiper-button-next:after {
     font-family: none;
@@ -644,6 +642,7 @@ footer h2 {
     align-items: center;
     color: white;
     position: relative;
+    text-decoration: none !important;
 }
 .btn-contact-us:after {
     position: absolute;
@@ -1387,6 +1386,9 @@ footer h2 {
     .about-company .about-company-more a {
         margin-right: 100px;
     }
+    .swiper-slide {
+        background-position: 92% center;
+    }
 }
 @media screen and (min-width: 992px) {
     .swiper-wrapper h3,
@@ -1551,6 +1553,23 @@ footer h2 {
     .about-hero {
         margin: 250px 0 150px;
     }
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: block;
+    }
+    .swiper-button-prev {
+        bottom: 63px;
+        top: auto;
+        left: 15px;
+    }
+    .swiper-button-next {
+        bottom: 63px;
+        top: auto;
+        left: 90px;
+    }
+    .swiper-slide {
+        padding: 170px 0;
+    }
 }
 @media screen and (min-width: 1367px) {
     .service-impact p,
@@ -1577,6 +1596,7 @@ footer h2 {
     .case-study-intro p,
     .service-intro p,
     .service-benefits.view-2 p,
+    .meet-us .lead,
     .job-section-title,
     .contact-us-section-title h4,
     .service-benefits.view-2 h4,
@@ -1615,8 +1635,7 @@ footer h2 {
     }
     .hero h1,
     .service-hero h1,
-    footer h2,
-    .swiper-wrapper h3 {
+    footer h2 {
         font-size: 100px;
     }
     .contact-email,
@@ -1640,12 +1659,6 @@ footer h2 {
     .case-holder {
         padding-right: 80px;
     }
-    .case {
-        padding: 245px 0;
-    }
-    .swiper-slide {
-        padding: 170px 0;
-    }
     .hero h1 {
         line-height: 114px;
     }
@@ -1663,9 +1676,6 @@ footer h2 {
     }
     .footer-copyright {
         margin-top: 170px;
-    }
-    footer {
-        padding: 290px 0 134px;
     }
     .home-service-box h4 {
         font-size: 35px;
@@ -1749,16 +1759,6 @@ footer h2 {
     }
     .contact-us-intro-bg h2 {
         font-size: 350px;
-    }
-    .swiper-button-prev {
-        bottom: 63px;
-        top: auto;
-        left: 278px;
-    }
-    .swiper-button-next {
-        bottom: 63px;
-        top: auto;
-        left: 350px;
     }
     .block {
         padding-top: 100px;
@@ -1848,6 +1848,13 @@ footer h2 {
         padding-top: 220px;
         padding-bottom: 130px;
     }
+    .home-service .lead {
+        font-size: 35px;
+        line-height: 1.6;
+    }
+    .meet-us-img {
+        margin: 90px 0;
+    }
 }
 @media screen and (min-width: 1537px) {
     .custom-wrapper {
@@ -1888,5 +1895,27 @@ footer h2 {
     .about-team {
         padding-top: 100px;
         padding-bottom: 100px;
+    }
+    .swiper-wrapper h3 {
+        font-size: 100px;
+    }
+    .swiper-button-prev {
+        left: 278px;
+    }
+    .swiper-button-next {
+        left: 350px;
+    }
+    .swiper-slide {
+        min-height: 100vh;
+    }
+    footer {
+        padding: 290px 0 134px;
+    }
+    .case {
+        padding: 245px 0;
+    }
+    .meet-us {
+        padding-top: 80px;
+        padding-bottom: 185px;
     }
 }
