@@ -63,7 +63,7 @@
                                 $background = get_sub_field('background');
                                 ?>
                                 <div class="col-auto mb-4">
-                                    <div class="office-box" style="background-image: url('<?php echo $background; ?>')" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="<?php echo $count*80; ?>">
+                                    <div class="office-box" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="<?php echo $count*80; ?>">
                                         <div>
                                             <h5><?php echo $title; ?></h5>
                                         </div>
