@@ -8,72 +8,58 @@
 
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="about">
+        <?php
+            $jobs         = get_field('jobs');
+            $intro        = get_field('intro');
+            $teamImage    = get_field('team_image');
+            $aboutCompany = get_field('about_company');
+        ?>
 
-        <section class="about-hero custom-padding">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-9">
-                        <h1>
-                            Our work is serious, we are not.
-                        </h1>
-                        <p>
-                            Culture
-                        </p>
-                        <h3>
-                            We are OIP Robotics. We believe in a perpetual source of ideas and
-                            people bringing them to You. We stand for technology serving business
-                            and humanity, not the other way around.
-                        </h3>
-                        <p>
-                            We work in collaborative, everyone-pitch-in mindset where employees have autonomy
-                            to help customers the way they see fit, rather than following strict guidelines and scripts.
-                        </p>
+
+        <!-- Hero -->
+        <?php while ( have_posts() ) : the_post(); ?>
+            <section class="about-hero custom-padding">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-10" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                            <?php the_content(); ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php endwhile; wp_reset_query(); ?>
+        <!-- end -->
 
-        <section class="about-people custom-padding">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-6">
-                        <h6>Wizards behind the scenes</h6>
-                        <p>
-                            We’re artists, scientists, parents, trail runners, chefs, dancers, gamers, chess players, writers, big thinkers, storytellers,
-                            dog lovers, bikers, singers and much more. Above all else, we’re technology advocates: launching you to wherever you need to go.
-                        </p>
+        <!-- Hero -->
+        <?php if ($intro): ?>
+            <section class="about-people custom-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                            <?php echo $intro; ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php endif; ?>
+        <!-- end -->
 
-        <section class="about-team">
-            <div class="container-fluid">
-                <div class="row">
-                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/oip_team.png">
-                </div>
-            </div>
-        </section>
+        <!-- Image -->
+        <?php if ($teamImage): ?>
+            <section class="about-team text-center">
+                <img class="img-fluid" src="<?php echo $teamImage; ?>" alt="OIP Team" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            </section>
+        <?php endif; ?>
+        <!-- end -->
 
-        <section class="about-company custom-padding">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="section-title">
-                            OIP Robotics - BE AN INSURTECH
-                        </h2>
-                        <p>
-                            OIPR started as an InsurTech department within OIP as an alternative to classic tech shops.
-                            We believed we could create better software and faster processes when insurance and technology were treated as equals.
-                            <br><br>
-                            We’re not just millions of code lines, but people behind it.
-                            We're a bunch of tech geeks who strive to transform businesses by creating tools that are smart and convenient.
-                            You will find us at the intersection between Software Engineering, Automation and Customer Satisfaction.
-                            Crafting the insurance-native tech, that addresses real problems and gets the job done.
-                        </p>
-                    </div>
+        <!-- About Company -->
+        <?php if ($aboutCompany): ?>
+            <section class="about-company custom-wrapper">
+                <div class="container-fluid" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <?php echo $aboutCompany; ?>
+
                     <div class="about-company-more col-12">
-                        <a class="custom-link" href="#">
+                        <a class="custom-link" href="/contact-us">
                             <span>Contact us</span>
                             <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
                         </a>
@@ -83,60 +69,50 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php endif; ?>
+        <!-- end -->
 
-        <section class="about-career board-redirection-link">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="board-redirection-box">
-                            <div>
-                                <h3>Software Developer</h3>
-                                <p>
-                                    <span>Full time job</span>
-                                    <span>Remote</span>
-                                </p>
-                                <p>
-                                    <span>
-                                        Application due date
-                                    </span>
-                                    Open until filled
-                                </p>
-                                <div class="d-block text-end pb-4 pb-md-0">
-                                    <a class="custom-link" href="#">
-                                        <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
-                                    </a>
+        <!-- Jobs -->
+        <?php if ($jobs): ?>
+            <section class="about-career custom-wrapper">
+                <div class="container-fluid h-100">
+                    <div class="row align-items-center h-100">
+                        <?php
+                            $class = "";
+
+                            if (count($jobs) === 1) {
+                                $class = "col-12";
+                            } elseif (count($jobs) === 2) {
+                                $class = "col-lg-6";
+                            } elseif (count($jobs) === 3) {
+                                $class = "col-lg-4";
+                            }
+                        ?>
+
+                        <?php foreach ($jobs as $key => $job): ?>
+                            <div class="<?php echo $class; ?>" data-aos="<?php echo $key % 2 ? 'fade-right' : 'fade-left'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <h3 class="mb-4"><?php echo $job->post_title; ?></h3>
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="flex-grow-0 text-white-05 fw-bold me-3"><?php echo get_field('condition', $job->ID)['type_of_employment']; ?></div>
+                                    <div class="flex-grow-0 text-white-05 fw-bold"><?php echo get_field('condition', $job->ID)['place_of_employment']; ?></div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-0 text-white-05 fw-bold me-3">Application due date</div>
+                                    <div class="flex-grow-0 fw-bold"><?php echo get_field('condition', $job->ID)['application_due_date']; ?></div>
+                                    <div class="flex-grow-1 text-end me-lg-5">
+                                        <a class="custom-link" href="<?php echo get_permalink($job->ID); ?>">
+                                            <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="board-redirection-box">
-                            <div>
-                                <h3>DevOps</h3>
-                                <p>
-                                    <span>Full time job</span>
-                                    <span>Remote</span>
-                                </p>
-                                <p>
-                                    <span>
-                                        Application due date
-                                    </span>
-                                    Open until filled
-                                </p>
-                                <div class="d-block text-end pb-4 pb-md-0">
-                                    <a class="custom-link" href="#">
-                                        <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
-            </div>
-        </section>
-
+            </section>
+        <?php endif; ?>
+        <!-- end -->
     </main>
 </div>
 

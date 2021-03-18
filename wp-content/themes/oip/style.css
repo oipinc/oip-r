@@ -49,6 +49,9 @@ body.init {
 .bg-transparent-dark-blue {
     background-color: var(--transparent-dark-blue);
 }
+.text-white-05 {
+    color: rgba(255,255,255, 0.5);
+}
 p {
     font-size: 14px;
 }
@@ -1291,12 +1294,12 @@ footer h2 {
 }
 /* end */
 
-/* about */
+/* About */
 .about-hero {
-    margin: 250px 0 150px 0;
+    margin: 250px 0 150px;
 }
 .about-hero h1 {
-    font-size: 120px;
+    font-size: 50px;
     font-weight: bold;
     padding-bottom: 100px;
     line-height: 0.99;
@@ -1310,7 +1313,9 @@ footer h2 {
 .about-team {
     margin: 100px 0;
 }
-
+.about-company h2 {
+    margin-bottom: 47px;
+}
 .about-company .about-company-more {
     margin-top: 100px;
 }
@@ -1320,6 +1325,10 @@ footer h2 {
 }
 .about-company .about-company-more a img {
     margin-left: 30px;
+}
+.about-career {
+    height: 430px;
+    background-color: rgba(104, 106, 90, 0.08);
 }
 /* end */
 
@@ -1537,6 +1546,7 @@ footer h2 {
     .job-form p,
     .service-benefits-title p,
     .product-stories-title p,
+    .about-company p,
     .board-redirection-box p {
         font-size: 18px;
     }
@@ -1569,6 +1579,8 @@ footer h2 {
     .board-redirection-box .custom-link,
     .service-hero h3,
     .board-redirection-box h3,
+    .about-career h3,
+    .about-company h2,
     .footer-email {
         font-size: 40px;
     }
@@ -1602,6 +1614,7 @@ footer h2 {
     }
     .contact-us-hero-content h1,
     .product-hero h1,
+    .about-hero h1,
     .init-container h1 {
         font-size: 150px;
     }
@@ -1827,6 +1840,10 @@ footer h2 {
     .service-benefits.view-2 ul li:before {
         line-height: 3.5;
         top: -35px;
+    }
+    .about-company {
+        padding-top: 220px;
+        padding-bottom: 130px;
     }
 }
 @media screen and (min-width: 1537px) {
