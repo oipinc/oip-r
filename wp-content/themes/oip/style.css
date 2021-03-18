@@ -655,15 +655,15 @@ footer h2 {
 .service-intro ul {
     padding: 0;
     list-style: none;
-    column-count: 2;
-    margin-top: 70px;
+    margin-top: 30px;
+    margin-bottom: 0;
 }
 .service-intro {
     counter-reset: section;
 }
 .service-intro ul li {
     margin: 20px 0;
-    font-size: 30px;
+    width: 100%;
     font-weight: 600;
     color: #fbfbff;
     line-height: 1.53;
@@ -743,35 +743,26 @@ footer h2 {
     margin-bottom: 5px;
 }
 .service-benefits.view-2 h2 {
-    font-size: 60px;
     margin-bottom: 35px;
 }
-.service-benefits.view-2 p {
-    font-size: 18px;
-}
 .service-benefits.view-2 h4 {
-    font-size: 30px;
     margin-bottom: 35px;
 }
 .service-benefits.view-2 ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
 }
 .service-benefits.view-2 ul li {
-    display: inline-block;
-    float: left;
-    font-size: 20px;
-    width: 260px;
+    width: 100%;
     font-weight: 600;
-    padding: 20px 0;
+    padding: 15px 0;
     border-bottom: 1px solid #505147;
-    margin: 30px 150px 30px 0;
+    margin: 15px 0;
     counter-increment: section;
     position: relative;
-}
-.service-benefits.view-2 ul li:nth-child(4n) {
-    margin-right: 0;
 }
 .service-benefits.view-2 {
     counter-reset: section;
@@ -779,11 +770,11 @@ footer h2 {
 .service-benefits.view-2 ul li:before {
     content: '0'counter(section);
     font-size: 16px;
-    line-height: 3.5;
+    line-height: 1.5;
     color: #fbfbff;
     position: absolute;
     left: 0;
-    top: -35px;
+    top: -7px;
     font-weight: bold;
 }
 .service-benefits-title {
@@ -1336,6 +1327,20 @@ footer h2 {
         background-position: 90% center;
         background-size: 430px;
     }
+    .service-benefits.view-2 ul li {
+        width: 48.5%;
+        padding: 20px 0;
+        margin: 15px 15px 15px 0;
+    }
+    .service-benefits.view-2 ul li:nth-child(2n) {
+        margin-right: 0;
+    }
+    .service-intro ul li {
+        width: 48%;
+    }
+    .service-intro ul {
+        margin-top: 70px;
+    }
 }
 @media screen and (min-width: 992px) {
     .swiper-wrapper h3,
@@ -1481,6 +1486,16 @@ footer h2 {
     .service-impact h6 {
         font-size: 100px;
     }
+    .service-benefits.view-2 ul li {
+        width: 32%;
+        margin: 15px 15px 15px 0;
+    }
+    .service-benefits.view-2 ul li:nth-child(2n) {
+        margin-right: 15px !important;
+    }
+    .service-benefits.view-2 ul li:nth-child(3n) {
+        margin-right: 0;
+    }
 }
 @media screen and (min-width: 1367px) {
     .service-impact p,
@@ -1490,6 +1505,9 @@ footer h2 {
     .product-stories-title p,
     .board-redirection-box p {
         font-size: 18px;
+    }
+    .service-benefits.view-2 ul li {
+        font-size: 20px;
     }
     .career-job-box p,
     .job-hero .career-job-box-small-title {
@@ -1502,9 +1520,12 @@ footer h2 {
     .product-intro p,
     .case-study-intro p,
     .service-intro p,
+    .service-benefits.view-2 p,
     .job-section-title,
     .contact-us-section-title h4,
+    .service-benefits.view-2 h4,
     .service-impact li,
+    .service-intro ul li,
     .form-holder input {
         font-size: 30px;
     }
@@ -1524,6 +1545,7 @@ footer h2 {
     .service-impact h2,
     .product-stories-title h2,
     .product-values h2,
+    .service-benefits.view-2 h2,
     .product-story-item h3,
     .career-job-box h3,
     .career-hero h1 {
@@ -1555,10 +1577,6 @@ footer h2 {
     .hero-title,
     .copyright-text {
         margin-left: 120px;
-    }
-    .custom-padding {
-        padding-left: 263px !important;
-        padding-right: 72px !important;
     }
     .case-holder {
         padding-right: 80px;
@@ -1692,10 +1710,6 @@ footer h2 {
         top: auto;
         left: 350px;
     }
-    .custom-wrapper {
-        padding-left: 263px;
-        padding-right: 263px;
-    }
     .block {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -1771,12 +1785,40 @@ footer h2 {
         line-height: 3.5;
         top: -35px;
     }
-    .service-recommendation .recommended-case-study {
-        padding: 0 150px;
-    }
     .recommended-case-study {
         height: 100vh;
         background-position: 90% center;
         background-size: calc(100vh - 150px);
+    }
+    .service-benefits.view-2 ul li:before {
+        line-height: 3.5;
+        top: -35px;
+    }
+}
+@media screen and (min-width: 1537px) {
+    .custom-wrapper {
+        padding-left: 263px;
+        padding-right: 263px;
+    }
+    .custom-padding {
+        padding-left: 263px !important;
+        padding-right: 72px !important;
+    }
+    .service-recommendation .recommended-case-study {
+        padding: 0 150px;
+    }
+    .service-benefits.view-2 ul li:nth-child(4n) {
+        margin-right: 0;
+    }
+    .service-benefits.view-2 ul li {
+        width: 260px;
+        padding: 20px 0;
+        margin: 30px 150px 30px 0 !important;
+    }
+    .service-benefits.view-2 ul li:nth-child(2n) {
+        margin-right: 150px !important;
+    }
+    .service-benefits.view-2 ul li:nth-child(4n) {
+        margin-right: 0 !important;
     }
 }

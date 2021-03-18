@@ -155,6 +155,14 @@ function getMaxHeight(domEl) {
     return maxHeight;
 }
 
+function elMaxHeight() {
+    const el = jQuery('.service-benefits.view-2 ul li');
+    const caseStudy = jQuery('.case h4');
+
+    el.css("height", getMaxHeight('.service-benefits.view-2 ul li'));
+    caseStudy.css("height", getMaxHeight('.case h4'));
+}
+
 jQuery(function() {
     barba.init({
         // We don't want "synced transition"
@@ -191,6 +199,7 @@ jQuery(function() {
                 initProductSlickSlider();
                 swipeSliderInit();
                 initProductSlider();
+                elMaxHeight();
 
                 const vid = document.getElementById("background_animation");
                 if (vid) {
@@ -200,12 +209,6 @@ jQuery(function() {
                 }
                 jQuery('.case-study-slide-item, .product-story-item, .product-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
-
-                const el = jQuery('.service-benefits.view-2 ul li');
-                const caseStudy = jQuery('.case h4');
-
-                el.css("height", getMaxHeight('.service-benefits.view-2 ul li'));
-                caseStudy.css("height", getMaxHeight('.case h4'));
 
                 const url = window.location.pathname.split('/');
                 if (url[1] !== "product") {
@@ -229,6 +232,7 @@ jQuery(function() {
                 initProductSlickSlider();
                 swipeSliderInit();
                 initProductSlider();
+                elMaxHeight();
 
                 jQuery('.case-study-slide-item, .product-story-item, .product-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
@@ -243,11 +247,7 @@ jQuery(function() {
         }]
     });
 
-    const el = jQuery('.service-benefits.view-2 ul li');
-    const caseStudy = jQuery('.case h4');
-
-    el.css("height", getMaxHeight('.service-benefits.view-2 ul li'));
-    caseStudy.css("height", getMaxHeight('.case h4'));
+    elMaxHeight();
 
     setTimeout(function () {
         jQuery("html, body").removeClass("init");
@@ -272,4 +272,8 @@ jQuery(".menu-navigation a").on("click", function () {
 });
 jQuery(".home-service-box a").hover(function () {
     jQuery(this).parent().toggleClass("hovered");
+});
+
+jQuery(window).resize(function() {
+    jQuery('.service-benefits.view-2 ul li').matchHeight();
 });
