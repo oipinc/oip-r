@@ -253,7 +253,6 @@ jQuery(function() {
         jQuery("html, body").removeClass("init");
         setTimeout(function () {
             AOS.init();
-
         },200)
     }, 2000);
 });

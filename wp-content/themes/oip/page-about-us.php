@@ -58,15 +58,21 @@
                 <div class="container-fluid" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <?php echo $aboutCompany; ?>
 
-                    <div class="about-company-more col-12">
-                        <a class="custom-link" href="/contact-us">
-                            <span>Contact us</span>
-                            <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
-                        </a>
-                        <a class="custom-link" href="#">
-                            Find out more
-                            <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
-                        </a>
+                    <div class="about-company-more">
+                        <div class="row">
+                            <div class="col-md-auto mb-4 mb-md-0">
+                                <a class="custom-link d-flex justify-content-between" href="/contact-us">
+                                    <span>Contact us</span>
+                                    <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
+                                </a>
+                            </div>
+                            <div class="col-md-auto">
+                                <a class="custom-link d-flex justify-content-between" href="#">
+                                    Find out more
+                                    <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -84,16 +90,16 @@
                             if (count($jobs) === 1) {
                                 $class = "col-12";
                             } elseif (count($jobs) === 2) {
-                                $class = "col-lg-6";
+                                $class = "col-lg-6 mb-4 mb-lg-0";
                             } elseif (count($jobs) === 3) {
-                                $class = "col-lg-4";
+                                $class = "col-lg-4 mb-4 mb-lg-0";
                             }
                         ?>
 
                         <?php foreach ($jobs as $key => $job): ?>
                             <div class="<?php echo $class; ?>" data-aos="<?php echo $key % 2 ? 'fade-right' : 'fade-left'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <h3 class="mb-4"><?php echo $job->post_title; ?></h3>
-                                <div class="d-flex align-items-center mb-3">
+                                <div class="d-flex align-items-center mb-lg-3">
                                     <div class="flex-grow-0 text-white-05 fw-bold me-3"><?php echo get_field('condition', $job->ID)['type_of_employment']; ?></div>
                                     <div class="flex-grow-0 text-white-05 fw-bold"><?php echo get_field('condition', $job->ID)['place_of_employment']; ?></div>
                                 </div>
@@ -101,7 +107,7 @@
                                     <div class="flex-grow-0 text-white-05 fw-bold me-3">Application due date</div>
                                     <div class="flex-grow-0 fw-bold"><?php echo get_field('condition', $job->ID)['application_due_date']; ?></div>
                                     <div class="flex-grow-1 text-end me-lg-5">
-                                        <a class="custom-link" href="<?php echo get_permalink($job->ID); ?>">
+                                        <a href="<?php echo get_permalink($job->ID); ?>">
                                             <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
                                         </a>
                                     </div>
