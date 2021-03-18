@@ -1822,3 +1822,38 @@ footer h2 {
         margin-right: 0 !important;
     }
 }
+
+
+/*
+    about
+*/
+
+.about-hero {
+    margin: 250px 0 150px 0;
+}
+.about-hero h1 {
+    font-size: 120px;
+    font-weight: bold;
+    padding-bottom: 100px;
+    line-height: 0.99;
+}
+.about-people {
+    background-image: url('assets/images/WBS.png');
+    background-position-x: left;
+    background-size: cover;
+    padding: 100px 0;
+}
+.about-team {
+    margin: 100px 0;
+}
+
+.about-company .about-company-more {
+    margin-top: 100px;
+}
+.about-company .about-company-more a {
+    font-size: 18px;
+    margin-right: 100px;
+}
+.about-company .about-company-more a img {
+    margin-left: 30px;
+}
