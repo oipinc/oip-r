@@ -6,26 +6,28 @@
         <section class="about-hero custom-padding">
             <div class="container-fluid">
                 <div class="row">
-                    <h1 class="col-12">
-                        Our work is serious, we are not.
-                    </h1>
-                    <p class="col-12">
-                        Culture
-                    </p>
-                    <h3 class="col-9">
-                        We are OIP Robotics. We believe in a perpetual source of ideas and
-                        people bringing them to You. We stand for technology serving business
-                        and humanity, not the other way around.
-                    </h3>
-                    <p class="col-9">
-                        We work in collaborative, everyone-pitch-in mindset where employees have autonomy
-                        to help customers the way they see fit, rather than following strict guidelines and scripts.
-                    </p>
+                    <div class="col-9">
+                        <h1>
+                            Our work is serious, we are not.
+                        </h1>
+                        <p>
+                            Culture
+                        </p>
+                        <h3>
+                            We are OIP Robotics. We believe in a perpetual source of ideas and
+                            people bringing them to You. We stand for technology serving business
+                            and humanity, not the other way around.
+                        </h3>
+                        <p>
+                            We work in collaborative, everyone-pitch-in mindset where employees have autonomy
+                            to help customers the way they see fit, rather than following strict guidelines and scripts.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="custom-padding">
+        <section class="about-people custom-padding">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-6">
@@ -39,7 +41,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="about-team">
             <div class="container-fluid">
                 <div class="row">
                     <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/oip_team.png">
@@ -47,11 +49,11 @@
             </div>
         </section>
 
-        <section class="custom-padding">
+        <section class="about-company custom-padding">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <h2>
+                        <h2 class="section-title">
                             OIP Robotics - BE AN INSURTECH
                         </h2>
                         <p>
@@ -64,7 +66,7 @@
                             Crafting the insurance-native tech, that addresses real problems and gets the job done.
                         </p>
                     </div>
-                    <div class="col-12">
+                    <div class="about-company-more col-12">
                         <a class="custom-link" href="#">
                             <span>Contact us</span>
                             <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
@@ -78,7 +80,7 @@
             </div>
         </section>
 
-        <section class="board-redirection-link">
+        <section class="about-career board-redirection-link">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
