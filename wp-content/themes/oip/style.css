@@ -56,11 +56,6 @@ p {
     padding-top: 25px;
     padding-bottom: 25px;
 }
-header {
-    position: absolute;
-    right: 0;
-    left: 0;
-}
 .main-navigation {
     padding: 39px 0;
     z-index: 2;
@@ -224,12 +219,6 @@ body.open .menu-icon__line-right {
     height: 14px;
     background-size: contain;
     background-repeat: no-repeat;
-}
-.hero-gif {
-    background-image: url("assets/images/oip.gif");
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: cover;
 }
 .hero-content {
     padding: 100px 0 150px;
@@ -471,6 +460,7 @@ footer h2 {
     background-repeat: no-repeat;
     background-position: 92% center;
     padding: 50px 0;
+    min-height: 100vh;
 }
 .swiper-wrapper h3 {
     font-size: 25px;
@@ -491,12 +481,14 @@ footer h2 {
 .swiper-pagination-bullet-active {
     background-color: var(--navy);
 }
-/*.swiper-button-next:after {*/
-/*    font-family: none;*/
-/*}*/
-/*.swiper-button-prev:after {*/
-/*    font-family: none;*/
-/*}*/
+.swiper-button-next:after {
+    font-family: none;
+    content: url("assets/images/slider-arrow-right.svg");
+}
+.swiper-button-prev:after {
+    font-family: none;
+    content: url("assets/images/slider-arrow-left.svg");
+}
 .legal-wrapper a {
     color: white;
 }
@@ -520,7 +512,6 @@ footer h2 {
 }
 .case-study-intro p,
 .service-intro p {
-    font-size: 30px;
     line-height: 1.47;
 }
 .app-img-wrapper {
@@ -532,10 +523,13 @@ footer h2 {
     padding-bottom: 50px;
 }
 .recommended-case-study {
-    height: 100vh;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
 }
 .recommended-case-study h2 {
-    font-size: 120px;
+    font-size: 50px;
     font-weight: 600;
     line-height: 0.89;
 }
@@ -612,9 +606,6 @@ footer h2 {
     right: 95px;
     bottom: 35px;
 }
-.service-recommendation .recommended-case-study {
-    padding: 0 150px;
-}
 #background_animation {
     position: absolute;
     top: -13vh;
@@ -625,18 +616,15 @@ footer h2 {
 
 /* Service view */
 .service-hero {
-    min-height: 100vh;
+    padding: 50px 0;
     display: flex;
     align-items: center;
 }
 .service-hero h1 {
-    font-size: 100px;
+    font-size: 50px;
     font-weight: bold;
     line-height: 1.14;
     margin-bottom: 37px;
-}
-.service-hero h3 {
-    font-size: 40px;
 }
 .service-hero p {
     font-size: 18px;
@@ -646,8 +634,8 @@ footer h2 {
     font-weight: bold;
     border-radius: 0;
     background-color: var(--gray-secondary);
-    width: 281px;
-    height: 84px;
+    width: 200px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -657,8 +645,8 @@ footer h2 {
 .btn-contact-us:after {
     position: absolute;
     content: "";
-    right: 20px;
-    top: 44%;
+    right: 0;
+    top: 42%;
     background-image: url("assets/images/right-arrow-small.svg");
     background-repeat: no-repeat;
     width: 25px;
@@ -712,14 +700,10 @@ footer h2 {
     counter-reset: section;
 }
 .service-impact h2 {
-    font-size: 60px;
     margin-bottom: 45px;
 }
-.service-impact p {
-    font-size: 18px;
-}
 .service-impact h6 {
-    font-size: 100px;
+    font-size: 40px;
     color: rgba(255,255,255,0.05);
     line-height: 0.98;
 }
@@ -732,21 +716,20 @@ footer h2 {
     margin: 0;
 }
 .service-impact li {
-    font-size: 30px;
     font-weight: 600;
     padding: 15px 0;
-    margin: 36px 0;
+    margin: 20px 0;
     position: relative;
     counter-increment: section;
 }
 .service-impact li:before {
     content: '0'counter(section);
     font-size: 16px;
-    line-height: 3.5;
+    line-height: 1.5;
     color: #fbfbff;
     position: absolute;
     left: 0;
-    top: -35px;
+    top: -10px;
     font-weight: bold;
 }
 .service-benefits h5 {
@@ -757,7 +740,7 @@ footer h2 {
 .service-benefits h3 {
     font-size: 25px;
     font-weight: 800;
-    margin-bottom: 23px;
+    margin-bottom: 5px;
 }
 .service-benefits.view-2 h2 {
     font-size: 60px;
@@ -804,10 +787,7 @@ footer h2 {
     font-weight: bold;
 }
 .service-benefits-title {
-    margin-bottom: 150px;
-}
-.service-benefits-title p {
-    font-size: 18px;
+    margin-bottom: 30px;
 }
 .service-benefits-title .line {
     background-color: white;
@@ -1140,10 +1120,13 @@ footer h2 {
 
 /* Product */
 .product-hero {
-    min-height: 100vh;
+    padding: 50px 0;
     display: flex;
     align-items: center;
     position: relative;
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
 }
 .product-hero h1 {
     font-size: 50px;
@@ -1155,7 +1138,6 @@ footer h2 {
     font-size: 18px;
 }
 .product-intro p {
-    font-size: 16px;
     line-height: 1.47;
 }
 .product-intro p br,
@@ -1284,6 +1266,38 @@ footer h2 {
 .product-spotlight-title h2 {
     line-height: normal;
 }
+.product-item {
+    padding: 15px;
+    margin: 0 5px;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.product-item img {
+    display: inline-block !important;
+}
+.item-caption {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+.item-caption p {
+    margin: 0;
+}
+.product-app-example {
+    position: relative;
+}
+.product-app-example:before {
+    background-color: var(--transparent-blue);
+    position: absolute;
+    content: "";
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    bottom: 31%;
+}
 /* end */
 
 @media screen and (min-width: 568px) {
@@ -1313,6 +1327,14 @@ footer h2 {
     }
     .product-values-box {
         max-width: 260px;
+    }
+    .recommended-case-study h2 {
+        font-size: 80px;
+    }
+    .recommended-case-study {
+        height: 500px;
+        background-position: 90% center;
+        background-size: 430px;
     }
 }
 @media screen and (min-width: 992px) {
@@ -1427,13 +1449,108 @@ footer h2 {
     .product-story-item {
         padding: 50px;
     }
+    .service-benefits-title {
+        margin-bottom: 70px;
+    }
+    .recommended-case-study {
+        height: 700px;
+        background-size: 630px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .product-item {
+        padding: 46px 106px;
+        margin: 0 25px;
+    }
+    .hero-gif {
+        background-image: url("assets/images/oip.gif");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: cover;
+    }
+    .product-hero,
+    .service-hero {
+        padding: 0;
+        min-height: 100vh;
+    }
+    header {
+        position: absolute;
+        right: 0;
+        left: 0;
+    }
+    .service-impact h6 {
+        font-size: 100px;
+    }
 }
 @media screen and (min-width: 1367px) {
+    .service-impact p,
+    .product-story-item p,
+    .job-form p,
+    .service-benefits-title p,
+    .product-stories-title p,
+    .board-redirection-box p {
+        font-size: 18px;
+    }
+    .career-job-box p,
+    .job-hero .career-job-box-small-title {
+        font-size: 21px;
+    }
+    .hero-info-box a {
+        font-size: 25px;
+    }
+    .job-wrapper .lead p,
+    .product-intro p,
+    .case-study-intro p,
+    .service-intro p,
+    .job-section-title,
+    .contact-us-section-title h4,
+    .service-impact li,
+    .form-holder input {
+        font-size: 30px;
+    }
+    .career-values h4 {
+        font-size: 35px;
+    }
+    .board-redirection-box .custom-link,
+    .service-hero h3,
+    .board-redirection-box h3,
+    .footer-email {
+        font-size: 40px;
+    }
+    .case h4,
+    .job-form h4,
+    .product-hero h2,
+    .product-request-form h2,
+    .service-impact h2,
+    .product-stories-title h2,
+    .product-values h2,
+    .product-story-item h3,
+    .career-job-box h3,
+    .career-hero h1 {
+        font-size: 60px;
+    }
+    .number,
+    .job-hero h1 {
+        font-size: 80px;
+    }
+    .hero h1,
+    .service-hero h1,
+    footer h2,
+    .swiper-wrapper h3 {
+        font-size: 100px;
+    }
+    .contact-email,
+    .case-study-text-nav h2,
+    .recommended-case-study h2 {
+        font-size: 120px;
+    }
+    .contact-us-hero-content h1,
+    .product-hero h1,
+    .init-container h1 {
+        font-size: 150px;
+    }
     .custom-container {
         max-width: 87.3%;
-    }
-    .case h4 {
-        font-size: 60px;
     }
     .hero-title,
     .copyright-text {
@@ -1449,14 +1566,10 @@ footer h2 {
     .case {
         padding: 245px 0;
     }
-    .swiper-wrapper h3 {
-        font-size: 100px;
-    }
     .swiper-slide {
         padding: 170px 0;
     }
     .hero h1 {
-        font-size: 100px;
         line-height: 114px;
     }
     .hero-info-box {
@@ -1468,18 +1581,13 @@ footer h2 {
     .main-navigation {
         padding: 39px 72px;
     }
-    .hero-info-box a {
-        font-size: 25px;
-    }
     .footer-copyright {
         padding: 0 72px;
     }
     footer h2 {
-        font-size: 100px;
         line-height: 109px;
     }
     .footer-email {
-        font-size: 40px;
         margin-top: 40px;
     }
     .footer-copyright {
@@ -1502,19 +1610,7 @@ footer h2 {
     .home-service {
         padding:203px 0 146px 0;
     }
-    .number,
-    .job-hero h1 {
-        font-size: 80px;
-    }
-    .contact-us-hero-content h1 {
-        font-size: 150px;
-    }
-    .career-hero h1 {
-        font-size: 60px;
-    }
-    .career-values h4 {
-        font-size: 35px;
-    }
+
     .career-values br,
     .job-wrapper .lead p br {
         display: block;
@@ -1532,19 +1628,11 @@ footer h2 {
     .board-row {
         padding: 75px 112px;
     }
-    .case-study-text-nav h2 {
-        font-size: 120px;
-    }
     .career-job-box {
         padding: 81px;
     }
     .career-job-box h3 {
-        font-size: 60px;
         margin-bottom: 33px;
-    }
-    .career-job-box p,
-    .job-hero .career-job-box-small-title {
-        font-size: 21px;
     }
     .career-open-position {
         padding-top: 30px;
@@ -1553,46 +1641,21 @@ footer h2 {
     .board-title {
         margin-bottom: 106px;
     }
-    .board-redirection-box .custom-link {
-        font-size: 40px;
-    }
     .board-redirection-box {
         height: 430px;
         padding: 0 135px;
     }
-    .board-redirection-box p {
-        font-size: 18px;
-    }
     .career-benefit-holder ul {
         column-count: 2;
     }
-    .board-redirection-box h3 {
-        font-size: 40px;
-    }
     .init-logo {
         left: 87px;
-    }
-    .init-container h1 {
-        font-size: 150px;
-    }
-    .job-wrapper .lead p,
-    .job-section-title {
-        font-size: 30px;
     }
     .job-holder {
         margin-bottom: 140px;
     }
     .job-form {
         padding: 160px 280px;
-    }
-    .job-form h4 {
-        font-size: 60px;
-    }
-    .job-form p {
-        font-size: 18px;
-    }
-    .form-holder input {
-        font-size: 30px;
     }
     .btn-apply {
         width: 281px;
@@ -1605,9 +1668,6 @@ footer h2 {
     .office-box {
         width: 563px;
         height: 563px;
-    }
-    .contact-email {
-        font-size: 120px;
     }
     .contact-us-intro {
         padding-top: 180px;
@@ -1622,9 +1682,6 @@ footer h2 {
     .contact-us-intro-bg h2 {
         font-size: 350px;
     }
-    .contact-us-section-title h4 {
-        font-size: 30px;
-    }
     .swiper-button-prev {
         bottom: 63px;
         top: auto;
@@ -1633,19 +1690,7 @@ footer h2 {
     .swiper-button-next {
         bottom: 63px;
         top: auto;
-        left: 330px;
-    }
-    .product-hero h1 {
-        font-size: 150px;
-    }
-    .product-hero h2 {
-        font-size: 60px;
-    }
-    .hero-gif {
-        background-size: contain;
-    }
-    .product-intro p {
-        font-size: 30px;
+        left: 350px;
     }
     .custom-wrapper {
         padding-left: 263px;
@@ -1668,9 +1713,6 @@ footer h2 {
     .product-request-form-holder {
         padding: 128px;
     }
-    .product-request-form h2 {
-        font-size: 60px;
-    }
     .product-request-form p br {
         display: block;
     }
@@ -1688,30 +1730,53 @@ footer h2 {
         margin-bottom: 115px;
     }
     .product-values h2 {
-        font-size: 60px;
         margin-bottom: 115px;
     }
     .product-story-item {
         padding: 184px 142px;
     }
-    .product-story-item h3 {
-        font-size: 60px;
-    }
     .product-story-item p {
         line-height: 1.78;
-        font-size: 18px;
     }
     .product-stories-title h2 {
-        font-size: 60px;
         margin-bottom: 56px;
-    }
-    .product-stories-title p {
-        font-size: 18px;
     }
     .prev-arrow {
         left: 265px;
     }
     .next-arrow {
         left: 300px;
+    }
+    .product-app-example {
+        margin-top: 150px;
+    }
+    .btn-contact-us {
+        width: 281px;
+        height: 84px;
+    }
+    .btn-contact-us:after {
+        right: 20px;
+        top: 44%;
+    }
+    .service-benefits-title {
+        margin-bottom: 150px;
+    }
+    .service-benefits h3 {
+        margin-bottom: 23px;
+    }
+    .service-impact li {
+        margin: 36px 0;
+    }
+    .service-impact li:before {
+        line-height: 3.5;
+        top: -35px;
+    }
+    .service-recommendation .recommended-case-study {
+        padding: 0 150px;
+    }
+    .recommended-case-study {
+        height: 100vh;
+        background-position: 90% center;
+        background-size: calc(100vh - 150px);
     }
 }

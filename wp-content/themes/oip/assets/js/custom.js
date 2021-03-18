@@ -91,7 +91,28 @@ function initProductSlickSlider() {
         nextArrow:"<img class='next-arrow' src='/wp-content/themes/oip/assets/images/right-arrow-small.svg' />",
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 1200,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '15px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+}
+
+function initProductSlider() {
+    jQuery('.product-slider').slick({
+        centerMode: true,
+        centerPadding: '240px',
+        slidesToShow: 1,
+        prevArrow:"<img class='prev-arrow' src='/wp-content/themes/oip/assets/images/left-arrow-small.svg' />",
+        nextArrow:"<img class='next-arrow' src='/wp-content/themes/oip/assets/images/right-arrow-small.svg' />",
+        responsive: [
+            {
+                breakpoint: 1200,
                 settings: {
                     arrows: false,
                     centerMode: true,
@@ -165,16 +186,19 @@ jQuery(function() {
                 await pageTransitionOut(data.next.container);
                 jQuery(window).scrollTop(0);
                 AOS.init();
+
                 initSlickSlider();
                 initProductSlickSlider();
                 swipeSliderInit();
+                initProductSlider();
+
                 const vid = document.getElementById("background_animation");
                 if (vid) {
                     vid.autoplay = true;
                     vid.loop = true;
                     vid.load();
                 }
-                jQuery('.case-study-slide-item, .product-story-item').matchHeight({ property: 'min-height' });
+                jQuery('.case-study-slide-item, .product-story-item, .product-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
 
                 const el = jQuery('.service-benefits.view-2 ul li');
@@ -200,10 +224,13 @@ jQuery(function() {
 
             async once(data) {
                 await contentAnimation(data.next.container);
+
                 initSlickSlider();
                 initProductSlickSlider();
                 swipeSliderInit();
-                jQuery('.case-study-slide-item, .product-story-item').matchHeight({ property: 'min-height' });
+                initProductSlider();
+
+                jQuery('.case-study-slide-item, .product-story-item, .product-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
 
                 const url = window.location.pathname.split('/');
