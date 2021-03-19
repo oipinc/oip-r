@@ -247,7 +247,7 @@ jQuery(function() {
         setTimeout(function () {
             AOS.init();
         },200)
-    }, 2000);
+    }, 1000);
 });
 
 jQuery(".btn-menu").on("click", function () {

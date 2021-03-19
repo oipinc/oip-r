@@ -62,13 +62,13 @@
                             <div class="col-md-auto mb-4 mb-md-0">
                                 <a class="custom-link d-flex justify-content-between" href="/contact-us">
                                     <span>Contact us</span>
-                                    <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
+                                    <img style="width: 30px" width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
                                 </a>
                             </div>
                             <div class="col-md-auto">
                                 <a class="custom-link d-flex justify-content-between" href="#">
                                     Find out more
-                                    <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
+                                    <img style="width: 30px" width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
                                 </a>
                             </div>
                         </div>
