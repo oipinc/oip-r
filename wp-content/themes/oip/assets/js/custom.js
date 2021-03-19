@@ -271,3 +271,11 @@ jQuery(window).resize(function() {
     jQuery('.service-benefits.view-2 ul li').matchHeight();
     jQuery('.product .swiper-slide, .case-mob .swiper-slide').matchHeight();
 });
+
+jQuery(".hero-info-box a").on('click', function (event) {
+    event.preventDefault();
+
+    jQuery('html, body').animate({
+        scrollTop: jQuery(jQuery.attr(this, 'href')).offset().top
+    }, 1000);
+});

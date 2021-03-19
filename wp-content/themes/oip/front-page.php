@@ -51,13 +51,13 @@
                         <div class="col custom-container">
                             <div class="row">
                                 <div class="col-md-6 bg-transparent-dark-blue hero-info-box">
-                                    <a class="d-flex align-items-center text-white" href="#">
+                                    <a class="d-flex align-items-center text-white" href="#home_service">
                                         Explore our service
                                         <img class="ms-4" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
                                     </a>
                                 </div>
                                 <div class="col-md-6 bg-transparent-gray hero-info-box">
-                                    <a class="d-flex align-items-center text-white" href="#">
+                                    <a class="d-flex align-items-center text-white" href="#home_product">
                                         Explore our product
                                         <img class="ms-4" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
                                     </a>
@@ -72,7 +72,7 @@
 
         <!-- Service -->
         <?php if (!empty(get_posts($services))): ?>
-            <section class="home-service custom-padding">
+            <section id="home_service" class="home-service custom-padding">
                 <div class="container-fluid">
                     <div class="home-service-title" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <p>Services</p>
@@ -99,7 +99,7 @@
 
         <!-- Products -->
         <?php if (!empty(get_posts($products))): ?>
-            <section class="product">
+            <section id="home_product" class="product">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <?php foreach (get_posts($products) as $key => $product): ?>
