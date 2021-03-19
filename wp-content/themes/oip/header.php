@@ -15,6 +15,7 @@
 ?>
 
 <body class="init <?php echo $bgProduct; ?>">
+
     <div class="loading-container">
         <div class="loading-screen"></div>
     </div>
@@ -24,29 +25,35 @@
         </a>
         <h1 class="my-0">OIP ROBOTICS</h1>
     </div>
+    <div class="get-in-touch d-none d-xxl-inline-block">
+        <a class="text-white" href="#">
+            Get in touch
+        </a>
+    </div>
+
     <div class="menu">
         <div class="menu-navigation">
             <div class="container-fluid">
-                <div class="get-in-touch">
-                    <a class="text-white" href="#">
-                        Get in touch
-                    </a>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-9">
-                        <?php
-                            wp_nav_menu([
-                                'menu' => 'header',
-                                'container' => '',
-                                'theme_location' => 'header',
-                                'items_wrap' => '<ul class="list-unstyled menu-list">%3$s</ul>'
-                            ])
-                        ?>
+                <?php
+                    wp_nav_menu([
+                        'menu' => 'header',
+                        'container' => '',
+                        'theme_location' => 'header',
+                        'items_wrap' => '<ul class="list-unstyled menu-list">%3$s</ul>'
+                    ])
+                ?>
+                <div class="mob-info d-md-none">
+                    <hr class="my-4">
+                    <span class="mb-4 d-block">office@oip.bz</span>
+                    <div class="mb-4">
+                        <p class="my-0">Terazije 5, 11000 Belgrade</p>
+                        <p class="my-0">+ 381 11 324 81 80</p>
                     </div>
+                    <a href="/contact-us" class="btn-contact-us">Get in touch</a>
                 </div>
             </div>
         </div>
-        <div class="menu-share">
+        <div class="menu-share d-none d-md-block">
             <div class="container-fluid">
                 <div class="row align-items-end">
                     <div class="col-auto">

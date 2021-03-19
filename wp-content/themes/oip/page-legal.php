@@ -8,13 +8,6 @@
 
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="terms-and-condition">
-
-        <div class="get-in-touch d-none d-xl-block">
-            <a class="text-white" href="/contact-us">
-                Get in touch
-            </a>
-        </div>
-
         <?php while ( have_posts() ) : the_post(); ?>
             <section class="legal-hero custom-wrapper hero-gif">
                 <div class="container-fluid">

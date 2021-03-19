@@ -16,12 +16,6 @@
             $serviceBenefitsTitle         = $serviceBenefitsBlock['service_benefit_title'];
         ?>
 
-        <div class="get-in-touch d-none d-xl-inline-block">
-            <a class="text-white" href="/contact-us">
-                Get in touch
-            </a>
-        </div>
-
         <section class="service-hero custom-padding hero-gif">
             <div class="container-fluid">
                 <div class="service-hero-content">

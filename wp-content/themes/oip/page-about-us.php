@@ -15,12 +15,6 @@
             $aboutCompany = get_field('about_company');
         ?>
 
-        <div class="get-in-touch d-none d-xl-block">
-            <a class="text-white" href="/contact-us">
-                Get in touch
-            </a>
-        </div>
-
         <!-- Hero -->
         <?php while ( have_posts() ) : the_post(); ?>
             <section class="about-hero custom-padding position-relative">

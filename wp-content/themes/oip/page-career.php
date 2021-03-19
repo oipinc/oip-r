@@ -14,12 +14,6 @@
             $openPosition = get_field('open_positions');
          ?>
 
-        <div class="get-in-touch d-none d-xl-block">
-            <a class="text-white" href="/contact-us">
-                Get in touch
-            </a>
-        </div>
-
         <?php if ($hero): ?>
             <section class="career-hero custom-padding d-flex align-items-center">
                 <div class="container-fluid" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
