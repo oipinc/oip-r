@@ -208,6 +208,14 @@ jQuery(function() {
                 } else {
                     jQuery("body").addClass("bg-dark-blue");
                 }
+
+                jQuery(".hero-info-box a").on('click', function (event) {
+                    event.preventDefault();
+
+                    jQuery('html, body').animate({
+                        scrollTop: jQuery(jQuery.attr(this, 'href')).offset().top
+                    }, 1000);
+                });
             },
             // Variations for didactical purpose…
             // Better browser support than async/await
