@@ -493,9 +493,6 @@ footer h2 {
     font-family: none;
     content: url("assets/images/slider-arrow-left.svg");
 }
-.legal-wrapper a {
-    color: white;
-}
 
 /* Case study view */
 .case-study-hero {
@@ -1332,6 +1329,19 @@ footer h2 {
 }
 /* end */
 
+.legal-wrapper a {
+    color: white;
+}
+.legal-hero {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.legal-hero h1 {
+    font-size: 50px;
+}
+
 @media screen and (min-width: 568px) {
     .office-box {
         width: calc((100vw / 2) - 24px);
@@ -1535,6 +1545,7 @@ footer h2 {
     .service-hero,
     .career-hero,
     .job-hero,
+    .legal-hero,
     .case-study-hero {
         padding: 0;
         min-height: 100vh;
@@ -1667,6 +1678,7 @@ footer h2 {
     .product-hero h1,
     .about-hero h1,
     .case-study-wrapper h1,
+    .legal-hero h1,
     .init-container h1 {
         font-size: 150px;
     }
