@@ -15,6 +15,12 @@
             $productExample2 = get_field( "product_image_example_2");
         ?>
 
+        <div class="get-in-touch d-none d-xl-inline-block">
+            <a class="text-white" href="/contact-us">
+                Get in touch
+            </a>
+        </div>
+
         <?php while ( have_posts() ) : the_post(); ?>
             <section class="product-hero custom-padding" style="background-image: url(<?php echo $heroBg; ?>)">
                 <div class="container-fluid">

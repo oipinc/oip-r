@@ -1,5 +1,12 @@
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="job-view">
+
+        <div class="get-in-touch d-none d-xl-inline-block">
+            <a class="text-white" href="/contact-us">
+                Get in touch
+            </a>
+        </div>
+
         <?php while ( have_posts() ) : the_post(); ?>
         <?php $condition = get_field( "condition", get_the_ID()); ?>
             <section class="job-hero custom-padding hero-gif">

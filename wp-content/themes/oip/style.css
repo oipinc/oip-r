@@ -360,7 +360,10 @@ body.open .menu-icon__line-right {
 
 .get-in-touch {
     transform: translateX(38px) rotateZ(-90deg);
-    display: inline-block;
+    position: absolute;
+    right: 72px;
+    top: 47%;
+    z-index: 2;
 }
 .get-in-touch a {
     text-decoration: none;

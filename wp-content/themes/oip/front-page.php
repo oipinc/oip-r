@@ -22,6 +22,12 @@
             $meetUs    = get_field('meet_us');
         ?>
 
+        <div class="get-in-touch d-none d-xl-inline-block">
+            <a class="text-white" href="/contact-us">
+                Get in touch
+            </a>
+        </div>
+
         <!-- Hero -->
         <?php while ( have_posts() ) : the_post(); ?>
             <section class="hero hero-gif">
@@ -37,11 +43,6 @@
                                 <div class="hero-title" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                     <?php the_content(); ?>
                                 </div>
-                            </div>
-                            <div class="col-auto get-in-touch d-none d-xl-block">
-                                <a class="text-white" href="/contact-us">
-                                    Get in touch
-                                </a>
                             </div>
                         </div>
                     </div>

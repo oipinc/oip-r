@@ -15,10 +15,15 @@
             $aboutCompany = get_field('about_company');
         ?>
 
+        <div class="get-in-touch d-none d-xl-block">
+            <a class="text-white" href="/contact-us">
+                Get in touch
+            </a>
+        </div>
 
         <!-- Hero -->
         <?php while ( have_posts() ) : the_post(); ?>
-            <section class="about-hero custom-padding">
+            <section class="about-hero custom-padding position-relative">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-10" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">

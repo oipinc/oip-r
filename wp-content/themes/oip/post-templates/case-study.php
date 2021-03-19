@@ -7,6 +7,12 @@
             $recommendedPost   = get_field('recommended_case_study');
         ?>
 
+        <div class="get-in-touch d-none d-xl-inline-block">
+            <a class="text-white" href="/contact-us">
+                Get in touch
+            </a>
+        </div>
+
         <!-- Hero -->
         <section class="case-study-hero case-study-wrapper custom-wrapper hero-gif">
             <div class="container-fluid">

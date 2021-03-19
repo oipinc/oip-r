@@ -9,6 +9,12 @@
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="contact-us">
 
+        <div class="get-in-touch d-none d-xl-inline-block">
+            <a class="text-white" href="/contact-us">
+                Get in touch
+            </a>
+        </div>
+
         <?php $hero = get_field('hero');
         if ($hero): ?>
             <section class="contact-us-hero position-relative">

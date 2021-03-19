@@ -8,9 +8,19 @@
 
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="career">
-        <?php
-        $hero = get_field('hero');
-        if ($hero): ?>
+         <?php
+            $hero         = get_field('hero');
+            $benefits     = get_field('benefits');
+            $openPosition = get_field('open_positions');
+         ?>
+
+        <div class="get-in-touch d-none d-xl-block">
+            <a class="text-white" href="/contact-us">
+                Get in touch
+            </a>
+        </div>
+
+        <?php if ($hero): ?>
             <section class="career-hero custom-padding d-flex align-items-center">
                 <div class="container-fluid" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <?php echo $hero['content']; ?>
@@ -39,9 +49,7 @@
             </section>
         <?php endif; ?>
 
-        <?php
-        $benefits = get_field('benefits');
-        if ($benefits): ?>
+        <?php if ($benefits): ?>
             <section class="career-benefit custom-padding">
                 <div class="container-fluid">
                     <h2 class="board-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Our Benefits</h2>
@@ -75,9 +83,7 @@
             </section>
         <?php endif; ?>
 
-        <?php
-        $openPosition = get_field('open_positions');
-        if ($openPosition): ?>
+        <?php if ($openPosition): ?>
             <section class="career-open-position custom-padding">
                 <div class="container-fluid">
                     <div class="career-open-position-section-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
