@@ -23,7 +23,7 @@
         <h1 class="my-0">OIP ROBOTICS</h1>
     </div>
     <div class="get-in-touch d-none d-xxl-inline-block">
-        <a class="text-white" href="#">
+        <a class="text-white" href="/contact-us">
             Get in touch
         </a>
     </div>
@@ -41,10 +41,13 @@
                 ?>
                 <div class="mob-info d-md-none">
                     <hr class="my-4">
-                    <span class="mb-4 d-block">office@oip.bz</span>
+                    <div class="mb-4 d-block">
+                        <a href="mailto:office@oip.bz">office@oip.bz</a>
+                    </div>
                     <div class="mb-4">
-                        <p class="my-0">Terazije 5, 11000 Belgrade</p>
-                        <p class="my-0">+ 381 11 324 81 80</p>
+                        <a target="_blank" href="https://goo.gl/maps/FFfwad9MFqbrPwPH9">Terazije 5, 11000 Belgrade</a>
+                        <br>
+                        <a href="tel:+ 381 11 324 81 80">+ 381 11 324 81 80</a>
                     </div>
                     <a href="/contact-us" class="btn-contact-us">Get in touch</a>
                 </div>
@@ -57,7 +60,7 @@
                         <?php get_template_part('template-parts/share'); ?>
                     </div>
                     <div class="col text-end">
-                        <span>office@oip.bz</span>
+                        <a class="mailto-link" href="mailto:office@oip.bz">office@oip.bz</a>
                     </div>
                 </div>
             </div>

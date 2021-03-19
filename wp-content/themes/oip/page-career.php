@@ -95,7 +95,7 @@
                         $title = get_the_title($post->ID);
                         $condition = get_field( 'condition', $post->ID );
                         ?>
-                        <div class="career-job-box" data-aos="<?php echo $key % 2 ? 'fade-right' : 'fade-left'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <div class="career-job-box mb-3" data-aos="<?php echo $key % 2 ? 'fade-right' : 'fade-left'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             <div class="row align-items-center">
                                 <div class="col">
                                     <div class="row">
@@ -142,7 +142,7 @@
                                 <h3>Meet the team</h3>
                                 <p>One of our clients, a leading wholesaler on the E&S market, had difficulties keeping up with hundreds of daily rece.</p>
                                 <div class="d-block text-md-end pb-4 pb-md-0">
-                                    <a class="custom-link" href="#"><img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow"></a>
+                                    <a class="custom-link" href="/about"><img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow"></a>
                                 </div>
                             </div>
                         </div>

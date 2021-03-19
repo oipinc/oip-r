@@ -65,12 +65,12 @@
                                     <img style="width: 30px" width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
                                 </a>
                             </div>
-                            <div class="col-md-auto">
-                                <a class="custom-link d-flex justify-content-between" href="#">
-                                    Find out more
-                                    <img style="width: 30px" width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
-                                </a>
-                            </div>
+<!--                            <div class="col-md-auto">-->
+<!--                                <a class="custom-link d-flex justify-content-between" href="#">-->
+<!--                                    Find out more-->
+<!--                                    <img style="width: 30px" width="30" src="--><?php //echo get_template_directory_uri(); ?><!--/assets/images/arrow-right.svg" alt="Arrow">-->
+<!--                                </a>-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>

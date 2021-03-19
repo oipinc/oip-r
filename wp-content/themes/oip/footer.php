@@ -6,7 +6,9 @@
                     <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <h2>Get in <br>touch</h2>
                         <span class="footer-email d-block">office@oip.bz</span>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow">
+                        <a href="mailto:office@oip.bz">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow">
+                        </a>
                     </div>
                 </div>
                 <div class="col d-none d-lg-block">
@@ -37,7 +39,9 @@
                 </div>
                 <div class="col d-none d-lg-block">
                     <div class="address-info" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                        <p>Terazije 5, 11000 Belgrade <br> + 381 11 324 81 80</p>
+                        <a target="_blank" href="https://goo.gl/maps/FFfwad9MFqbrPwPH9">Terazije 5, 11000 Belgrade</a>
+                        <br>
+                        <a href="tel:+ 381 11 324 81 80">+ 381 11 324 81 80</a>
                     </div>
                 </div>
             </div>
@@ -76,7 +80,9 @@
                 <p class="my-0">We are working hard Monday to Friday, starting bright and early with a cup of lightly creamed coffee. Feel free to get in touch with us.</p>
             </div>
             <div class="address-info">
-                <p>Terazije 5, 11000 Belgrade <br> + 381 11 324 81 80</p>
+                <a target="_blank" href="https://goo.gl/maps/FFfwad9MFqbrPwPH9">Terazije 5, 11000 Belgrade</a>
+                <br>
+                <a href="tel:+ 381 11 324 81 80">+ 381 11 324 81 80</a>
             </div>
             <?php get_template_part('template-parts/mobile-share'); ?>
             <div class="copyright">

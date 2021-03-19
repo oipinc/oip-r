@@ -71,6 +71,10 @@ p {
     font-size: 20px;
     font-weight: bold;
 }
+.mob-info a {
+    color: white;
+    text-decoration: none;
+}
 .menu-share {
     position: absolute;
     bottom: 0;
@@ -192,8 +196,10 @@ body.open .menu-icon__line-right {
 .menu.open .menu-share {
     transition-delay: 1.4s;
 }
-.menu-share span {
+.menu-share .mailto-link {
     font-size: 30px;
+    color: white;
+    text-decoration: none;
     font-weight: bold;
     line-height: 2.2;
 }
@@ -820,6 +826,9 @@ footer h2 {
 .contact-us-hero-content p {
     color: #fbfbff;
 }
+.contact-us-hero {
+    padding-top: 50px;
+}
 .contact-us-office {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1093,6 +1102,7 @@ footer h2 {
     position: absolute;
     background-color: rgba(255,255,255,0.05);
     z-index: 1;
+    cursor: pointer;
 }
 #upload_cv {
     visibility: hidden;
@@ -1392,7 +1402,7 @@ footer h2 {
         padding-top: 50px;
         padding-bottom: 50px;
     }
-    .menu-list a {
+    .menu-list > li > a {
         font-size: 40px;
     }
 }
@@ -1459,7 +1469,7 @@ footer h2 {
         margin-top: 100px;
     }
     .address-info {
-        margin-top: 65px;
+        margin-top: 60px;
     }
     footer {
         padding: 100px 0;
@@ -1899,6 +1909,9 @@ footer h2 {
     }
     .custom-link img {
         width: auto;
+    }
+    .contact-us-hero {
+        padding-top: 100px;
     }
 }
 @media screen and (min-width: 1537px) {
