@@ -1,20 +1,34 @@
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="case-study-view">
-        <section class="case-study-wrapper custom-wrapper hero-gif">
-            <div class="case-study-intro">
-                <h6 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Case Study</h6>
-                <h1 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"><?php echo the_title(); ?></h1>
-                <h6 data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">Overview</h6>
-                <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <?php while ( have_posts() ) : the_post(); ?>
-                        <?php the_content(); ?>
-                    <?php
-                    endwhile;
-                    wp_reset_query();
-                    ?>
+        <?php
+            $appImage          = get_field('app_image');
+            $ourSolutionBottom = get_field('our_solution_bottom');
+            $result            = get_field('results');
+            $recommendedPost   = get_field('recommended_case_study');
+        ?>
+
+        <!-- Hero -->
+        <section class="case-study-hero case-study-wrapper custom-wrapper hero-gif">
+            <div class="container-fluid">
+                <div class="case-study-intro">
+                    <h6 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Case Study</h6>
+                    <h1 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"><?php echo the_title(); ?></h1>
+                    <h6 data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">Overview</h6>
+                    <div class="row">
+                        <div class="col-xl-10">
+                            <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <?php while ( have_posts() ) : the_post(); ?>
+                                    <?php the_content(); ?>
+                                <?php endwhile; wp_reset_query(); ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        <!-- end -->
+
+        <!-- Problem -->
         <section class="case-study-wrapper case-study-problem custom-wrapper">
             <div class="container-fluid">
                 <div class="row" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -41,7 +55,7 @@
                             <?php } else { ?>
                                 <div class="col-lg-6 text-center">
                                     <?php if ($image && $retinaImage) { ?>
-                                        <img class="img-fluid" src="<?php echo $image; ?>" srcset="<?php echo $retinaImage; ?> 2x" alt="Image" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                        <img class="img-fluid mb-3 mb-lg-0" src="<?php echo $image; ?>" srcset="<?php echo $retinaImage; ?> 2x" alt="Image" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                     <?php }?>
                                 </div>
                             <?php } ?>
@@ -55,6 +69,9 @@
                 <?php endif; ?>
             </div>
         </section>
+        <!-- end -->
+
+        <!-- Our Solution -->
         <section class="case-study-wrapper case-study-solution custom-wrapper">
             <div class="container-fluid">
                 <div class="row" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -81,19 +98,16 @@
                 <?php endif; ?>
             </div>
         </section>
+        <!-- end -->
 
-        <?php
-        $appImage = get_field('app_image');
-        if($appImage['image'] && $appImage['retina_image']): ?>
+        <?php if($appImage['image'] && $appImage['retina_image']): ?>
             <section class="app-img-wrapper">
                 <img class="img-fluid" src="<?php echo $appImage['image']; ?>" srcset="<?php echo $appImage['retina_image']; ?> 2x" alt="App image" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
             </section>
         <?php endif; ?>
 
-        <?php
-        $ourSolutionBottom = get_field('our_solution_bottom');
-        if($ourSolutionBottom['label'] && $ourSolutionBottom['content']): ?>
-            <section class="case-study-wrapper case-study-solution custom-wrapper">
+        <?php if($ourSolutionBottom['label'] && $ourSolutionBottom['content']): ?>
+            <section class="case-study-wrapper case-study-solution custom-wrapper d-none">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-6 case-study-text-nav">
@@ -150,9 +164,7 @@
             </section>
         <?php endif; ?>
 
-        <?php
-        $result = get_field('results');
-        if($result['label'] && $result['content']): ?>
+        <?php if($result['label'] && $result['content']): ?>
             <section class="case-study-wrapper case-study-result custom-wrapper">
                 <div class="container-fluid">
                     <div class="row" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -180,17 +192,14 @@
             </section>
         <?php endif; ?>
 
-        <?php
-        $recommendedPost = get_field('recommended_case_study');
-        if($recommendedPost): ?>
-        <?php $permalink = get_permalink($recommendedPost->ID); ?>
+        <?php if($recommendedPost): ?>
             <section class="recommended-case-study bg-gray-secondary case-study-wrapper custom-wrapper">
                 <div class="container-fluid h-100">
                     <div class="row justify-content-center align-items-center h-100">
                         <div class="col">
                             <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <h2><?php echo esc_html($recommendedPost->post_title); ?></h2>
-                                <a href="<?php echo esc_url($permalink); ?>">Read Use Case <img class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"></a>
+                                <a href="<?php echo esc_url(get_permalink($recommendedPost->ID)); ?>">Read Use Case <img class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"></a>
                             </div>
                         </div>
                     </div>

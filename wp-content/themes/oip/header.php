@@ -22,7 +22,7 @@
         <a class="init-logo" href="/">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo">
         </a>
-        <h1 class="my-0">OIP Robotics</h1>
+        <h1 class="my-0">OIP ROBOTICS</h1>
     </div>
     <div class="menu">
         <div class="menu-navigation">

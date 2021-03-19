@@ -495,33 +495,33 @@ footer h2 {
 }
 
 /* Case study view */
+.case-study-hero {
+    padding: 50px 0;
+}
 .custom-wrapper {
     position: relative;
 }
 .case-study-wrapper h1 {
     font-weight: bold;
-    font-size: 150px;
+    font-size: 50px;
     line-height: 0.88;
-    margin-bottom: 160px;
+    margin-bottom: 50px;
 }
 .case-study-wrapper h6,
 .service-hero-content h6 {
     font-weight: normal;
-}
-.case-study-intro {
-    padding: 190px 0;
 }
 .case-study-intro p,
 .service-intro p {
     line-height: 1.47;
 }
 .app-img-wrapper {
-    padding: 150px;
+    padding: 15px;
     background-color: #f8f7f5;
 }
 .use-case-img-holder {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .recommended-case-study {
     height: 500px;
@@ -543,13 +543,10 @@ footer h2 {
 }
 .case-study-problem,
 .case-study-solution,
+.case-study-slider-wrapper,
 .case-study-result {
-    padding-top: 150px;
-    padding-bottom: 150px;
-}
-.case-study-slider-wrapper {
-    padding-top: 80px;
-    padding-bottom: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .case-study-text-nav h2 {
     font-size: 50px;
@@ -559,9 +556,12 @@ footer h2 {
     margin-bottom: 30px;
 }
 .custom-link {
-    font-size: 50px;
+    font-size: 20px;
     color: white;
     text-decoration: none;
+}
+.custom-link img {
+    width: 30px;
 }
 .case-study-text-nav .line {
     background-color: white;
@@ -574,15 +574,11 @@ footer h2 {
 }
 .case-study-problem p {
     line-height: 1.83;
-    font-size: 18px;
-}
-.case-study-problem-divider {
-    margin-bottom: 228px;
 }
 .case-study-slide-item {
-    padding: 70px 150px;
-    margin: 0 25px;
+    padding: 15px;
     border-radius: 10px;
+    margin: 0 15px;
     display: flex !important;
     justify-content: center;
     align-items: center;
@@ -604,8 +600,8 @@ footer h2 {
 }
 .case-study-slide-caption {
     position: absolute;
-    right: 95px;
-    bottom: 35px;
+    right: 15px;
+    bottom: 0;
 }
 #background_animation {
     position: absolute;
@@ -1389,6 +1385,10 @@ footer h2 {
     .swiper-slide {
         background-position: 92% center;
     }
+    .use-case-img-holder {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 @media screen and (min-width: 992px) {
     .swiper-wrapper h3,
@@ -1513,6 +1513,15 @@ footer h2 {
         padding: 46px 106px;
         margin: 0 25px;
     }
+    .case-study-slide-item {
+        margin: 0 25px;
+        padding: 70px 150px;
+    }
+    .case-study-slide-caption {
+        position: absolute;
+        right: 95px;
+        bottom: 35px;
+    }
     .hero-gif {
         background-image: url("assets/images/oip.gif");
         background-repeat: no-repeat;
@@ -1522,7 +1531,8 @@ footer h2 {
     .product-hero,
     .service-hero,
     .career-hero,
-    .job-hero {
+    .job-hero,
+    .case-study-hero {
         padding: 0;
         min-height: 100vh;
     }
@@ -1570,6 +1580,12 @@ footer h2 {
     .swiper-slide {
         padding: 170px 0;
     }
+    .case-study-intro {
+        padding: 190px 0;
+    }
+    .case-study-wrapper h1 {
+        margin-bottom: 160px;
+    }
 }
 @media screen and (min-width: 1367px) {
     .service-impact p,
@@ -1578,6 +1594,7 @@ footer h2 {
     .service-benefits-title p,
     .product-stories-title p,
     .about-company p,
+    .case-study-problem p,
     .board-redirection-box p {
         font-size: 18px;
     }
@@ -1646,6 +1663,7 @@ footer h2 {
     .contact-us-hero-content h1,
     .product-hero h1,
     .about-hero h1,
+    .case-study-wrapper h1,
     .init-container h1 {
         font-size: 150px;
     }
@@ -1702,9 +1720,19 @@ footer h2 {
     }
     .career-benefit,
     .career-board,
+    .case-study-problem,
+    .case-study-solution,
+    .case-study-result,
     .use-case-img-holder {
         padding-top: 150px;
         padding-bottom: 150px;
+    }
+    .case-study-slider-wrapper {
+        padding-top: 80px;
+        padding-bottom: 150px;
+    }
+    .case-study-problem-divider {
+        margin-bottom: 228px;
     }
     .board-row {
         padding: 75px 112px;
@@ -1855,6 +1883,12 @@ footer h2 {
     .meet-us-img {
         margin: 90px 0;
     }
+    .custom-link {
+        font-size: 50px;
+    }
+    .custom-link img {
+        width: auto;
+    }
 }
 @media screen and (min-width: 1537px) {
     .custom-wrapper {
@@ -1917,5 +1951,8 @@ footer h2 {
     .meet-us {
         padding-top: 80px;
         padding-bottom: 185px;
+    }
+    .app-img-wrapper {
+        padding: 150px;
     }
 }
