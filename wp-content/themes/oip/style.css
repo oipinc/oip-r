@@ -401,6 +401,7 @@ footer h2 {
     line-height: 70px;
     -webkit-text-stroke:1px white;
     -webkit-text-fill-color:transparent;
+    font-weight: bold;
 }
 .footer-email {
     font-size: 30px;
@@ -696,12 +697,20 @@ footer h2 {
 .service-impact h2 {
     margin-bottom: 45px;
 }
-.service-impact h6 {
+.service-impact .technologies ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.service-impact .technologies li {
     font-size: 40px;
     color: rgba(255,255,255,0.05);
     line-height: 0.98;
+    margin: 0 !important;
 }
-.service-impact h6 .active {
+.service-impact .technologies li:before {
+    content: none;
+}
+.service-impact .technologies li:hover {
     color: white;
 }
 .service-impact ul {
@@ -1538,7 +1547,14 @@ footer h2 {
         right: 95px;
         bottom: 35px;
     }
-    .hero-gif {
+    .hero-gif:after {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        content: "";
+        opacity: 0.5;
         background-image: url("assets/images/oip.gif");
         background-repeat: no-repeat;
         background-position: top right;
@@ -1558,7 +1574,7 @@ footer h2 {
         right: 0;
         left: 0;
     }
-    .service-impact h6 {
+    .service-impact .technologies li {
         font-size: 100px;
     }
     .service-benefits.view-2 ul li {
@@ -1679,6 +1695,9 @@ footer h2 {
     .case-study-text-nav h2,
     .recommended-case-study h2 {
         font-size: 120px;
+    }
+    .recommended-case-study h2 {
+        line-height: 0.9;
     }
     .contact-us-hero-content h1,
     .product-hero h1,

@@ -205,7 +205,7 @@
                         <?php echo $meetUs['intro']; ?>
                     </div>
                 </div>
-                <div class="meet-us-img">
+                <div class="meet-us-img text-center">
                     <img class="img-fluid" src=" <?php echo $meetUs['image']; ?>" alt="OIP Team">
                 </div>
                 <div class="custom-wrapper">

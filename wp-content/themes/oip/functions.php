@@ -22,6 +22,7 @@ function gretathemes_meta_description() {
     echo '<meta name="rating" content="general">';
     echo '<link rel="icon" href="' . get_template_directory_uri() .'/assets/images/favicon.ico" type="image/x-icon" />';
     echo '<link rel="shortcut icon" href="' . get_template_directory_uri() .'/assets/images/favicon.ico" type="image/x-icon" />';
+    echo '<link rel="apple-touch-icon" href="' . get_template_directory_uri() .'/assets/images/apple-touch-icon.png">';
     echo '<meta name="keywords" content="knowledge process outsourcing, outsourcing insurance, insurtech companies, back office support, properties and casualty insurance, insurance BPO, outsourcing insurance services, outsourcing insurance professionals, insurtech services, back office outsource" />';
     echo '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">';
 }

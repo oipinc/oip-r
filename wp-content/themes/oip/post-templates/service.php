@@ -8,7 +8,7 @@
 
             $relations                    = get_field('case_study_recommendation');
             $serviceIntro                 = get_field('service_intro');
-            $serviceImpact                = get_field('service_impact');
+            $serviceImpact                = get_field('service_impact_group');
             $serviceBenefitsBlockView1    = $serviceBenefitsBlock['checkbox_service_benefits_view_1'];
             $serviceBenefitsBlockView2    = $serviceBenefitsBlock['checkbox_service_benefits_view_2'];
             $serviceBenefitsView1         = $serviceBenefitsBlock['service_benefits_view_1'];
@@ -90,8 +90,15 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-10">
-                            <?php echo $serviceImpact; ?>
+                            <?php echo $serviceImpact['service_impact']; ?>
                         </div>
+                        <?php if ($serviceImpact['technologies']): ?>
+                        <div class="col-12">
+                            <div class="technologies">
+                                <?php echo $serviceImpact['technologies']; ?>
+                            </div>
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </section>
