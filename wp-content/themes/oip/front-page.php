@@ -18,8 +18,9 @@
                 'post_type'        => 'post',
             ];
 
-            $caseStudy = get_field('case_study');
-            $meetUs    = get_field('meet_us');
+            $caseStudy      = get_field('case_study');
+            $meetUs         = get_field('meet_us');
+            $serviceGroup   = get_field('services');
         ?>
 
         <div class="get-in-touch d-none d-xl-inline-block">
@@ -77,7 +78,9 @@
                 <div class="container-fluid">
                     <div class="home-service-title" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <p>Services</p>
-                        <p class="lead">Being at a crossroads of Insurance and Technology allows us to offer prime digital services that will make digital transformation a reality for your business.</p>
+                        <div class="lead">
+                            <?php echo $serviceGroup['intro']; ?>
+                        </div>
                     </div>
 
                     <div class="row">

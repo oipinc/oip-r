@@ -12,30 +12,18 @@ function title_setup()
 function gretathemes_meta_description() {
     global $post;
 
-//    $desPost = strip_tags($post->post_content);
-//    $desPost = strip_shortcodes($desPost);
-//    $desPost = str_replace(["\n", "\r", "\t"], ' ', $desPost);
-//    $desPost = mb_substr($desPost, 0, 300, 'utf8');
-//
-//    $description = $desPost !== "" ? $desPost : 'Desc';
-
     $title = $post->post_title;
 
     echo '<meta name="robots" content="index, follow">';
-    echo '<meta name="description" content="OIP is the leading Knowledge Process Outsourcing company within the E&S market, supported by 30 years of underwriting experience and 8 years of front line service." />';
+    echo '<meta name="description" content="OIP Robotics is a Specialty Lines InsurTech, working on digital transformation in the US and UK market." />';
+    echo '<meta name="apple-mobile-web-app-capable" content="yes">';
+    echo '<meta name="format-detection" content="telephone=no">';
+    echo '<meta name="copyright" content="OIP Robotics">';
+    echo '<meta name="rating" content="general">';
     echo '<link rel="icon" href="' . get_template_directory_uri() .'/assets/images/favicon.ico" type="image/x-icon" />';
     echo '<link rel="shortcut icon" href="' . get_template_directory_uri() .'/assets/images/favicon.ico" type="image/x-icon" />';
     echo '<meta name="keywords" content="knowledge process outsourcing, outsourcing insurance, insurtech companies, back office support, properties and casualty insurance, insurance BPO, outsourcing insurance services, outsourcing insurance professionals, insurtech services, back office outsource" />';
-    echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
-
-    echo '<meta property="og:site_name" content="OIP">';
-    echo '<meta content="website" property="og:type">';
-    echo '<meta property="og:title" content="'. $title .'">';
-    echo '<meta property="og:type" content="">';
-    echo '<meta property="fb:app_id" content="">';
-    echo '<meta property="og:url" content="https://oip.biz">';
-    echo '<meta property="og:description" content="OIP is the leading Knowledge Process Outsourcing company within the E&S market, supported by 30 years of underwriting experience and 8 years of front line service.">';
-    echo '<meta property="og:image" content="' . get_template_directory_uri() . '/assets/images/oip-share.jpg">';
+    echo '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">';
 }
 
 /**
