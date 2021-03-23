@@ -10,8 +10,7 @@
     <main data-barba="container" data-barba-namespace="contact-us">
         <?php $hero = get_field('hero');
         if ($hero): ?>
-            <section class="contact-us-hero position-relative">
-                <img class="img-fluid" src="<?php echo $hero['image'] ?>" srcset=" <?php echo $hero['retina_image'] ?> 2x" alt="OIP group">
+            <section class="contact-us-hero position-relative" style="background-image: url(<?php echo $hero['image'] ?>)">
                 <div class="custom-padding">
                     <div class="container-fluid">
                         <div class="contact-us-hero-content">
