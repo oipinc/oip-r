@@ -55,6 +55,9 @@ body.init {
 p {
     font-size: 14px;
 }
+.lead {
+    font-weight: normal;
+}
 .block {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -463,6 +466,10 @@ footer h2 {
 .swiper-wrapper h3 {
     font-size: 40px;
     margin-bottom: 30px;
+    font-weight: bold;
+}
+.swiper-wrapper p {
+    color: #fbfbff;
 }
 .swiper-wrapper a {
     font-size: 18px;
@@ -1625,6 +1632,7 @@ footer h2 {
     }
 }
 @media screen and (min-width: 1367px) {
+    .home-service a,
     .service-impact p,
     .product-story-item p,
     .job-form p,
@@ -1687,7 +1695,6 @@ footer h2 {
     .job-hero h1 {
         font-size: 80px;
     }
-    .hero h1,
     .service-hero h1,
     footer h2 {
         font-size: 100px;
@@ -1705,6 +1712,7 @@ footer h2 {
     .about-hero h1,
     .case-study-wrapper h1,
     .legal-hero h1,
+    .hero h1,
     .init-container h1 {
         font-size: 150px;
     }
@@ -1719,7 +1727,10 @@ footer h2 {
         padding-right: 80px;
     }
     .hero h1 {
-        line-height: 114px;
+        line-height: 0.93;
+    }
+    .hero p {
+        line-height: 1.88;
     }
     .hero-info-box {
         padding: 87px 65px;

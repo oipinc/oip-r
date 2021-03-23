@@ -115,7 +115,9 @@
                                                 <div class="slide-content mb-5" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                                                     <?php echo get_field('short_description', $product->ID)['content']; ?>
                                                 </div>
-                                                <a href="<?php echo get_permalink($product->ID); ?>"><img class="me-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"> Read more</a>
+                                                <a href="<?php echo get_permalink($product->ID); ?>">
+                                                    Read more <img class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
