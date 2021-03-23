@@ -13,15 +13,15 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <p class="career-job-box-small-title">Place of employment:</p>
-                                            <p class="text-uppercase"><?php echo $condition['place_of_employment']; ?></p>
+                                            <p class="text-uppercase career-job-box-small-title text-white"><?php echo $condition['place_of_employment']; ?></p>
                                         </div>
                                         <div class="col-md-4">
                                             <p class="career-job-box-small-title">Application due date:</p>
-                                            <p class="text-uppercase"><?php echo $condition['application_due_date']; ?></p>
+                                            <p class="text-uppercase career-job-box-small-title text-white"><?php echo $condition['application_due_date']; ?></p>
                                         </div>
                                         <div class="col-md-4">
                                             <p class="career-job-box-small-title">Type of employment:</p>
-                                            <p class="text-uppercase"><?php echo $condition['type_of_employment']; ?></p>
+                                            <p class="text-uppercase career-job-box-small-title text-white"><?php echo $condition['type_of_employment']; ?></p>
                                         </div>
                                     </div>
                                 </div>

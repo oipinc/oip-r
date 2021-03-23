@@ -1034,6 +1034,9 @@ footer h2 {
     font-size: 14px;
     line-height: 1.47;
 }
+.job-section-title {
+    font-weight: normal;
+}
 .job-wrapper .lead p br {
     display: none;
 }
