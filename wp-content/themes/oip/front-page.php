@@ -54,13 +54,13 @@
                             <div class="row">
                                 <div class="col-md-6 bg-transparent-dark-blue hero-info-box">
                                     <a class="d-flex align-items-center text-white" href="#home_service">
-                                        Explore our service
+                                        Explore our services
                                         <img class="ms-4" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
                                     </a>
                                 </div>
                                 <div class="col-md-6 bg-transparent-gray hero-info-box">
                                     <a class="d-flex align-items-center text-white" href="#home_product">
-                                        Explore our product
+                                        Explore our solutions
                                         <img class="ms-4" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
                                     </a>
                                 </div>

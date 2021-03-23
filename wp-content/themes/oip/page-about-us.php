@@ -99,12 +99,12 @@
                             <div class="<?php echo $class; ?>" data-aos="<?php echo $key % 2 ? 'fade-right' : 'fade-left'?>" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <h3 class="mb-4"><?php echo $job->post_title; ?></h3>
                                 <div class="d-flex align-items-center mb-lg-3">
-                                    <div class="flex-grow-0 text-white-05 fw-bold me-3"><?php echo get_field('condition', $job->ID)['type_of_employment']; ?></div>
-                                    <div class="flex-grow-0 text-white-05 fw-bold"><?php echo get_field('condition', $job->ID)['place_of_employment']; ?></div>
+                                    <div class="flex-grow-0 text-white-05 small-headline me-3"><?php echo get_field('condition', $job->ID)['type_of_employment']; ?></div>
+                                    <div class="flex-grow-0 text-white-05 small-headline"><?php echo get_field('condition', $job->ID)['place_of_employment']; ?></div>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <div class="flex-grow-0 text-white-05 fw-bold me-3">Application due date</div>
-                                    <div class="flex-grow-0 fw-bold"><?php echo get_field('condition', $job->ID)['application_due_date']; ?></div>
+                                    <div class="flex-grow-0 text-white-05 small-headline me-3">Application due date</div>
+                                    <div class="flex-grow-0 small-headline"><?php echo get_field('condition', $job->ID)['application_due_date']; ?></div>
                                     <div class="flex-grow-1 text-end me-lg-5">
                                         <a href="<?php echo get_permalink($job->ID); ?>">
                                             <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">

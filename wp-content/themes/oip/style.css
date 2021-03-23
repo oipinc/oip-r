@@ -1315,7 +1315,14 @@ footer h2 {
     font-size: 50px;
     font-weight: bold;
     padding-bottom: 100px;
-    line-height: 0.99;
+    line-height: 0.88;
+}
+.about-hero h3 {
+    font-weight: normal;
+    line-height: 1.47;
+}
+.about-hero h6 {
+    font-weight: normal;
 }
 .about-people {
     background-image: url('assets/images/WBS.png');
@@ -1323,18 +1330,26 @@ footer h2 {
     background-size: cover;
     padding: 50px 0;
 }
+.about-people p {
+    font-weight: bold;
+}
+.about-people h6 {
+    font-weight: normal;
+}
 .about-team,
 .about-company {
     padding: 50px 0;
 }
 .about-company h2 {
     margin-bottom: 47px;
+    font-weight: bold;
 }
 .about-company .about-company-more {
     margin-top: 100px;
 }
 .about-company .about-company-more a {
     font-size: 18px;
+    font-weight: bold;
 }
 .about-company .about-company-more a img {
     margin-left: 30px;
@@ -1342,6 +1357,12 @@ footer h2 {
 .about-career {
     padding: 30px 0;
     background-color: rgba(104, 106, 90, 0.08);
+}
+.about-career h3 {
+    font-weight: 600;
+}
+.small-headline {
+    font-weight: 600;
 }
 /* end */
 
@@ -1639,6 +1660,8 @@ footer h2 {
     .service-benefits-title p,
     .product-stories-title p,
     .about-company p,
+    .about-people p,
+    .about-hero p,
     .case-study-problem p,
     .board-redirection-box p {
         font-size: 18px;
@@ -1761,7 +1784,9 @@ footer h2 {
     .home-service {
         padding:203px 0 146px 0;
     }
-
+    .about-hero h3 {
+        font-size: 30px;
+    }
     .career-values br,
     .job-wrapper .lead p br {
         display: block;
