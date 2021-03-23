@@ -870,6 +870,7 @@ footer h2 {
 }
 .office-box p {
     opacity: 0.4;
+    font-weight: bold;
 }
 .office-box h5 {
     font-size: 25px;
@@ -877,7 +878,6 @@ footer h2 {
 }
 .office-box:hover p {
     opacity: 1;
-    font-weight: bold;
 }
 .office-bg:before {
     background-color: rgba(0, 2, 36, 0.05);
@@ -1112,7 +1112,7 @@ footer h2 {
     box-shadow: none;
 }
 .btn-apply {
-    font-size: 18px;
+    font-size: 18px !important;
     font-weight: bold;
     line-height: 2.17;
     color: white;
@@ -1120,6 +1120,11 @@ footer h2 {
     height: 50px;
     border-radius: 0;
     background-color: var(--gray-secondary);
+    position: relative;
+    background-image: url("assets/images/right-arrow-small.svg");
+    background-repeat: no-repeat;
+    background-size: 25px 16px;
+    background-position: 90% center;
 }
 .btn-upload {
     width: 200px;
@@ -1152,12 +1157,11 @@ footer h2 {
 }
 .product-hero h1 {
     font-size: 50px;
+    font-weight: bold;
 }
 .product-hero h2 {
     font-size: 30px;
-}
-.product-hero p {
-    font-size: 18px;
+    font-weight: bold;
 }
 .product-intro p {
     line-height: 1.47;
@@ -1203,6 +1207,9 @@ footer h2 {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
 }
 .product-spotlight .number {
     font-size: 40px;
@@ -1677,6 +1684,7 @@ footer h2 {
     .about-company p,
     .about-people p,
     .about-hero p,
+    .product-hero-content p,
     .case-study-problem p,
     .career-board p,
     .board-redirection-box p {

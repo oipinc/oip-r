@@ -18,8 +18,8 @@
         <?php while ( have_posts() ) : the_post(); ?>
             <section class="product-hero custom-padding" style="background-image: url(<?php echo $heroBg; ?>)">
                 <div class="container-fluid">
+                    <p>Product</p>
                     <div class="product-hero-content" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                        <p>Product</p>
                         <h1><?php the_title(); ?></h1>
                         <?php the_content(); ?>
                     </div>
@@ -237,7 +237,7 @@
                             <div class="board-redirection-box">
                                 <div class="w-100">
                                     <h3><?php echo $relatedProduct->post_title; ?></h3>
-                                    <a class="related-link custom-link" href="<?php echo get_permalink($relatedProduct->ID); ?>">
+                                    <a class="related-link" href="<?php echo get_permalink($relatedProduct->ID); ?>">
                                         View our product<img width="30" class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
                                     </a>
                                 </div>
