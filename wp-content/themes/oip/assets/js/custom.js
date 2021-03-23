@@ -280,7 +280,7 @@ jQuery(window).resize(function() {
     jQuery('.product .swiper-slide, .case-mob .swiper-slide').matchHeight();
 });
 
-jQuery(".hero-info-box a").on('click', function (event) {
+jQuery(".hero-info-box a, .btn-demo").on('click', function (event) {
     event.preventDefault();
 
     jQuery('html, body').animate({
