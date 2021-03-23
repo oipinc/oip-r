@@ -51,7 +51,7 @@
                             <div class="col-lg-6 mb-3 mb-lg-0">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-grow-0 me-4">
-                                        <h6 class="my-0"><?php echo $serviceBenefitsTitle['title']; ?></h6>
+                                        <h6 class="my-0 fw-bold"><?php echo $serviceBenefitsTitle['title']; ?></h6>
                                     </div>
                                     <div class="flex-grow-1 d-none d-lg-block">
                                         <div class="line"></div>

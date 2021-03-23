@@ -627,8 +627,8 @@ footer h2 {
     line-height: 1.14;
     margin-bottom: 37px;
 }
-.service-hero p {
-    font-size: 18px;
+.service-hero h3 {
+    font-weight: bold;
 }
 .btn-contact-us {
     font-size: 18px;
@@ -703,6 +703,10 @@ footer h2 {
 }
 .service-impact h2 {
     margin-bottom: 45px;
+    font-weight: normal;
+}
+.service-impact h4 {
+    font-weight: normal;
 }
 .service-impact .technologies ul {
     display: flex;
@@ -754,9 +758,11 @@ footer h2 {
 }
 .service-benefits.view-2 h2 {
     margin-bottom: 35px;
+    font-weight: normal;
 }
 .service-benefits.view-2 h4 {
     margin-bottom: 35px;
+    font-weight: normal;
 }
 .service-benefits.view-2 ul {
     margin: 0;
@@ -1686,8 +1692,10 @@ footer h2 {
     .about-company p,
     .about-people p,
     .about-hero p,
+    .service-hero p,
     .product-hero-content p,
     .case-study-problem p,
+    .service-benefits.view-2 p,
     .career-board p,
     .board-redirection-box p {
         font-size: 18px;
@@ -1707,11 +1715,11 @@ footer h2 {
     .product-intro p,
     .case-study-intro p,
     .service-intro p,
-    .service-benefits.view-2 p,
     .meet-us .lead,
     .job-section-title,
     .contact-us-section-title h4,
     .service-benefits.view-2 h4,
+    .service-impact h4,
     .service-impact li,
     .service-intro ul li,
     .contact-us-intro h3,
