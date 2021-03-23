@@ -903,7 +903,8 @@ footer h2 {
     font-weight: bold;
     line-height: 3.5;
 }
-.career-values {
+.career-values h4,
+.career-values p {
     color: #fbfbff;
 }
 .career-values h4 {
@@ -916,11 +917,12 @@ footer h2 {
     display: none;
 }
 .section-title {
+    color: white;
     margin-bottom: 50px;
 }
 .board-title {
     font-size: 25px;
-    font-weight: bold;
+    font-weight: normal;
     color: white;
     margin-bottom: 30px;
 }
@@ -943,6 +945,7 @@ footer h2 {
 }
 .board-day p {
     white-space: nowrap;
+    font-weight: 600;
 }
 .board-redirection-box {
     height: 100%;
@@ -1000,6 +1003,7 @@ footer h2 {
 .career-benefit-holder ul li {
     border-bottom: 1px solid #505147;
     padding: 10px 0;
+    font-weight: 600;
 }
 /* end */
 
@@ -1663,10 +1667,12 @@ footer h2 {
     .about-people p,
     .about-hero p,
     .case-study-problem p,
+    .career-board p,
     .board-redirection-box p {
         font-size: 18px;
     }
-    .service-benefits.view-2 ul li {
+    .service-benefits.view-2 ul li,
+    .career-benefit-holder ul li {
         font-size: 20px;
     }
     .career-job-box p,
@@ -1826,6 +1832,7 @@ footer h2 {
     }
     .board-title {
         margin-bottom: 106px;
+        font-size: 60px;
     }
     .board-redirection-box {
         height: 430px;
@@ -1969,6 +1976,9 @@ footer h2 {
     }
     .contact-us-hero {
         padding-top: 100px;
+    }
+    .career-open-position-section-title h2 {
+        line-height: 0.9;
     }
 }
 @media screen and (min-width: 1537px) {
