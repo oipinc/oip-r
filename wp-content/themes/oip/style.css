@@ -1222,6 +1222,7 @@ footer h2 {
 }
 .product-spotlight-box p {
     margin: 0;
+    font-weight: bold;
 }
 .text-nav-subtitle {
     position: absolute;
@@ -1265,6 +1266,7 @@ footer h2 {
 .product-values p {
     line-height: 1.6;
     margin-bottom: 28px;
+    font-weight: 600;
 }
 .product-values-box {
     margin-bottom: 20px;
