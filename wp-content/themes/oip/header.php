@@ -18,7 +18,11 @@
 </head>
 
 <?php
-    $bgProduct = in_category('7') ? 'bg-dark-blue' : '';
+    $bgProduct   = in_category('7') ? 'bg-dark-blue' : '';
+    $address     = get_field('address', 'option');
+    $phone       = get_field('phone', 'option');
+    $email       = get_field('email', 'option');
+    $copyright   = get_field('copyright', 'option');
 ?>
 
 <body class="init <?php echo $bgProduct; ?>">
@@ -52,12 +56,12 @@
                 <div class="mob-info d-md-none">
                     <hr class="my-4">
                     <div class="mb-4 d-block">
-                        <a href="mailto:office@oip.bz">office@oip.bz</a>
+                        <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
                     </div>
                     <div class="mb-4">
-                        <a target="_blank" href="https://goo.gl/maps/FFfwad9MFqbrPwPH9">Terazije 5, 11000 Belgrade</a>
+                        <a target="_blank" href="https://goo.gl/maps/FFfwad9MFqbrPwPH9"><?php echo $address; ?></a>
                         <br>
-                        <a href="tel:+ 381 11 324 81 80">+ 381 11 324 81 80</a>
+                        <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
                     </div>
                     <a href="/contact-us" class="btn-contact-us">Get in touch</a>
                 </div>
@@ -70,7 +74,7 @@
                         <?php get_template_part('template-parts/share'); ?>
                     </div>
                     <div class="col text-end">
-                        <a class="mailto-link" href="mailto:office@oip.bz">office@oip.bz</a>
+                        <a class="mailto-link" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
                     </div>
                 </div>
             </div>

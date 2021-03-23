@@ -1,3 +1,10 @@
+<?php
+    $address     = get_field('address', 'option');
+    $phone       = get_field('phone', 'option');
+    $email       = get_field('email', 'option');
+    $copyright   = get_field('copyright', 'option');
+?>
+
 <footer class="bg-gray">
     <div class="footer-navigation custom-padding">
         <div class="container-fluid">
@@ -5,8 +12,8 @@
                 <div class="col-lg-4 col-xxl-6">
                     <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <h2>Get in <br>touch</h2>
-                        <span class="footer-email d-block">office@oip.bz</span>
-                        <a href="mailto:office@oip.bz">
+                        <span class="footer-email d-block"><?php echo $email; ?></span>
+                        <a href="mailto:<?php echo $email; ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow">
                         </a>
                     </div>
@@ -39,9 +46,9 @@
                 </div>
                 <div class="col d-none d-lg-block">
                     <div class="address-info" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                        <a target="_blank" href="https://goo.gl/maps/FFfwad9MFqbrPwPH9">Terazije 5, 11000 Belgrade</a>
+                        <a target="_blank" href="https://goo.gl/maps/FFfwad9MFqbrPwPH9"><?php echo $address; ?></a>
                         <br>
-                        <a href="tel:+ 381 11 324 81 80">+ 381 11 324 81 80</a>
+                        <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
                     </div>
                 </div>
             </div>
@@ -57,10 +64,9 @@
                 </div>
                 <div class="col">
                     <div class="row align-items-end">
-                        <div class="col-lg-7">
+                        <div class="col-lg-5 col-xl-4">
                             <div class="copyright-text" data-aos="fade-up" data-aos-duration="1000">
-                                <p class="my-0">We are working hard Monday to Friday, starting bright <br> and early with a cup of lightly creamed coffee. Feel
-                                    <br>free to get in touch with us.</p>
+                                <p class="my-0"><?php echo $copyright; ?></p>
                             </div>
                         </div>
                         <div class="col copyright text-end" data-aos="fade-up" data-aos-duration="1000">
@@ -77,12 +83,12 @@
     <div class="footer-copyright d-lg-none">
         <div class="container-fluid text-center" data-aos="fade-up" data-aos-duration="1000">
             <div class="copyright-text" data-aos="fade-up" data-aos-duration="1000">
-                <p class="my-0">We are working hard Monday to Friday, starting bright and early with a cup of lightly creamed coffee. Feel free to get in touch with us.</p>
+                <p class="my-0"><?php echo $copyright; ?></p>
             </div>
             <div class="address-info">
-                <a target="_blank" href="https://goo.gl/maps/FFfwad9MFqbrPwPH9">Terazije 5, 11000 Belgrade</a>
+                <a target="_blank" href="https://goo.gl/maps/FFfwad9MFqbrPwPH9"><?php echo $address; ?></a>
                 <br>
-                <a href="tel:+ 381 11 324 81 80">+ 381 11 324 81 80</a>
+                <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
             </div>
             <?php get_template_part('template-parts/mobile-share'); ?>
             <div class="copyright">
