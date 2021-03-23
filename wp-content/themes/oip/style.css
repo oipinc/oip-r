@@ -1559,6 +1559,7 @@ footer h2 {
         background-repeat: no-repeat;
         background-position: top right;
         background-size: cover;
+        z-index: -1;
     }
     .product-hero,
     .service-hero,
