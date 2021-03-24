@@ -3,12 +3,10 @@
         <?php
             $result            = get_field('results');
             $recommendedPost   = get_field('recommended_case_study');
-            $ourSolution = get_field('our_solution');
-            $problemStatement = get_field('problem_statement');
-            $appImage = get_field('app_image');
-            $workflow = get_field('workflow');
-
-            var_dump($workflow);die();
+            $ourSolution       = get_field('our_solution');
+            $problemStatement  = get_field('problem_statement');
+            $appImage          = get_field('app_image');
+            $workflow          = get_field('workflow');
         ?>
 
         <!-- Hero -->
