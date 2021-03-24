@@ -7,6 +7,8 @@
             $problemStatement = get_field('problem_statement');
             $appImage = get_field('app_image');
             $workflow = get_field('workflow');
+
+            var_dump($workflow);die();
         ?>
 
         <!-- Hero -->
@@ -95,7 +97,7 @@
         <!-- end -->
 
         <!-- App image -->
-        <?php if($appImage): ?>
+        <?php if($appImage['image'] && $appImage['retina_image']): ?>
             <section class="app-img-wrapper text-center">
                 <img class="img-fluid" src="<?php echo $appImage['image']; ?>" srcset="<?php echo $appImage['retina_image']; ?> 2x" alt="App image" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
             </section>
@@ -103,7 +105,7 @@
         <!-- end -->
 
         <!-- Workflow -->
-        <?php if($workflow): ?>
+        <?php if(!empty($workflow['content']) && $workflow['image']): ?>
             <section class="case-study-workflow">
                 <div class="container-fluid">
                     <?php echo $workflow['intro']; ?>
