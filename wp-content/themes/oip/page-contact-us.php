@@ -36,7 +36,7 @@
                 <div class="container-fluid">
                     <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <?php echo $intro['left_content']; ?>
-                        <span class="contact-email">office@oip.bz</span>
+                        <span class="contact-email"><?php echo get_field('email', 'option'); ?></span>
                     </div>
                 </div>
             </section>
