@@ -106,10 +106,12 @@
         <?php if(!empty($workflow['intro']) && $workflow['image']): ?>
             <section class="case-study-workflow">
                 <div class="container-fluid">
-                    <?php echo $workflow['intro']; ?>
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <?php echo $workflow['intro']; ?>
+                    </div>
 
                     <?php if($workflow['image']): ?>
-                        <div class="workflow-img text-center">
+                        <div class="workflow-img text-center" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             <img class="img-fluid" src="<?php echo $workflow['image']; ?>" alt="Workflow">
                         </div>
                     <?php endif; ?>
