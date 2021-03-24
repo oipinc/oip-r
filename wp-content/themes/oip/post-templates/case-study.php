@@ -103,7 +103,7 @@
         <!-- end -->
 
         <!-- Workflow -->
-        <?php if(!empty($workflow['content']) && $workflow['image']): ?>
+        <?php if(!empty($workflow['intro']) && $workflow['image']): ?>
             <section class="case-study-workflow">
                 <div class="container-fluid">
                     <?php echo $workflow['intro']; ?>
