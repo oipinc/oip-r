@@ -200,20 +200,17 @@
         <?php endif; ?>
 
         <!-- Request Form -->
-        <?php if (!empty($requestForm)): ?>
+        <?php if (!empty($requestForm['form_shortcode'])): ?>
             <section id="demo_form" class="product-request-form block">
                 <div class="container-fluid">
                     <div class="bg-navy product-request-form-holder">
                         <div class="row">
-                            <div class="col-12" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                                <h2>Sign up for free trial <br> or request a demo!</h2>
-                            </div>
                             <div class="col-lg-6" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                                <p>See how an all-in-one growth software tool gets your <br> entire team on the same page.</p>
+                                <?php echo $requestForm['content']; ?>
                             </div>
                             <div class="col-lg-6" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <div class="form-holder mt-0">
-                                    <?php echo do_shortcode($requestForm); ?>
+                                    <?php echo do_shortcode($requestForm['form_shortcode']); ?>
                                 </div>
                             </div>
                         </div>
