@@ -499,8 +499,13 @@ footer h2 {
 }
 
 /* Case study view */
+.problem-statement-img {
+    margin-top: 20px;
+}
 .case-study-hero {
     padding: 50px 0;
+    display: flex;
+    align-items: center;
 }
 .custom-wrapper {
     position: relative;
@@ -509,7 +514,6 @@ footer h2 {
     font-weight: bold;
     font-size: 50px;
     line-height: 0.88;
-    margin-bottom: 50px;
 }
 .case-study-wrapper h6,
 .service-hero-content h6 {
@@ -521,7 +525,7 @@ footer h2 {
 }
 .app-img-wrapper {
     padding: 15px;
-    background-color: #f8f7f5;
+    background-color: #e9e9e9;
 }
 .use-case-img-holder {
     padding-top: 15px;
@@ -571,12 +575,15 @@ footer h2 {
     background-color: white;
     height: 2px;
     width: 100%;
+    max-width: 406px;
     margin-left: 30px;
 }
 .case-study-text-nav span {
     white-space: nowrap;
 }
-.case-study-problem p {
+.case-study-problem p,
+.case-study-solution p,
+.case-study-result p {
     line-height: 1.83;
 }
 .case-study-slide-item {
@@ -612,6 +619,15 @@ footer h2 {
     top: -13vh;
     right: -150px;
     z-index: -1;
+}
+.case-study-workflow {
+    padding: 50px 0;
+}
+.workflow-img {
+    margin-top: 50px;
+}
+.case-study-workflow h3 {
+    font-weight: normal;
 }
 /* end */
 
@@ -1675,14 +1691,11 @@ footer h2 {
     .swiper-slide {
         padding: 170px 0;
     }
-    .case-study-intro {
-        padding: 190px 0;
-    }
-    .case-study-wrapper h1 {
-        margin-bottom: 160px;
-    }
     .menu-navigation {
         padding: 272px 72px 0 263px;
+    }
+    .workflow-img {
+        margin-top: 100px;
     }
 }
 @media screen and (min-width: 1367px) {
@@ -1698,6 +1711,8 @@ footer h2 {
     .service-hero p,
     .product-hero-content p,
     .case-study-problem p,
+    .case-study-result p,
+    .case-study-solution p,
     .service-benefits.view-2 p,
     .career-board p,
     .board-redirection-box p {
@@ -1736,6 +1751,7 @@ footer h2 {
     .service-hero h3,
     .board-redirection-box h3,
     .about-career h3,
+    .case-study-workflow h3,
     .about-company h2,
     .footer-email {
         font-size: 40px;
@@ -2013,6 +2029,15 @@ footer h2 {
     .career-open-position-section-title h2 {
         line-height: 0.9;
     }
+    .problem-statement-img {
+        margin-top: 150px;
+    }
+    .case-study-workflow {
+        padding: 190px 0 150px;
+    }
+    .workflow-img {
+        margin-top: 200px;
+    }
 }
 @media screen and (min-width: 1537px) {
     .custom-wrapper {
@@ -2077,7 +2102,7 @@ footer h2 {
         padding-bottom: 185px;
     }
     .app-img-wrapper {
-        padding: 150px;
+        padding: 80px 0;
     }
     .menu-share {
         padding: 0 72px;
