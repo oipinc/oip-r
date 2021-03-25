@@ -34,7 +34,7 @@
         <a class="init-logo" href="/">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo">
         </a>
-        <h1 class="my-0">OIP ROBOTICS</h1>
+        <h1 class="my-0">OIP Robotics</h1>
     </div>
     <div class="get-in-touch d-none d-xxl-inline-block">
         <a class="text-white" href="/contact-us">

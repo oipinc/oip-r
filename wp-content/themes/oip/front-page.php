@@ -21,13 +21,7 @@
             $caseStudy      = get_field('case_study');
             $meetUs         = get_field('meet_us');
             $serviceGroup   = get_field('services');
-        ?>
-
-        <div class="get-in-touch d-none d-xl-inline-block">
-            <a class="text-white" href="/contact-us">
-                Get in touch
-            </a>
-        </div>
+        ?>>
 
         <!-- Hero -->
         <?php while ( have_posts() ) : the_post(); ?>
@@ -142,22 +136,12 @@
                                 $shortDescription = get_field('short_description', $value->ID);
                             ?>
                             <div class="col-md-6 <?php echo $key === 0 ? 'mb-5 mb-md-0' : '' ?>">
-                                <div class="case-holder">
-                                    <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="300" class="d-flex flex-column">
+                                <div class="case-holder" style="background-image: url(<?php echo $shortDescription['feature_image']['image']; ?>)">
+                                    <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="300" class="d-flex flex-column flex-grow-1">
                                         <?php echo $shortDescription['content']; ?>
                                     </div>
-                                    <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
-                                        <img class="case-img" src="<?php echo $shortDescription['feature_image']['image']; ?>" srcset="<?php echo $shortDescription['feature_image']['retina_image']; ?> 2x" alt="Product 1">
-                                        <div class="row align-items-center">
-                                            <div class="col">
-                                                <a href="<?php echo get_permalink($value->ID); ?>">Read more</a>
-                                            </div>
-                                            <div class="col text-end">
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow">
-                                                </a>
-                                            </div>
-                                        </div>
+                                    <div class="position-relative" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
+                                        <a class="case-link" href="<?php echo get_permalink($value->ID); ?>">Read more</a>
                                     </div>
                                 </div>
                             </div>
