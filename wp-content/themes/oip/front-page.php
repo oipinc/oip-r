@@ -21,6 +21,12 @@
             $caseStudy      = get_field('case_study');
             $meetUs         = get_field('meet_us');
             $serviceGroup   = get_field('services');
+
+            $productArray = get_posts($products);
+            function order($a, $b){
+                return strnatcmp(get_field('order', $a->ID), get_field('order', $b->ID));
+            }
+            usort($productArray, 'order');
         ?>>
 
         <!-- Hero -->
@@ -100,7 +106,7 @@
             <section id="home_product" class="product">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <?php foreach (get_posts($products) as $key => $product): ?>
+                        <?php foreach ($productArray as $key => $product): ?>
                             <div class="swiper-slide" style="background-color: <?php echo $key % 2 ? '#505147' : '#686a5a' ?>; background-image: url(<?php echo get_field('short_description', $product->ID)['feature_image']['image']; ?>)">
                                 <div class="custom-padding">
                                     <div class="container-fluid">
