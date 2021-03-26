@@ -203,7 +203,15 @@ jQuery(function() {
                 swipeSliderInit();
                 initProductSlider();
                 elMaxHeight();
-                playVideo("app_video");
+                let autoPlayVideo = document.getElementById(el);
+                if (autoPlayVideo) {
+                    autoPlayVideo.oncanplaythrough = function() {
+                        autoPlayVideo.muted = true;
+                        autoPlayVideo.play();
+                        autoPlayVideo.pause();
+                        autoPlayVideo.play();
+                    }
+                }
 
                 jQuery('.case-study-slide-item, .product-story-item, .product-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
