@@ -203,19 +203,14 @@ jQuery(function() {
                 swipeSliderInit();
                 initProductSlider();
                 elMaxHeight();
-                let autoPlayVideo = document.getElementById(el);
-                if (autoPlayVideo) {
-                    autoPlayVideo.oncanplaythrough = function() {
-                        autoPlayVideo.muted = true;
-                        autoPlayVideo.play();
-                        autoPlayVideo.pause();
-                        autoPlayVideo.play();
-                    }
-                }
 
                 jQuery('.case-study-slide-item, .product-story-item, .product-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
-                jQuery('.product .swiper-slide, .case-mob .swiper-slide, .home-service-box h4').matchHeight();
+                jQuery('.product .swiper-slide, .case-mob .swiper-slide').matchHeight();
+
+                setTimeout(function () {
+                    jQuery('.home-service-box h4').matchHeight();
+                },500)
 
                 const url = window.location.pathname.split('/');
                 if (url[1] !== "product") {
@@ -251,7 +246,11 @@ jQuery(function() {
 
                 jQuery('.case-study-slide-item, .product-story-item, .product-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
-                jQuery('.product .swiper-slide, .case-mob .swiper-slide, .home-service-box h4').matchHeight();
+                jQuery('.product .swiper-slide, .case-mob .swiper-slide').matchHeight();
+
+                setTimeout(function () {
+                    jQuery('.home-service-box h4').matchHeight();
+                },500)
 
                 const url = window.location.pathname.split('/');
                 if (url[1] !== "product") {
