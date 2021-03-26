@@ -154,6 +154,18 @@ function elMaxHeight() {
     caseStudy.css("height", getMaxHeight('.case h4'));
 }
 
+function playVideo(el) {
+    let autoPlayVideo = document.getElementById(el);
+    if (autoPlayVideo) {
+        autoPlayVideo.oncanplaythrough = function() {
+            autoPlayVideo.muted = true;
+            autoPlayVideo.play();
+            autoPlayVideo.pause();
+            autoPlayVideo.play();
+        }
+    }
+}
+
 jQuery(function() {
     barba.init({
         // We don't want "synced transition"
@@ -191,13 +203,8 @@ jQuery(function() {
                 swipeSliderInit();
                 initProductSlider();
                 elMaxHeight();
+                playVideo("app_video");
 
-                const vid = document.getElementById("background_animation");
-                if (vid) {
-                    vid.autoplay = true;
-                    vid.loop = true;
-                    vid.load();
-                }
                 jQuery('.case-study-slide-item, .product-story-item, .product-item').matchHeight({ property: 'min-height' });
                 jQuery('.product-values-box').matchHeight({ property: 'min-height' });
                 jQuery('.product .swiper-slide, .case-mob .swiper-slide, .home-service-box h4').matchHeight();
@@ -286,4 +293,8 @@ jQuery(".hero-info-box a, .btn-demo").on('click', function (event) {
     jQuery('html, body').animate({
         scrollTop: jQuery(jQuery.attr(this, 'href')).offset().top
     }, 1000);
+});
+
+jQuery(document).ready(function () {
+    playVideo("app_video");
 });

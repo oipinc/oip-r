@@ -5,7 +5,7 @@
             $recommendedPost   = get_field('recommended_case_study');
             $ourSolution       = get_field('our_solution');
             $problemStatement  = get_field('problem_statement');
-            $appImage          = get_field('app_image');
+            $appVideo          = get_field('app_video');
             $workflow          = get_field('workflow');
         ?>
 
@@ -94,10 +94,14 @@
         <?php endif; ?>
         <!-- end -->
 
-        <!-- App image -->
-        <?php if($appImage['image'] && $appImage['retina_image']): ?>
+        <!-- App Video -->
+        <?php if(!empty($appVideo)): ?>
             <section class="app-img-wrapper text-center">
-                <img class="img-fluid" src="<?php echo $appImage['image']; ?>" srcset="<?php echo $appImage['retina_image']; ?> 2x" alt="App image" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <video id="app_video" autoplay loop>
+                    <?php foreach ($appVideo as $video): ?>
+                        <source src="<?php echo $video['video']['url']; ?>" type="<?php echo $video['video']['mime_type']; ?>">
+                    <?php endforeach; ?>
+                </video>
             </section>
         <?php endif; ?>
         <!-- end -->

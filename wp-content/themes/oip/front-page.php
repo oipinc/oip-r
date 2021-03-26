@@ -27,7 +27,7 @@
                 return strnatcmp(get_field('order', $a->ID), get_field('order', $b->ID));
             }
             usort($productArray, 'order');
-        ?>>
+        ?>
 
         <!-- Hero -->
         <?php while ( have_posts() ) : the_post(); ?>
@@ -147,7 +147,7 @@
                                         <?php echo $shortDescription['content']; ?>
                                     </div>
                                     <div class="position-relative" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
-                                        <a class="case-link" href="<?php echo get_permalink($value->ID); ?>">Read more</a>
+                                        <a class="case-link" href="<?php echo get_permalink($value->ID); ?>">Find out more</a>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +170,7 @@
                                             <img class="case-img" src="<?php echo $shortDescription['feature_image']['image']; ?>" srcset="<?php echo $shortDescription['feature_image']['retina_image']; ?> 2x" alt="Product 1">
                                             <div class="row align-items-center">
                                                 <div class="col">
-                                                    <a href="<?php echo get_permalink($value->ID); ?>">Read more</a>
+                                                    <a href="<?php echo get_permalink($value->ID); ?>">Find out more</a>
                                                 </div>
                                                 <div class="col text-end">
                                                     <a href="#">
