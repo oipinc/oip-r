@@ -13,6 +13,7 @@ function gretathemes_meta_description() {
     global $post;
 
     $title = $post->post_title;
+    $rootUrl = get_site_url();
 
     echo '<meta name="robots" content="index, follow">';
     echo '<meta name="description" content="OIP Robotics is a Specialty Lines InsurTech, working on digital transformation in the US and UK market." />';
@@ -31,7 +32,7 @@ function gretathemes_meta_description() {
     echo '<meta property="og:title" content="'. $title .'">';
     echo '<meta property="og:type" content="">';
     echo '<meta property="fb:app_id" content="">';
-    echo '<meta property="og:url" content="">';
+    echo '<meta property="og:url" content="' . $rootUrl . '">';
     echo '<meta property="og:description" content="OIP Robotics is a Specialty Lines InsurTech, working on digital transformation in the US and UK market.">';
     echo '<meta property="og:image" content="' . get_template_directory_uri() . '/assets/images/oip-share.jpg">';
 }
