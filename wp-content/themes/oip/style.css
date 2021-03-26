@@ -118,7 +118,7 @@ br {
     height: 11px;
     width: 140%;
 }
-.menu-list .current_page_item .sub-menu a:before  {
+.menu-list .sub-menu .current_page_item a:before  {
     top: 12px;
     height: 5px;
     width: 120%;
