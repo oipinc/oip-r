@@ -156,6 +156,7 @@ function elMaxHeight() {
 
 function playVideo(el) {
     let autoPlayVideo = document.getElementById(el);
+
     if (autoPlayVideo) {
         autoPlayVideo.oncanplaythrough = function() {
             autoPlayVideo.muted = true;
@@ -226,6 +227,15 @@ jQuery(function() {
                         scrollTop: jQuery(jQuery.attr(this, 'href')).offset().top
                     }, 1000);
                 });
+
+                let autoPlayVideo = document.getElementById("app_video");
+
+                if (autoPlayVideo) {
+                    document.getElementById("app_video").muted = true;
+                    document.getElementById("app_video").play();
+                    document.getElementById("app_video").pause();
+                    document.getElementById("app_video").play();
+                }
             },
             // Variations for didactical purpose…
             // Better browser support than async/await
