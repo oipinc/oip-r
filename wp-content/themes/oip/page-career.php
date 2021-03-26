@@ -15,7 +15,7 @@
          ?>
 
         <?php if ($hero): ?>
-            <section class="career-hero custom-padding d-flex align-items-center">
+            <section class="career-hero custom-padding d-flex align-items-center" style="background-image: url(<?php echo $hero['background'] ?>)">
                 <div class="container-fluid" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <?php echo $hero['content']; ?>
                 </div>

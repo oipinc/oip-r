@@ -55,6 +55,9 @@ body.init {
 p {
     font-size: 14px;
 }
+br {
+    display: none;
+}
 .lead {
     font-weight: normal;
 }
@@ -908,8 +911,7 @@ footer h2 {
     font-weight: 600;
 }
 .contact-us-hero {
-    padding-top: 50px;
-    min-height: 100vh;
+    min-height: 82vh;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -964,10 +966,13 @@ footer h2 {
 
 /* Career */
 .career-hero {
-    padding: 50px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    min-height: 82vh;
 }
 .career-hero h1 {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 600
 }
 .career-number {
@@ -1587,9 +1592,6 @@ footer h2 {
     .board-row {
         padding: 30px 15px;
     }
-    .career-hero h1 {
-        font-size: 40px;
-    }
     .job-wrapper .lead p,
     .job-section-title {
         font-size: 21px;
@@ -1701,6 +1703,7 @@ footer h2 {
     .career-hero,
     .job-hero,
     .legal-hero,
+    .contact-us-hero,
     .case-study-hero {
         padding: 0;
         min-height: 100vh;
@@ -1747,6 +1750,9 @@ footer h2 {
     }
     .workflow-img {
         margin-top: 100px;
+    }
+    br {
+        display: block;
     }
 }
 @media screen and (min-width: 1367px) {
@@ -1816,8 +1822,7 @@ footer h2 {
     .product-values h2,
     .service-benefits.view-2 h2,
     .product-story-item h3,
-    .career-job-box h3,
-    .career-hero h1 {
+    .career-job-box h3 {
         font-size: 60px;
     }
     .number,
@@ -1842,6 +1847,7 @@ footer h2 {
     .case-study-wrapper h1,
     .legal-hero h1,
     .hero h1,
+    .career-hero h1,
     .init-container h1 {
         font-size: 150px;
     }

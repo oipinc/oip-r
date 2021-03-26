@@ -132,7 +132,7 @@
                             <?php endforeach; ?>
                         </div>
                         <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            <a href="#demo_form" class="btn btn-demo">Request a demo</a>
+                            <a href="#demo_form" class="btn btn-demo">Seeing is Believing! Request a demo</a>
                         </div>
                     </div>
                 </section>
