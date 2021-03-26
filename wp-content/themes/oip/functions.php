@@ -27,7 +27,7 @@ function gretathemes_meta_description() {
     echo '<meta name="keywords" content="knowledge process outsourcing, outsourcing insurance, insurtech companies, back office support, properties and casualty insurance, insurance BPO, outsourcing insurance services, outsourcing insurance professionals, insurtech services, back office outsource" />';
     echo '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">';
 
-    echo '<meta property="og:site_name" content="OIP">';
+    echo '<meta property="og:site_name" content="OIP Robotics">';
     echo '<meta content="website" property="og:type">';
     echo '<meta property="og:title" content="'. $title .'">';
     echo '<meta property="og:type" content="">';
