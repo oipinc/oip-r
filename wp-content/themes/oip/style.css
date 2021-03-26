@@ -376,6 +376,25 @@ body.open .menu-icon__line-right {
     top: 47%;
     z-index: 2;
 }
+
+.form-holder .form-control:-webkit-autofill,
+.form-holder .form-control:-webkit-autofill:hover,
+.form-holder .form-control:-webkit-autofill:focus,
+.form-holder .form-control:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #0d0f2f inset !important;
+}
+.form-holder .form-control:-webkit-autofill
+{
+    -webkit-text-fill-color: white !important;
+}
+.product-request-form-holder .form-holder .form-control:-webkit-autofill,
+.product-request-form-holder .form-holder .form-control:-webkit-autofill:hover,
+.product-request-form-holder .form-holder .form-control:-webkit-autofill:focus,
+.product-request-form-holder .form-holder .form-control:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--navy) inset !important;
+}
+
+
 /*body.open .get-in-touch {*/
 /*    z-index: 0;*/
 /*}*/
@@ -1166,6 +1185,7 @@ footer h2 {
     border-bottom: 1px solid var(--gray-secondary);
     padding-left: 0;
     background-color: transparent;
+    color: white;
 }
 .form-holder {
     margin-top: 50px;

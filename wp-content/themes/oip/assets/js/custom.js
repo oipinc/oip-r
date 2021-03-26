@@ -311,7 +311,16 @@ jQuery(".hero-info-box a, .btn-demo").on('click', function (event) {
         scrollTop: jQuery(jQuery.attr(this, 'href')).offset().top
     }, 1000);
 });
-
+jQuery(".upload-cv").on("change", function (e) {
+    let fileName = e.target.files[0].name;
+    jQuery(".fileName").text(fileName);
+});
 jQuery(document).ready(function () {
     playVideo("app_video");
+
+    setTimeout(function () {
+        if (jQuery(".wpcf7-response-output").length > 0) {
+            jQuery(".wpcf7-response-output").remove();
+        }
+    }, 1500);
 });
