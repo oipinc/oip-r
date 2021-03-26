@@ -9,9 +9,10 @@
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="career">
          <?php
-            $hero         = get_field('hero');
-            $benefits     = get_field('benefits');
-            $openPosition = get_field('open_positions');
+            $hero             = get_field('hero');
+            $benefits         = get_field('benefits');
+            $openPosition     = get_field('open_positions');
+            $redirectionBlock = get_field('redirection_block', 'option');
          ?>
 
         <?php if ($hero): ?>
@@ -139,10 +140,10 @@
                     <div class="col-md-6">
                         <div class="board-redirection-box">
                             <div>
-                                <h3>Meet the team</h3>
-                                <p>One of our clients, a leading wholesaler on the E&S market, had difficulties keeping up with hundreds of daily rece.</p>
+                                <h3><?php echo $redirectionBlock['title']; ?></h3>
+                                <p><?php echo $redirectionBlock['content']; ?></p>
                                 <div class="d-block text-md-end pb-4 pb-md-0">
-                                    <a class="custom-link" href="/about"><img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow"></a>
+                                    <a class="custom-link" href="<?php echo $redirectionBlock['link']; ?>"><img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow"></a>
                                 </div>
                             </div>
                         </div>

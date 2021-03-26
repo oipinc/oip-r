@@ -103,8 +103,8 @@ if( function_exists('acf_add_options_page') ) {
     ));
 
     acf_add_options_sub_page(array(
-        'page_title' 	=> 'Theme Header Settings',
-        'menu_title'	=> 'Header',
+        'page_title' 	=> 'Theme Widgets Settings',
+        'menu_title'	=> 'Widgets',
         'parent_slug'	=> 'theme-general-settings',
     ));
 
