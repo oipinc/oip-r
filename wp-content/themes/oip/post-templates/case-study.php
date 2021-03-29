@@ -161,7 +161,7 @@
                         <div class="col">
                             <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <h2><?php echo esc_html($recommendedPost->post_title); ?></h2>
-                                <a href="<?php echo esc_url(get_permalink($recommendedPost->ID)); ?>">Read Use Case <img class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"></a>
+                                <a href="<?php echo esc_url(get_permalink($recommendedPost->ID)); ?>">Read Case Study <img class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow"></a>
                             </div>
                         </div>
                     </div>
