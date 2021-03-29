@@ -59,7 +59,7 @@
                         <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
                     </div>
                     <div class="mb-4">
-                        <a target="_blank" href="https://goo.gl/maps/FFfwad9MFqbrPwPH9"><?php echo $address; ?></a>
+                        <a target="_blank" href="<?php echo $map; ?>"><?php echo $address; ?></a>
                         <br>
                         <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
                     </div>

@@ -3,6 +3,7 @@
     $phone       = get_field('phone', 'option');
     $email       = get_field('email', 'option');
     $copyright   = get_field('copyright', 'option');
+    $map         = get_field('map_link', 'option');
 ?>
 
 <footer class="bg-gray">
@@ -46,7 +47,7 @@
                 </div>
                 <div class="col d-none d-lg-block">
                     <div class="address-info" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                        <a target="_blank" href="https://goo.gl/maps/FFfwad9MFqbrPwPH9"><?php echo $address; ?></a>
+                        <a target="_blank" href="<?php echo $map; ?>"><?php echo $address; ?></a>
                         <br>
                         <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
                     </div>
@@ -86,7 +87,7 @@
                 <p class="my-0"><?php echo $copyright; ?></p>
             </div>
             <div class="address-info">
-                <a target="_blank" href="https://goo.gl/maps/FFfwad9MFqbrPwPH9"><?php echo $address; ?></a>
+                <a target="_blank" href="<?php echo $map; ?>"><?php echo $address; ?></a>
                 <br>
                 <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
             </div>
