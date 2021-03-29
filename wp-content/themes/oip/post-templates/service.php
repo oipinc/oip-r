@@ -122,7 +122,7 @@
                                         <h2><?php echo $title; ?></h2>
                                         <a href="<?php echo $permalink; ?>">
                                             <img class="me-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/right-arrow.svg" alt="Arrow">
-                                            Read use case
+                                            Read Case Study
                                         </a>
                                     </div>
                                 </div>
