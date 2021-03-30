@@ -1704,6 +1704,9 @@ footer h2 {
         height: 430px;
         padding: 0;
     }
+    .case-holder {
+        min-height: 670px;
+    }
 }
 @media screen and (min-width: 1200px) {
     .product-item {
