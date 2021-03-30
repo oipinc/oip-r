@@ -243,7 +243,7 @@ body.open .menu-icon__line-right {
     padding: 100px 0 150px;
 }
 .hero h1 {
-    font-size: 50px;
+    font-size: 45px;
     line-height: 60px;
     font-weight: bold;
 }
@@ -347,7 +347,7 @@ body.open .menu-icon__line-right {
     padding: 0 15px;
 }
 .init-container h1 {
-    font-size: 50px;
+    font-size: 45px;
     animation: 0.5s ease-out 0s 1 slideInFromLeft;
     font-weight: 900;
 }
@@ -562,7 +562,7 @@ footer h2 {
 }
 .case-study-wrapper h1 {
     font-weight: bold;
-    font-size: 50px;
+    font-size: 45px;
     line-height: 0.88;
 }
 .case-study-wrapper h6,
@@ -699,7 +699,7 @@ footer h2 {
     align-items: center;
 }
 .service-hero h1 {
-    font-size: 50px;
+    font-size: 45px;
     font-weight: bold;
     line-height: 1.14;
     margin-bottom: 37px;
@@ -925,7 +925,7 @@ footer h2 {
     align-items: center;
 }
 .contact-us-hero-content h1 {
-    font-size: 50px;
+    font-size: 45px;
 }
 .contact-us-hero-content p {
     color: #fbfbff;
@@ -999,7 +999,7 @@ footer h2 {
     min-height: 82vh;
 }
 .career-hero h1 {
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 600
 }
 .career-number {
@@ -1263,7 +1263,7 @@ footer h2 {
     background-repeat: no-repeat;
 }
 .product-hero h1 {
-    font-size: 50px;
+    font-size: 45px;
     font-weight: bold;
 }
 .product-hero h2 {
@@ -1451,7 +1451,7 @@ footer h2 {
     padding: 50px 0;
 }
 .about-hero h1 {
-    font-size: 50px;
+    font-size: 45px;
     font-weight: bold;
     padding-bottom: 100px;
     line-height: 0.88;
@@ -1515,7 +1515,7 @@ footer h2 {
     position: relative;
 }
 .legal-hero h1 {
-    font-size: 50px;
+    font-size: 45px;
 }
 
 @media screen and (min-width: 568px) {
