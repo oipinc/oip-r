@@ -196,7 +196,7 @@ jQuery(function() {
 
             async enter(data) {
                 await pageTransitionOut(data.next.container);
-                jQuery(window).scrollTop(0);
+                jQuery(window).scrollTop(-50);
                 AOS.init();
 
                 initSlickSlider();
