@@ -1247,6 +1247,8 @@ footer h2 {
 }
 #upload_cv {
     visibility: hidden;
+    display: block;
+    height: 50px;
 }
 /* end */
 

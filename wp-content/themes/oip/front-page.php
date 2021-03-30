@@ -167,7 +167,7 @@
                                     <div class="case-holder">
                                         <?php echo $shortDescription['content']; ?>
                                         <div>
-                                            <img class="case-img" src="<?php echo $shortDescription['feature_image']['image']; ?>" srcset="<?php echo $shortDescription['feature_image']['retina_image']; ?> 2x" alt="Product 1">
+                                            <img class="case-img" src="<?php echo $shortDescription['feature_image']['image']; ?>" alt="Product 1">
                                             <div class="row align-items-center">
                                                 <div class="col">
                                                     <a href="<?php echo get_permalink($value->ID); ?>">Find out more</a>
