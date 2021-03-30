@@ -324,3 +324,20 @@ jQuery(document).ready(function () {
         }
     }, 1500);
 });
+
+jQuery(document).on( 'scroll', function() {
+    const height = jQuery(document).height();
+    const scrolled = jQuery(document).scrollTop()
+
+    if (scrolled > (height * 33) / 100) {
+        jQuery(".back-to-top").addClass("active");
+    } else {
+        jQuery(".back-to-top").removeClass("active");
+    }
+});
+jQuery(".back-to-top").on('click', function (event) {
+    event.preventDefault();
+    jQuery("html, body").animate({ scrollTop: 0 }, 1500);
+    return false;
+});
+

@@ -100,6 +100,10 @@
     <!-- end -->
 </footer>
 
+<a class="back-to-top bg-white" href="#">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/back-to-top.svg" alt="Back to top">
+</a>
+
 <?php wp_footer(); ?>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>-->

@@ -62,6 +62,27 @@ p {
     padding-top: 25px;
     padding-bottom: 25px;
 }
+.back-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+}
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease 0ms;
+    transform: translateY(0);
+}
 .main-navigation {
     padding: 39px 0;
     z-index: 2;
