@@ -437,7 +437,7 @@ footer h2 {
     font-weight: bold;
 }
 .footer-email {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     margin-top: 30px;
 }
@@ -1583,6 +1583,9 @@ footer h2 {
     }
     .menu-list > li > a {
         font-size: 40px;
+    }
+    .footer-email {
+        font-size: 30px;
     }
 }
 @media screen and (min-width: 992px) {
