@@ -55,9 +55,6 @@ body.init {
 p {
     font-size: 14px;
 }
-br {
-    display: none;
-}
 .lead {
     font-weight: normal;
 }
@@ -680,7 +677,6 @@ footer h2 {
     font-weight: normal;
 }
 .case-holder {
-    min-height: 670px;
     background-repeat: no-repeat;
     background-size: contain;
     display: flex;
@@ -1017,9 +1013,6 @@ footer h2 {
     line-height: 1.26;
     margin-bottom: 30px;
 }
-.career-values br {
-    display: none;
-}
 .section-title {
     color: white;
     margin-bottom: 50px;
@@ -1123,9 +1116,6 @@ footer h2 {
 }
 .job-section-title {
     font-weight: normal;
-}
-.job-wrapper .lead p br {
-    display: none;
 }
 .job-wrapper li {
     list-style: none;
@@ -1273,10 +1263,6 @@ footer h2 {
 .product-intro p {
     line-height: 1.47;
 }
-.product-intro p br,
-.product-hero p br {
-    display: none;
-}
 .product-features .number {
     font-size: 25px;
     margin-bottom: 23px;
@@ -1287,9 +1273,6 @@ footer h2 {
 }
 .product-features-box {
     margin-bottom: 20px;
-}
-.product-request-form p br {
-    display: none;
 }
 .product-features-title {
     margin-bottom: 50px;
@@ -1542,10 +1525,6 @@ footer h2 {
         height: 260px;
         justify-content: center;
     }
-    .product-intro p br,
-    .product-hero p br {
-        display: block;
-    }
     .product-values-box {
         max-width: 260px;
     }
@@ -1789,9 +1768,6 @@ footer h2 {
     .workflow-img {
         margin-top: 100px;
     }
-    br {
-        display: block;
-    }
 }
 @media screen and (min-width: 1367px) {
     .home-service a,
@@ -1937,10 +1913,6 @@ footer h2 {
     .about-hero h3 {
         font-size: 30px;
     }
-    .career-values br,
-    .job-wrapper .lead p br {
-        display: block;
-    }
     .career-values {
         padding-top: 100px;
         padding-bottom: 250px;
@@ -2032,9 +2004,6 @@ footer h2 {
     }
     .product-request-form-holder {
         padding: 128px;
-    }
-    .product-request-form p br {
-        display: block;
     }
     .product-spotlight-title,
     .product-spotlight-box {
