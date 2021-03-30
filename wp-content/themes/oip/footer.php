@@ -105,6 +105,7 @@
 </a>
 
 <?php wp_footer(); ?>
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6839195.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>-->
 </body>
