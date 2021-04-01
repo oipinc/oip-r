@@ -32,7 +32,7 @@
 
         <!-- Hero -->
         <?php while ( have_posts() ) : the_post(); ?>
-            <section class="hero hero-gif">
+            <section class="hero hero-gif overflow-hidden">
                 <div class="hero-content">
                     <div class="container-fluid">
                         <div class="row align-items-center">
@@ -75,7 +75,7 @@
 
         <!-- Service -->
         <?php if (!empty(get_posts($services))): ?>
-            <section id="home_service" class="home-service custom-padding">
+            <section id="home_service" class="home-service custom-padding overflow-hidden">
                 <div class="container-fluid">
                     <div class="home-service-title" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <p>Services</p>
@@ -104,7 +104,7 @@
 
         <!-- Products -->
         <?php if (!empty(get_posts($products))): ?>
-            <section id="home_product" class="product">
+            <section id="home_product" class="product overflow-hidden">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <?php foreach ($productArray as $key => $product): ?>
@@ -135,7 +135,7 @@
 
         <!-- Case Study -->
         <?php if ($caseStudy): ?>
-            <section class="case custom-padding d-none d-lg-block">
+            <section class="case custom-padding d-none d-lg-block overflow-hidden">
                 <div class="container-fluid">
                     <div class="row">
                         <?php foreach ($caseStudy as $key => $value): ?>
@@ -192,7 +192,7 @@
 
         <!-- Meet us -->
         <?php if ($meetUs): ?>
-            <section class="meet-us block">
+            <section class="meet-us block overflow-hidden">
                 <div class="custom-wrapper">
                     <div class="container-fluid">
                         <?php echo $meetUs['intro']; ?>

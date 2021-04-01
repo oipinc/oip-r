@@ -17,7 +17,7 @@
 
         <!-- Hero -->
         <?php while ( have_posts() ) : the_post(); ?>
-            <section class="about-hero custom-padding position-relative">
+            <section class="about-hero custom-padding position-relative overflow-hidden">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-10" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -31,7 +31,7 @@
 
         <!-- Hero -->
         <?php if ($intro): ?>
-            <section class="about-people custom-wrapper">
+            <section class="about-people custom-wrapper overflow-hidden">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -45,7 +45,7 @@
 
         <!-- Image -->
         <?php if ($teamImage): ?>
-            <section class="about-team text-center">
+            <section class="about-team text-center overflow-hidden">
                 <img class="img-fluid" src="<?php echo $teamImage; ?>" alt="OIP Team" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             </section>
         <?php endif; ?>
@@ -53,7 +53,7 @@
 
         <!-- About Company -->
         <?php if ($aboutCompany): ?>
-            <section class="about-company custom-wrapper">
+            <section class="about-company custom-wrapper overflow-hidden">
                 <div class="container-fluid" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <?php echo $aboutCompany; ?>
 
@@ -80,7 +80,7 @@
 
         <!-- Jobs -->
         <?php if ($jobs): ?>
-            <section class="about-career custom-wrapper">
+            <section class="about-career custom-wrapper overflow-hidden">
                 <div class="container-fluid h-100">
                     <div class="row align-items-center h-100">
                         <?php

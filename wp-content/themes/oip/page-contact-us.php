@@ -10,7 +10,7 @@
     <main data-barba="container" data-barba-namespace="contact-us">
         <?php $hero = get_field('hero');
         if ($hero): ?>
-            <section class="contact-us-hero position-relative" style="background-image: url(<?php echo $hero['image'] ?>)">
+            <section class="contact-us-hero position-relative overflow-hidden" style="background-image: url(<?php echo $hero['image'] ?>)">
                 <div class="custom-padding">
                     <div class="container-fluid">
                         <div class="contact-us-hero-content">
@@ -26,7 +26,7 @@
         <?php
         $intro = get_field('intro');
         if ($intro): ?>
-            <section class="contact-us-intro custom-padding bg-white">
+            <section class="contact-us-intro custom-padding bg-white overflow-hidden">
                 <div class="contact-us-intro-bg">
                     <h2 class="my-0">Drop us a line.</h2>
                 </div>
@@ -43,7 +43,7 @@
         <?php endif; ?>
 
         <?php if( have_rows('office') ): ?>
-            <section class="contact-us-office custom-wrapper bg-white">
+            <section class="contact-us-office custom-wrapper bg-white overflow-hidden">
                 <div class="container-fluid contact-us-section-title">
                     <p>Offices</p>
                     <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">

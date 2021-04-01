@@ -16,7 +16,7 @@
          ?>
 
         <?php if ($hero): ?>
-            <section class="career-hero custom-padding d-flex align-items-center" style="background-image: url(<?php echo $hero['background'] ?>)">
+            <section class="career-hero custom-padding d-flex align-items-center overflow-hidden" style="background-image: url(<?php echo $hero['background'] ?>)">
                 <div class="container-fluid" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <?php echo $hero['content']; ?>
                 </div>
@@ -24,7 +24,7 @@
         <?php endif; ?>
 
         <?php if( have_rows('our_values') ): ?>
-            <section class="career-values custom-padding">
+            <section class="career-values custom-padding overflow-hidden">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
@@ -45,7 +45,7 @@
         <?php endif; ?>
 
         <?php if ($benefits): ?>
-            <section class="career-benefit custom-padding">
+            <section class="career-benefit custom-padding overflow-hidden">
                 <div class="container-fluid">
                     <h2 class="board-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Our Benefits</h2>
                     <div class="career-benefit-holder" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -56,7 +56,7 @@
         <?php endif; ?>
 
         <?php if( have_rows('board') ): ?>
-            <section class="career-board custom-padding">
+            <section class="career-board custom-padding overflow-hidden">
                 <div class="container-fluid">
                     <h2 class="board-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Getting on board</h2>
                     <?php $count = -1; ?>
@@ -79,7 +79,7 @@
         <?php endif; ?>
 
         <?php if ($openPosition): ?>
-            <section class="career-open-position custom-padding">
+            <section class="career-open-position custom-padding overflow-hidden">
                 <div class="container-fluid">
                     <div class="career-open-position-section-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div class="case-study-text-nav">
@@ -129,7 +129,7 @@
             </section>
         <?php endif; ?>
 
-        <section class="board-redirection-link">
+        <section class="board-redirection-link overflow-hidden">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
