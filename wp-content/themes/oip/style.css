@@ -15,10 +15,10 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }
-body,
-html {
-    overflow-x: hidden;
-}
+/*body,*/
+/*html {*/
+/*    overflow-x: hidden;*/
+/*}*/
 html.open,
 body.open,
 html.init,
@@ -2195,3 +2195,230 @@ footer h2 {
         right: 72px;
     }
 }
+
+@media screen and (min-width: 992px) {
+    .rect {
+        border-radius: 35%;
+        border: 2px solid transparent;
+        width: 5%;
+        height: 16.6%;
+        position: absolute;
+    }
+    .rect-1 {
+        left: 6%;
+        top: 17%;
+    }
+    .rect-2 {
+        left: 13.5%;
+        top: 17%;
+    }
+    .rect-3 {
+        left: 22%;
+        top: 17%;
+    }
+    .rect-4 {
+        left: 28.8%;
+        top: 18%;
+    }
+    .rect-5 {
+        left: 36%;
+        top: 17%;
+    }
+    .rect-6 {
+        left: 45%;
+        top: 16%;
+    }
+    .rect-7 {
+        left: 52%;
+        top: 12%;
+    }
+    .rect-8 {
+        right: 33%;
+        top: 14%;
+    }
+    .rect-9 {
+        right: 25%;
+        top: 15%;
+    }
+    .rect-10 {
+        right: 17%;
+        top: 15%;
+    }
+    .rect-11 {
+        right: 7%;
+        top: 16%;
+    }
+    .rect-12 {
+        left: 8%;
+        top: 39%;
+    }
+    .rect-13 {
+        left: 17.5%;
+        top: 38%;
+    }
+    .rect-14 {
+        left: 26.5%;
+        top: 38%;
+    }
+    .rect-15 {
+        left: 35.6%;
+        top: 35%;
+    }
+    .rect-16 {
+        left: 42%;
+        top: 34%;
+    }
+    .rect-17 {
+        left: 49.5%;
+        top: 34%;
+    }
+    .rect-18 {
+        right: 37.5%;
+        top: 34%;
+    }
+    .rect-19 {
+        right: 28%;
+        top: 37%;
+    }
+    .rect-20 {
+        right: 19%;
+        top: 36%;
+    }
+    .rect-21 {
+        right: 11%;
+        top: 33%;
+    }
+    .rect-22 {
+        left: 5%;
+        bottom: 29%;
+    }
+    .rect-23 {
+        left: 13.5%;
+        bottom: 29%;
+    }
+    .rect-24 {
+        left: 22%;
+        bottom: 30%;
+    }
+    .rect-25 {
+        left: 31%;
+        bottom: 34%;
+    }
+    .rect-26 {
+        left: 41.5%;
+        bottom: 29%;
+    }
+    .rect-27 {
+        right: 44%;
+        bottom: 28%;
+    }
+    .rect-28 {
+        right: 34.5%;
+        bottom: 29%;
+    }
+    .rect-29 {
+        right: 24%;
+        bottom: 30%;
+    }
+    .rect-30 {
+        right: 12.5%;
+        bottom: 31%;
+    }
+    .rect-31 {
+        right: 4.5%;
+        bottom: 36%;
+    }
+    .profile-holder {
+        min-height: 100vh;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: white;
+        transition: 0.5s;
+        transform: translateY(-100%);
+        color: black;
+    }
+    .profile-holder.active {
+        transform: translateY(0);
+        z-index: 1000;
+    }
+}
+.profile-img-holder {
+    position: relative;
+}
+.profile-img-holder.active:after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: white;
+    color: black;
+    content: "Loading...";
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.meet-us-img > div {
+    overflow: hidden;
+}
+.profile-holder em {
+    color: var(--gray-secondary);
+}
+.close-profile-holder {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    right: 15px;
+    top: 15px;
+}
+.leftright {
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: var(--navy);
+    border-radius: 2px;
+    transform: rotate(45deg);
+    transition: all .3s ease-in;
+}
+
+.rightleft {
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: var(--navy);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    transition: all .3s ease-in;
+}
+
+label {
+    color: var(--navy);
+    font-size: .6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .3s ease-in;
+    opacity: 0;
+}
+.close {
+    margin: 60px 0 0 5px;
+    position: absolute;
+}
+.close-profile-holder:hover .leftright {
+    transform: rotate(-45deg);
+    background-color: var(--dark-blue);
+}
+.close-profile-holder:hover .rightleft {
+    transform: rotate(45deg);
+    background-color: var(--dark-blue);
+}
+.close-profile-holder:hover label {
+    opacity: 1;
+}
+
