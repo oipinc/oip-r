@@ -289,6 +289,7 @@ jQuery(".btn-menu").on("click", function () {
 jQuery(".menu-navigation a").on("click", function () {
     const href = jQuery(this).attr("href");
     if (href === "#") {
+        jQuery(".menu-navigation li .sub-menu").hide();
         jQuery(this).siblings().slideToggle(300);
     } else {
         jQuery(".menu-navigation li").removeClass("current_page_item");

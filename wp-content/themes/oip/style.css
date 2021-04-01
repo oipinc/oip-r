@@ -1784,7 +1784,9 @@ footer h2 {
         padding: 170px 0;
     }
     .menu-navigation {
-        padding: 272px 72px 0 263px;
+        padding: 0 0 0 263px;
+        display: flex;
+        align-items: center;
     }
     .workflow-img {
         margin-top: 100px;
@@ -2130,6 +2132,10 @@ footer h2 {
     }
 }
 @media screen and (min-width: 1537px) {
+    .menu-navigation {
+        padding: 272px 72px 0 263px;
+        display: block;
+    }
     .custom-wrapper {
         padding-left: 263px;
         padding-right: 263px;
