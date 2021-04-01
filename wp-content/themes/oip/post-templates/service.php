@@ -16,7 +16,7 @@
             $serviceBenefitsTitle         = $serviceBenefitsBlock['service_benefit_title'];
         ?>
 
-        <section class="service-hero custom-padding hero-gif">
+        <section class="service-hero custom-padding hero-gif overflow-hidden">
             <div class="container-fluid">
                 <div class="service-hero-content">
                     <h6 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Services</h6>
@@ -30,7 +30,7 @@
 
         <!-- Block Intro -->
         <?php if ($serviceIntroBlock && $serviceIntro): ?>
-            <section class="service-intro custom-wrapper block" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <section class="service-intro custom-wrapper block overflow-hidden" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-10">
@@ -75,7 +75,7 @@
         <?php endif; ?>
 
         <?php if ($serviceBenefitsBlockView2): ?>
-            <section class="service-benefits custom-padding block view-2">
+            <section class="service-benefits custom-padding block view-2 overflow-hidden">
                 <div class="container-fluid">
                     <?php echo $serviceBenefitsView2; ?>
                     <div class="clearfix"></div>
@@ -86,7 +86,7 @@
 
         <!-- Block Impact -->
         <?php if ($serviceImpactBlock): ?>
-            <section class="service-impact custom-padding block">
+            <section class="service-impact custom-padding block overflow-hidden">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-10">
@@ -107,7 +107,7 @@
 
         <!-- Block Related -->
         <?php if ($caseStudyRecommendationBlock && $relations): ?>
-            <section class="service-recommendation">
+            <section class="service-recommendation overflow-hidden">
                 <?php foreach($relations as $key => $relationPost):
                     $permalink = get_permalink($relationPost->ID);
                     $title = get_the_title($relationPost->ID);

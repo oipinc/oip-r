@@ -3,7 +3,7 @@
 
         <?php while ( have_posts() ) : the_post(); ?>
         <?php $condition = get_field( "condition", get_the_ID()); ?>
-            <section class="job-hero custom-padding hero-gif">
+            <section class="job-hero custom-padding hero-gif overflow-hidden">
                 <div class="container-fluid h-100">
                     <div class="h-100 d-flex align-items-center">
                         <div class="job-intro w-100">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </section>
-            <section class="job-wrapper custom-padding">
+            <section class="job-wrapper custom-padding overflow-hidden">
                 <div class="container-fluid">
                     <?php the_content(); ?>
                 </div>
@@ -39,7 +39,7 @@
             <?php
             $form = get_field('apply_form');
             if ($form): ?>
-                <section class="job-form">
+                <section class="job-form overflow-hidden">
                     <div class="container-fluid">
                         <?php echo $form['content']; ?>
                         <div class="form-holder">

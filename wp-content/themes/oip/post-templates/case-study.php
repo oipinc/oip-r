@@ -10,7 +10,7 @@
         ?>
 
         <!-- Hero -->
-        <section class="case-study-hero case-study-wrapper custom-wrapper hero-gif">
+        <section class="case-study-hero case-study-wrapper custom-wrapper hero-gif overflow-hidden">
             <div class="container-fluid">
                 <h6 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Case Study</h6>
                 <h1 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"><?php echo the_title(); ?></h1>
@@ -20,7 +20,7 @@
 
         <!-- Hero -->
         <?php while ( have_posts() ) : the_post(); ?>
-            <section class="case-study-intro custom-wrapper">
+            <section class="case-study-intro custom-wrapper overflow-hidden">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-10">
@@ -37,7 +37,7 @@
 
         <!-- Problem -->
         <?php if ($problemStatement): ?>
-            <section class="case-study-wrapper case-study-problem custom-wrapper">
+            <section class="case-study-wrapper case-study-problem custom-wrapper overflow-hidden">
                 <div class="container-fluid">
                     <div class="row" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div class="col-lg-8 case-study-text-nav">
@@ -69,7 +69,7 @@
 
         <!-- Our Solution -->
         <?php if($ourSolution): ?>
-            <section class="case-study-wrapper case-study-solution custom-wrapper">
+            <section class="case-study-wrapper case-study-solution custom-wrapper overflow-hidden">
                 <div class="container-fluid">
                     <div class="row" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div class="col-lg-8 case-study-text-nav">
@@ -96,7 +96,7 @@
 
         <!-- App Video -->
         <?php if(!empty($appVideo)): ?>
-            <section class="app-img-wrapper text-center">
+            <section class="app-img-wrapper text-center overflow-hidden">
                 <video id="app_video" autoplay loop>
                     <?php foreach ($appVideo as $video): ?>
                         <source src="<?php echo $video['video']['url']; ?>" type="<?php echo $video['video']['mime_type']; ?>">
@@ -108,7 +108,7 @@
 
         <!-- Workflow -->
         <?php if(!empty($workflow['intro']) && $workflow['image']): ?>
-            <section class="case-study-workflow">
+            <section class="case-study-workflow overflow-hidden">
                 <div class="container-fluid">
                     <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <?php echo $workflow['intro']; ?>
@@ -126,7 +126,7 @@
 
         <!-- Result -->
         <?php if($result): ?>
-            <section class="case-study-wrapper case-study-result custom-wrapper">
+            <section class="case-study-wrapper case-study-result custom-wrapper overflow-hidden">
                 <div class="container-fluid">
                     <div class="row" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div class="col-lg-8 case-study-text-nav">
@@ -155,7 +155,7 @@
         <!-- end -->
 
         <?php if($recommendedPost): ?>
-            <section class="recommended-case-study bg-gray-secondary case-study-wrapper custom-wrapper">
+            <section class="recommended-case-study bg-gray-secondary case-study-wrapper custom-wrapper overflow-hidden">
                 <div class="container-fluid h-100">
                     <div class="row justify-content-center align-items-center h-100">
                         <div class="col">

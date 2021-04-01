@@ -9,7 +9,7 @@
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="terms-and-condition">
         <?php while ( have_posts() ) : the_post(); ?>
-            <section class="legal-hero custom-wrapper hero-gif">
+            <section class="legal-hero custom-wrapper hero-gif overflow-hidden">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-9">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </section>
-            <section class="legal-wrapper custom-wrapper block">
+            <section class="legal-wrapper custom-wrapper block overflow-hidden">
                 <div class="container-fluid">
                     <?php the_content(); ?>
                 </div>

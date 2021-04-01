@@ -7,7 +7,7 @@
 ?>
 
 <footer class="bg-gray">
-    <div class="footer-navigation custom-padding">
+    <div class="footer-navigation custom-padding overflow-hidden">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4 col-xxl-6">
@@ -57,7 +57,7 @@
     </div>
 
     <!-- Desktop -->
-    <div class="footer-copyright d-none d-lg-block">
+    <div class="footer-copyright d-none d-lg-block overflow-hidden">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-auto">
@@ -81,7 +81,7 @@
     <!-- end -->
 
     <!-- Mobile -->
-    <div class="footer-copyright d-lg-none">
+    <div class="footer-copyright d-lg-none overflow-hidden">
         <div class="container-fluid text-center" data-aos="fade-up" data-aos-duration="1000">
             <div class="copyright-text" data-aos="fade-up" data-aos-duration="1000">
                 <p class="my-0"><?php echo $copyright; ?></p>
