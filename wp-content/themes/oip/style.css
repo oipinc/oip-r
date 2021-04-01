@@ -2343,7 +2343,7 @@ footer h2 {
         bottom: 0;
         background-color: white;
         transition: 0.5s;
-        transform: translateY(-100%);
+        transform: translateY(-120%);
         color: black;
     }
     .profile-holder.active {
