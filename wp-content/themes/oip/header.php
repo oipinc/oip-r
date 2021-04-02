@@ -24,7 +24,7 @@
         <style>
             .hero-gif:after {
                 background-image: url(<?php echo $gifAnimation['file']['url']; ?>);
-                background-size: <?php echo $gifAnimation['file']['background_size']; ?>;
+                background-size: <?php echo $gifAnimation['background_size']; ?>;
                 background-position-y: <?php echo $gifAnimation['background_position']['background_y_position']; ?>;
                 background-position-x: <?php echo $gifAnimation['background_position']['background_x_position']; ?>;
             }
