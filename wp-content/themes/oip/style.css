@@ -1730,10 +1730,7 @@ footer h2 {
         top: 0;
         content: "";
         opacity: 0.5;
-        background-image: url("assets/images/oip.gif");
         background-repeat: no-repeat;
-        background-position: top right;
-        background-size: cover;
         z-index: -1;
     }
     .product-hero,
