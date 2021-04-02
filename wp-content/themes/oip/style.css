@@ -1750,6 +1750,7 @@ footer h2 {
         position: absolute;
         right: 0;
         left: 0;
+        top:0;
     }
     .service-impact .technologies li {
         font-size: 100px;
