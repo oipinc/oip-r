@@ -22,7 +22,7 @@
         $customX = $gifAnimation['background_position']['background_x_position'] . "%";
         $defaultY = $gifAnimation['background_position']['background_y_position'];
         $defaultX = $gifAnimation['background_position']['background_x_position'];
-        
+
         $y = $gifAnimation['background_position']['position'] === "default" ? $defaultY : $customY;
         $x = $gifAnimation['background_position']['position'] === "default" ? $defaultX : $customX;
     ?>
