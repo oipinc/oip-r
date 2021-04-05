@@ -18,6 +18,13 @@
 
     <?php
         $gifAnimation = get_field('gif_animation');
+        $customY = $gifAnimation['background_position']['background_y_position'] . "px";
+        $customX = $gifAnimation['background_position']['background_x_position'] . "%";
+        $defaultY = $gifAnimation['background_position']['background_y_position'];
+        $defaultX = $gifAnimation['background_position']['background_x_position'];
+        
+        $y = $gifAnimation['background_position']['position'] === "default" ? $defaultY : $customY;
+        $x = $gifAnimation['background_position']['position'] === "default" ? $defaultX : $customX;
     ?>
 
     <?php if ($gifAnimation): ?>
@@ -25,8 +32,8 @@
             .hero-gif:after {
                 background-image: url(<?php echo $gifAnimation['file']['url']; ?>);
                 background-size: <?php echo $gifAnimation['background_size']; ?>;
-                background-position-y: <?php echo $gifAnimation['background_position']['background_y_position']; ?>;
-                background-position-x: <?php echo $gifAnimation['background_position']['background_x_position']; ?>;
+                background-position-y: <?php echo $y; ?>;
+                background-position-x: <?php echo $x; ?>;
             }
         </style>
     <?php endif; ?>
