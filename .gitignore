@@ -22,3 +22,5 @@ node_modules/
 *.sql
 *.sqlite
 .idea
+
+wp-config.php

@@ -1,6 +1,28 @@
 <div data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="job-view">
 
+        <?php
+            $gifAnimation = get_field('gif_animation');
+            $customY = $gifAnimation['background_position']['background_y_position'] . "px";
+            $customX = $gifAnimation['background_position']['background_x_position'] . "%";
+            $defaultY = $gifAnimation['background_position']['background_y_position'];
+            $defaultX = $gifAnimation['background_position']['background_x_position'];
+
+            $y = $gifAnimation['background_position']['position'] === "default" ? $defaultY : $customY;
+            $x = $gifAnimation['background_position']['position'] === "default" ? $defaultX : $customX;
+        ?>
+
+        <?php if ($gifAnimation): ?>
+            <style>
+                .hero-gif:after {
+                    background-image: url(<?php echo $gifAnimation['file']['url']; ?>);
+                    background-size: <?php echo $gifAnimation['background_size']; ?>;
+                    background-position-y: <?php echo $y; ?>;
+                    background-position-x: <?php echo $x; ?>;
+                }
+            </style>
+        <?php endif; ?>
+
         <?php while ( have_posts() ) : the_post(); ?>
         <?php $condition = get_field( "condition", get_the_ID()); ?>
             <section class="job-hero custom-padding hero-gif overflow-hidden">

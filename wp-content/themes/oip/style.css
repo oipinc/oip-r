@@ -65,7 +65,7 @@ p {
 .back-to-top {
     position: fixed;
     right: 15px;
-    bottom: 15px;
+    bottom: 90px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -1730,10 +1730,7 @@ footer h2 {
         top: 0;
         content: "";
         opacity: 0.5;
-        background-image: url("assets/images/oip.gif");
         background-repeat: no-repeat;
-        background-position: top right;
-        background-size: cover;
         z-index: -1;
     }
     .product-hero,
@@ -1750,6 +1747,7 @@ footer h2 {
         position: absolute;
         right: 0;
         left: 0;
+        top:0;
     }
     .service-impact .technologies li {
         font-size: 100px;
