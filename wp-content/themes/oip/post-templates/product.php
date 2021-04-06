@@ -237,7 +237,7 @@
                                 <div class="w-100">
                                     <h3><?php echo $relatedProduct->post_title; ?></h3>
                                     <a class="related-link" href="<?php echo get_permalink($relatedProduct->ID); ?>">
-                                        View our product<img width="30" class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
+                                        View the Product<img width="30" class="ms-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="Arrow">
                                     </a>
                                 </div>
                             </div>
