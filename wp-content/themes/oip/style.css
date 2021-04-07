@@ -2425,4 +2425,55 @@ footer h2 {
 .close-profile-holder:hover label {
     opacity: 1;
 }
-
+.profile-content {
+    position: relative;
+    padding: 30px 0;
+    display: inline-block;
+}
+.profile-content h2 {
+    margin: 0;
+}
+.profile-content:before,
+.profile-content:after {
+    position: absolute;
+    content: "";
+    width: 97%;
+    height: 3px;
+    background-color: var(--navy);
+}
+.profile-content:before {
+    top: 4px;
+    left: 3%;
+}
+.profile-content:after {
+    bottom: 4px;
+    right: 3%;
+}
+.profile-content h2:before,
+.profile-content h2:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.profile-content h2:before {
+    left: -15px;
+    top: 0;
+    background-image: url("assets/images/l_quote.svg");
+}
+.profile-content h2:after {
+    right: -15px;
+    bottom: 0;
+    background-image: url("assets/images/r_quote.svg");
+}
+.profile-title-holder {
+    display: inline-block;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+.profile-title {
+    margin: 0;
+}

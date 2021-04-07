@@ -120,10 +120,12 @@
             </div>
             <div class="col-lg-7">
                 <div class="mb-4">
-                    <h2 class="profile-title"></h2>
-                    <em></em>
+                    <div class="profile-content"></div>
                 </div>
-                <div class="profile-content"></div>
+
+                <div class="bg-navy profile-title-holder">
+                    <h4 class="profile-title"></h4>
+                </div>
             </div>
         </div>
     </div>
