@@ -555,7 +555,11 @@ footer h2 {
 }
 .swiper-button-next,
 .swiper-button-prev {
-    display: none;
+    top: 92%;
+}
+.swiper-button-prev {
+    left: auto;
+    right: 70px;
 }
 .swiper-button-next:after {
     font-family: none;
@@ -1763,10 +1767,6 @@ footer h2 {
     }
     .about-hero {
         margin: 250px 0 150px;
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-        display: block;
     }
     .swiper-button-prev {
         bottom: 63px;
