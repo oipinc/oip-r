@@ -459,6 +459,9 @@ footer h2 {
     font-weight: bold;
     margin-top: 30px;
 }
+.footer-list {
+    padding-top: 60px;
+}
 .address-info {
     margin-top: 20px;
 }
