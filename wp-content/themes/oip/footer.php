@@ -1,9 +1,12 @@
 <?php
     $address     = get_field('address', 'option');
+    $usaAddress  = get_field('usa_address', 'option');
     $phone       = get_field('phone', 'option');
+    $usaPhone    = get_field('usa_phone', 'option');
     $email       = get_field('email', 'option');
     $copyright   = get_field('copyright', 'option');
     $map         = get_field('map_link', 'option');
+    $usaMap      = get_field('usa_map_link', 'option');
 ?>
 
 <footer class="bg-gray">
@@ -48,6 +51,11 @@
                         <a target="_blank" href="<?php echo $map; ?>"><?php echo $address; ?></a>
                         <br>
                         <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+                    </div>
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <a target="_blank" href="<?php echo $usaMap; ?>"><?php echo $usaAddress; ?></a>
+                        <br>
+                        <a href="tel:<?php echo $usaPhone; ?>"><?php echo $usaPhone; ?></a>
                     </div>
                 </div>
             </div>
