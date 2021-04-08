@@ -113,18 +113,17 @@
 
     <div class="container h-100">
         <div class="row align-items-center justify-content-center h-100">
-            <div class="col-lg-5">
+            <div class="col-lg-3">
                 <div class="profile-img-holder">
                     <img class="img-fluid profile-img" src="http://placehold.it/500x700" alt="Image">
                 </div>
             </div>
-            <div class="col-lg-7">
-                <div class="mb-4">
-                    <div class="profile-content"></div>
-                </div>
-
-                <div class="bg-navy profile-title-holder">
-                    <h4 class="profile-title"></h4>
+            <div class="col-lg-6">
+                <div class="ps-5">
+                    <div class="ps-5">
+                        <div class="profile-content"></div>
+                        <h2 class="profile-title my-0"></h2>
+                    </div>
                 </div>
             </div>
         </div>

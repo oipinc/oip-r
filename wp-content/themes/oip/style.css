@@ -2339,10 +2339,10 @@ footer h2 {
         right: 0;
         top: 0;
         bottom: 0;
-        background-color: white;
+        background-color: rgba(0, 2, 36, 0.9);
         transition: 0.5s;
         transform: translateY(-120%);
-        color: black;
+        color: white;
     }
     .profile-holder.active {
         transform: translateY(0);
@@ -2358,8 +2358,8 @@ footer h2 {
     left: 0;
     bottom: 0;
     top: 0;
-    background-color: white;
-    color: black;
+    background-color: rgba(0, 2, 36, 0.9);
+    color: white;
     content: "Loading...";
     font-size: 30px;
     display: flex;
@@ -2385,25 +2385,24 @@ footer h2 {
     width: 50px;
     position: absolute;
     margin-top: 24px;
-    background-color: var(--navy);
+    background-color: white;
     border-radius: 2px;
     transform: rotate(45deg);
     transition: all .3s ease-in;
 }
-
 .rightleft {
     height: 4px;
     width: 50px;
     position: absolute;
     margin-top: 24px;
-    background-color: var(--navy);
+    background-color: white;
     border-radius: 2px;
     transform: rotate(-45deg);
     transition: all .3s ease-in;
 }
 
 .close-profile-holder label {
-    color: var(--navy);
+    color: white;
     font-size: .6em;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -2416,11 +2415,11 @@ footer h2 {
 }
 .close-profile-holder:hover .leftright {
     transform: rotate(-45deg);
-    background-color: var(--dark-blue);
+    background-color: white;
 }
 .close-profile-holder:hover .rightleft {
     transform: rotate(45deg);
-    background-color: var(--dark-blue);
+    background-color: white;
 }
 .close-profile-holder:hover label {
     opacity: 1;
@@ -2433,14 +2432,6 @@ footer h2 {
 .profile-content h2 {
     margin: 0;
 }
-.profile-content:before,
-.profile-content:after {
-    position: absolute;
-    content: "";
-    width: 97%;
-    height: 3px;
-    background-color: var(--navy);
-}
 .profile-content:before {
     top: 4px;
     left: 3%;
@@ -2449,31 +2440,19 @@ footer h2 {
     bottom: 4px;
     right: 3%;
 }
-.profile-content h2:before,
-.profile-content h2:after {
+.profile-content:before {
     position: absolute;
     content: "";
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background-size: contain;
     background-repeat: no-repeat;
 }
-.profile-content h2:before {
-    left: -15px;
-    top: 0;
-    background-image: url("assets/images/l_quote.svg");
-}
-.profile-content h2:after {
-    right: -15px;
-    bottom: 0;
+.profile-content:before {
+    left: -60px;
+    top: -20px;
     background-image: url("assets/images/r_quote.svg");
 }
-.profile-title-holder {
-    display: inline-block;
-    color: white;
-    padding: 20px;
-    position: relative;
-}
-.profile-title {
+.profile-content p {
     margin: 0;
 }
