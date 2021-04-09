@@ -2428,7 +2428,7 @@ footer h2 {
 .close-profile-holder:hover label {
     opacity: 1;
 }
-.grecaptcha-badge {
+body.recaptcha .grecaptcha-badge {
     visibility: visible !important;
 }
 body:not(.recaptcha) .grecaptcha-badge {
