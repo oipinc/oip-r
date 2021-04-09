@@ -121,3 +121,12 @@ if( function_exists('acf_add_options_page') ) {
         'parent_slug'	=> 'theme-general-settings',
     ));
 }
+
+function oiw_disable_recaptcha_badge_page(){
+    if (!is_category(['6','7'])) {
+        wp_dequeue_script('google-recaptcha');
+        wp_dequeue_script('wpcf7-recaptcha');
+        wp_dequeue_style('wpcf7-recaptcha');
+    }
+}
+add_action( 'wp_enqueue_scripts', 'oiw_disable_recaptcha_badge_page' );
