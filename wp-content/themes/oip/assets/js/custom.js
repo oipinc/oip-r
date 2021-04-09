@@ -216,16 +216,16 @@ jQuery(function() {
 
                 const url = window.location.pathname.split('/');
 
-                if (url[1] !== "solution") {
-                    jQuery("body").removeClass("bg-dark-blue recaptcha");
+                if (url[1] === "solution" || url[1] === "job") {
+                    jQuery("body").addClass("recaptcha");
                 } else {
-                    jQuery("body").addClass("bg-dark-blue recaptcha");
+                    jQuery("body").removeClass("recaptcha");
                 }
 
-                if (url[1] !== "job") {
-                    jQuery("body").removeClass("recaptcha");
+                if (url[1] !== "solution") {
+                    jQuery("body").removeClass("bg-dark-blue");
                 } else {
-                    jQuery("body").addClass("recaptcha");
+                    jQuery("body").addClass("bg-dark-blue");
                 }
 
                 jQuery(".hero-info-box a").on('click', function (event) {
@@ -272,16 +272,16 @@ jQuery(function() {
 
                 const url = window.location.pathname.split('/');
 
-                if (url[1] !== "solution") {
-                    jQuery("body").removeClass("bg-dark-blue recaptcha");
+                if (url[1] === "solution" || url[1] === "job") {
+                    jQuery("body").addClass("recaptcha");
                 } else {
-                    jQuery("body").addClass("bg-dark-blue recaptcha");
+                    jQuery("body").removeClass("recaptcha");
                 }
 
-                if (url[1] !== "job") {
-                    jQuery("body").removeClass("recaptcha");
+                if (url[1] !== "solution") {
+                    jQuery("body").removeClass("bg-dark-blue");
                 } else {
-                    jQuery("body").addClass("recaptcha");
+                    jQuery("body").addClass("bg-dark-blue");
                 }
             }
         }]
