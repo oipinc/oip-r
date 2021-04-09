@@ -215,10 +215,17 @@ jQuery(function() {
                 },500)
 
                 const url = window.location.pathname.split('/');
-                if (url[1] !== "product") {
-                    jQuery("body").removeClass("bg-dark-blue");
+
+                if (url[1] !== "solution") {
+                    jQuery("body").removeClass("bg-dark-blue recaptcha");
                 } else {
-                    jQuery("body").addClass("bg-dark-blue");
+                    jQuery("body").addClass("bg-dark-blue recaptcha");
+                }
+
+                if (url[1] !== "job") {
+                    jQuery("body").removeClass("recaptcha");
+                } else {
+                    jQuery("body").addClass("recaptcha");
                 }
 
                 jQuery(".hero-info-box a").on('click', function (event) {
