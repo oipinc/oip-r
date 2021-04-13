@@ -223,23 +223,20 @@
                 <div class="meet-us-img text-center">
                     <div class="position-relative d-inline-block">
                         <img class="img-fluid d-none original-img" src=" <?php echo $meetUs['image']; ?>" alt="OIP Team">
-                        <img class="img-fluid" usemap="#meet_us" src=" <?php echo $meetUs['image']; ?>" alt="OIP Team">
+                        <img class="img-fluid img-persons" src=" <?php echo $meetUs['image']; ?>" alt="OIP Team">
 
-                        <map name="meet_us">
-                            <?php foreach ($profiles as $key => $profile): ?>
-                            <area
-                                    shape="rect"
-                                    class="rect rect-<?php echo $key + 1; ?>"
-                                    href="#" alt="Person"
-                                    data-work="<?php echo !empty($profile['work_as']) ? $profile['work_as'] : 'N/A'; ?>"
-                                    data-title="<?php echo $profile['title']; ?>"
-                                    data-text="<?php echo $profile['content']; ?>"
-                                    data-image="<?php echo $profile['hovered_image']; ?>"
-                                    data-profile="<?php echo $profile['profile_image']; ?>"
-                            >
-                            <?php endforeach; ?>
-                        </map>
-                    </div>
+                        <?php foreach ($profiles as $key => $profile): ?>
+                        <a
+                            class="rect rect-<?php echo $key + 1; ?>"
+                            href="#"
+                            data-work="<?php echo !empty($profile['work_as']) ? $profile['work_as'] : 'N/A'; ?>"
+                            data-title="<?php echo $profile['title']; ?>"
+                            data-text="<?php echo $profile['content']; ?>"
+                            data-image="<?php echo $profile['hovered_image']; ?>"
+                            data-profile="<?php echo $profile['profile_image']; ?>"
+                        >
+                        <?php endforeach; ?>
+                    </a>
                 </div>
                 <div class="custom-wrapper">
                     <div class="container-fluid">

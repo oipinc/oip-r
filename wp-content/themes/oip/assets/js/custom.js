@@ -361,11 +361,11 @@ rect.on("click", function (e) {
 });
 rect.hover(function (e) {
     const image = jQuery(this).attr("data-image");
-    jQuery("img[usemap='#meet_us']").attr('src', image);
+    jQuery(".img-persons").attr('src', image);
 });
 rect.mouseleave(function () {
     const image = jQuery(".original-img").attr("src");
-    jQuery("img[usemap='#meet_us']").attr('src', image);
+    jQuery(".img-persons").attr('src', image);
 });
 jQuery(".close-profile-holder").on("click", function (e) {
     e.preventDefault();
