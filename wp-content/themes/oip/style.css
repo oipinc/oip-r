@@ -2339,10 +2339,10 @@ footer h2 {
         right: 0;
         top: 0;
         bottom: 0;
-        background-color: rgba(0, 2, 36, 0.9);
+        background-color: rgba(255,255,255, 0.9);
         transition: 0.5s;
         transform: translateY(-120%);
-        color: white;
+        color: var(--navy);
     }
     .profile-holder.active {
         transform: translateY(0);
@@ -2358,8 +2358,8 @@ footer h2 {
     left: 0;
     bottom: 0;
     top: 0;
-    background-color: rgba(0, 2, 36, 0.9);
-    color: white;
+    background-color: transparent;
+    color: var(--navy);
     content: "Loading...";
     font-size: 30px;
     display: flex;
@@ -2385,7 +2385,7 @@ footer h2 {
     width: 50px;
     position: absolute;
     margin-top: 24px;
-    background-color: white;
+    background-color: var(--navy);
     border-radius: 2px;
     transform: rotate(45deg);
     transition: all .3s ease-in;
@@ -2395,14 +2395,14 @@ footer h2 {
     width: 50px;
     position: absolute;
     margin-top: 24px;
-    background-color: white;
+    background-color: var(--navy);
     border-radius: 2px;
     transform: rotate(-45deg);
     transition: all .3s ease-in;
 }
 
 .close-profile-holder label {
-    color: white;
+    color: var(--navy);
     font-size: .6em;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -2415,11 +2415,11 @@ footer h2 {
 }
 .close-profile-holder:hover .leftright {
     transform: rotate(-45deg);
-    background-color: white;
+    background-color: var(--navy);
 }
 .close-profile-holder:hover .rightleft {
     transform: rotate(45deg);
-    background-color: white;
+    background-color: var(--navy);
 }
 .close-profile-holder:hover label {
     opacity: 1;
