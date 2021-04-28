@@ -246,7 +246,20 @@ jQuery(function() {
                 }
 
                 jQuery(".rect").on("click", function (e) {
-                    alert('dsadas');
+                    e.preventDefault();
+                    const title = jQuery(this).attr("data-title");
+                    const content = jQuery(this).attr("data-text");
+                    const image = jQuery(this).attr("data-profile");
+                    const el = jQuery(".profile-holder");
+
+                    el.find(".profile-title").text(title);
+                    el.find(".profile-content").html(content);
+                    el.find(".profile-img-holder").addClass("active");
+
+                    el.find(".profile-img").attr('src', image).load(function() {
+                        el.find(".profile-img-holder").removeClass("active");
+                    });
+                    el.addClass("active");
                 });
             },
             // Variations for didactical purpose…
