@@ -1,6 +1,5 @@
 const loadingScreen = document.querySelector('.loading-screen')
 const mainNavigation = document.querySelector('.main-navigation')
-const rect = jQuery(".rect");
 
 function delay(n) {
     n = n || 2000
