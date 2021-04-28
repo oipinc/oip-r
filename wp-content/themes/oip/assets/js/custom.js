@@ -244,6 +244,11 @@ jQuery(function() {
                     document.getElementById("app_video").pause();
                     document.getElementById("app_video").play();
                 }
+
+                rect.hover(function (e) {
+                    const image = jQuery(this).attr("data-image");
+                    jQuery(".img-persons").attr('src', image);
+                });
             },
             // Variations for didactical purpose…
             // Better browser support than async/await
@@ -355,4 +360,33 @@ jQuery(".back-to-top").on('click', function (event) {
     event.preventDefault();
     jQuery("html, body").animate({ scrollTop: 0 }, 1500);
     return false;
+});
+
+rect.on("click", function (e) {
+    e.preventDefault();
+    const title = jQuery(this).attr("data-title");
+    const content = jQuery(this).attr("data-text");
+    const image = jQuery(this).attr("data-profile");
+    const el = jQuery(".profile-holder");
+
+    el.find(".profile-title").text(title);
+    el.find(".profile-content").html(content);
+    el.find(".profile-img-holder").addClass("active");
+
+    el.find(".profile-img").attr('src', image).load(function() {
+        el.find(".profile-img-holder").removeClass("active");
+    });
+    el.addClass("active");
+});
+rect.hover(function (e) {
+    const image = jQuery(this).attr("data-image");
+    jQuery(".img-persons").attr('src', image);
+});
+rect.mouseleave(function () {
+    const image = jQuery(".original-img").attr("src");
+    jQuery(".img-persons").attr('src', image);
+});
+jQuery(".close-profile-holder").on("click", function (e) {
+    e.preventDefault();
+    jQuery(".profile-holder").removeClass("active")
 });
