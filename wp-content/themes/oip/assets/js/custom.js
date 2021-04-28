@@ -168,6 +168,10 @@ function playVideo(el) {
     }
 }
 
+function pageHover() {
+    alert("test");
+}
+
 jQuery(function() {
     barba.init({
         // We don't want "synced transition"
@@ -245,10 +249,7 @@ jQuery(function() {
                     document.getElementById("app_video").play();
                 }
 
-                rect.hover(function (e) {
-                    const image = jQuery(this).attr("data-image");
-                    jQuery(".img-persons").attr('src', image);
-                });
+                await pageHover();
             },
             // Variations for didactical purpose…
             // Better browser support than async/await
