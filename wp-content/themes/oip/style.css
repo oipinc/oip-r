@@ -2342,10 +2342,10 @@ footer h2 {
         right: 0;
         top: 0;
         bottom: 0;
-        background-color: white;
+        background-color: rgba(255,255,255, 0.9);
         transition: 0.5s;
-        transform: translateY(-100%);
-        color: black;
+        transform: translateY(-120%);
+        color: var(--navy);
     }
     .profile-holder.active {
         transform: translateY(0);
@@ -2361,8 +2361,8 @@ footer h2 {
     left: 0;
     bottom: 0;
     top: 0;
-    background-color: white;
-    color: black;
+    background-color: transparent;
+    color: var(--navy);
     content: "Loading...";
     font-size: 30px;
     display: flex;
@@ -2393,7 +2393,6 @@ footer h2 {
     transform: rotate(45deg);
     transition: all .3s ease-in;
 }
-
 .rightleft {
     height: 4px;
     width: 50px;
@@ -2405,28 +2404,60 @@ footer h2 {
     transition: all .3s ease-in;
 }
 
-/*label {*/
-/*    color: var(--navy);*/
-/*    font-size: .6em;*/
-/*    text-transform: uppercase;*/
-/*    letter-spacing: 2px;*/
-/*    transition: all .3s ease-in;*/
-/*    opacity: 0;*/
-/*}*/
+.close-profile-holder label {
+    color: var(--navy);
+    font-size: .6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .3s ease-in;
+    opacity: 0;
+}
 .close {
     margin: 60px 0 0 5px;
     position: absolute;
 }
 .close-profile-holder:hover .leftright {
     transform: rotate(-45deg);
-    background-color: var(--dark-blue);
+    background-color: var(--navy);
 }
 .close-profile-holder:hover .rightleft {
     transform: rotate(45deg);
-    background-color: var(--dark-blue);
+    background-color: var(--navy);
 }
 .close-profile-holder:hover label {
     opacity: 1;
+}
+.profile-content {
+    position: relative;
+    padding: 30px 0;
+    display: inline-block;
+}
+.profile-content h2 {
+    margin: 0;
+}
+.profile-content:before {
+    top: 4px;
+    left: 3%;
+}
+.profile-content:after {
+    bottom: 4px;
+    right: 3%;
+}
+.profile-content:before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.profile-content:before {
+    left: -60px;
+    top: -20px;
+    background-image: url("assets/images/r_quote.svg");
+}
+.profile-content p {
+    margin: 0;
 }
 body.recaptcha .grecaptcha-badge {
     visibility: visible !important;
@@ -2434,4 +2465,3 @@ body.recaptcha .grecaptcha-badge {
 body:not(.recaptcha) .grecaptcha-badge {
     visibility: hidden !important;
 }
-

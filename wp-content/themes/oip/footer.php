@@ -110,6 +110,32 @@
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/back-to-top.svg" alt="Back to top">
 </a>
 
+<div class="profile-holder">
+    <div class="close-profile-holder">
+        <div class="leftright"></div>
+        <div class="rightleft"></div>
+        <label class="close">close</label>
+    </div>
+
+    <div class="container h-100">
+        <div class="row align-items-center justify-content-center h-100">
+            <div class="col-lg-3">
+                <div class="profile-img-holder">
+                    <img class="img-fluid profile-img" src="http://placehold.it/500x700" alt="Image">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ps-5">
+                    <div class="ps-5">
+                        <div class="profile-content"></div>
+                        <h2 class="profile-title my-0"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <?php wp_footer(); ?>
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6839195.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

@@ -21,6 +21,7 @@
             $caseStudy      = get_field('case_study');
             $meetUs         = get_field('meet_us');
             $serviceGroup   = get_field('services');
+            $profiles       = get_field('profile', 'options');
 
             $productArray = get_posts($products);
             function order($a, $b){
@@ -220,7 +221,22 @@
                     </div>
                 </div>
                 <div class="meet-us-img text-center">
-                    <img class="img-fluid" src=" <?php echo $meetUs['image']; ?>" alt="OIP Team">
+                    <div class="position-relative d-inline-block">
+                        <img class="img-fluid d-none original-img" src=" <?php echo $meetUs['image']; ?>" alt="OIP Team">
+                        <img class="img-fluid img-persons" src=" <?php echo $meetUs['image']; ?>" alt="OIP Team">
+
+                        <?php foreach ($profiles as $key => $profile): ?>
+                        <a
+                            class="rect rect-<?php echo $key + 1; ?>"
+                            href="#"
+                            data-work="<?php echo !empty($profile['work_as']) ? $profile['work_as'] : 'N/A'; ?>"
+                            data-title="<?php echo $profile['title']; ?>"
+                            data-text="<?php echo $profile['content']; ?>"
+                            data-image="<?php echo $profile['hovered_image']; ?>"
+                            data-profile="<?php echo $profile['profile_image']; ?>"
+                        >
+                        <?php endforeach; ?>
+                    </a>
                 </div>
                 <div class="custom-wrapper">
                     <div class="container-fluid">
