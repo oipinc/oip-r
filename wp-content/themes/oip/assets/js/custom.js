@@ -245,7 +245,7 @@ jQuery(function() {
                     document.getElementById("app_video").play();
                 }
 
-                rect.on("click", function (e) {
+                jQuery(".rect").on("click", function (e) {
                     alert('dsadas');
                 });
             },
