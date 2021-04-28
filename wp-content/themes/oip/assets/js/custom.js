@@ -169,7 +169,10 @@ function playVideo(el) {
 }
 
 function pageHover() {
-    alert("test");
+    rect.hover(function (e) {
+        const image = jQuery(this).attr("data-image");
+        jQuery(".img-persons").attr('src', image);
+    });
 }
 
 jQuery(function() {
