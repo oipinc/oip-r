@@ -254,9 +254,7 @@
 </div>
 
 <script>
-    const rect = jQuery(".rect");
-
-    rect.on("click", function (e) {
+    jQuery(".rect").on("click", function (e) {
         e.preventDefault();
         const title = jQuery(this).attr("data-title");
         const content = jQuery(this).attr("data-text");
@@ -272,11 +270,11 @@
         });
         el.addClass("active");
     });
-    rect.hover(function (e) {
+    jQuery(".rect").hover(function (e) {
         const image = jQuery(this).attr("data-image");
         jQuery(".img-persons").attr('src', image);
     });
-    rect.mouseleave(function () {
+    jQuery(".rect").mouseleave(function () {
         const image = jQuery(".original-img").attr("src");
         jQuery(".img-persons").attr('src', image);
     });
