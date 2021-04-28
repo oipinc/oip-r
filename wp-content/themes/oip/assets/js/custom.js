@@ -265,6 +265,10 @@ jQuery(function() {
                     const image = jQuery(this).attr("data-image");
                     jQuery(".img-persons").attr('src', image);
                 });
+                jQuery(".rect").mouseleave(function () {
+                    const image = jQuery(".original-img").attr("src");
+                    jQuery(".img-persons").attr('src', image);
+                });
             },
             // Variations for didactical purpose…
             // Better browser support than async/await
