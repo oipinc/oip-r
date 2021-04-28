@@ -23,9 +23,10 @@
     $phone       = get_field('phone', 'option');
     $email       = get_field('email', 'option');
     $copyright   = get_field('copyright', 'option');
+    $reCaptcha   = in_category(['6', '7']) ? 'recaptcha' : '';
 ?>
 
-<body class="init <?php echo $bgProduct; ?>">
+<body class="init <?php echo $bgProduct; ?> <?php echo $reCaptcha; ?>">
 
     <div class="loading-container">
         <div class="loading-screen"></div>

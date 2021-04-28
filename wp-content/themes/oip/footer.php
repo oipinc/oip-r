@@ -1,9 +1,12 @@
 <?php
     $address     = get_field('address', 'option');
+    $usaAddress  = get_field('usa_address', 'option');
     $phone       = get_field('phone', 'option');
+    $usaPhone    = get_field('usa_phone', 'option');
     $email       = get_field('email', 'option');
     $copyright   = get_field('copyright', 'option');
     $map         = get_field('map_link', 'option');
+    $usaMap      = get_field('usa_map_link', 'option');
 ?>
 
 <footer class="bg-gray">
@@ -21,26 +24,24 @@
                 </div>
                 <div class="col d-none d-lg-block">
                     <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                        <h6>Useful links</h6>
                         <?php
                         wp_nav_menu([
                             'menu' => 'footer',
                             'container' => '',
                             'theme_location' => 'footer',
-                            'items_wrap' => '<ul class="list-unstyled my-0">%3$s</ul>'
+                            'items_wrap' => '<ul class="list-unstyled my-0 footer-list">%3$s</ul>'
                         ])
                         ?>
                     </div>
                 </div>
                 <div class="col d-none d-lg-block">
                     <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                        <h6>Legal</h6>
                         <?php
                         wp_nav_menu([
                             'menu' => 'legal',
                             'container' => '',
                             'theme_location' => 'legal',
-                            'items_wrap' => '<ul class="list-unstyled my-0">%3$s</ul>'
+                            'items_wrap' => '<ul class="list-unstyled my-0 footer-list">%3$s</ul>'
                         ])
                         ?>
                     </div>
@@ -50,6 +51,11 @@
                         <a target="_blank" href="<?php echo $map; ?>"><?php echo $address; ?></a>
                         <br>
                         <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+                    </div>
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <a target="_blank" href="<?php echo $usaMap; ?>"><?php echo $usaAddress; ?></a>
+                        <br>
+                        <a href="tel:<?php echo $usaPhone; ?>"><?php echo $usaPhone; ?></a>
                     </div>
                 </div>
             </div>

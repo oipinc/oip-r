@@ -215,7 +215,14 @@ jQuery(function() {
                 },500)
 
                 const url = window.location.pathname.split('/');
-                if (url[1] !== "product") {
+
+                if (url[1] === "solution" || url[1] === "job") {
+                    jQuery("body").addClass("recaptcha");
+                } else {
+                    jQuery("body").removeClass("recaptcha");
+                }
+
+                if (url[1] !== "solution") {
                     jQuery("body").removeClass("bg-dark-blue");
                 } else {
                     jQuery("body").addClass("bg-dark-blue");
@@ -264,7 +271,14 @@ jQuery(function() {
                 },500)
 
                 const url = window.location.pathname.split('/');
-                if (url[1] !== "product") {
+
+                if (url[1] === "solution" || url[1] === "job") {
+                    jQuery("body").addClass("recaptcha");
+                } else {
+                    jQuery("body").removeClass("recaptcha");
+                }
+
+                if (url[1] !== "solution") {
                     jQuery("body").removeClass("bg-dark-blue");
                 } else {
                     jQuery("body").addClass("bg-dark-blue");
