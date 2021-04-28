@@ -1,5 +1,6 @@
 const loadingScreen = document.querySelector('.loading-screen')
 const mainNavigation = document.querySelector('.main-navigation')
+const rect = jQuery(".rect");
 
 function delay(n) {
     n = n || 2000
@@ -354,4 +355,33 @@ jQuery(".back-to-top").on('click', function (event) {
     event.preventDefault();
     jQuery("html, body").animate({ scrollTop: 0 }, 1500);
     return false;
+});
+
+rect.on("click", function (e) {
+    e.preventDefault();
+    const title = jQuery(this).attr("data-title");
+    const content = jQuery(this).attr("data-text");
+    const image = jQuery(this).attr("data-profile");
+    const el = jQuery(".profile-holder");
+
+    el.find(".profile-title").text(title);
+    el.find(".profile-content").html(content);
+    el.find(".profile-img-holder").addClass("active");
+
+    el.find(".profile-img").attr('src', image).load(function() {
+        el.find(".profile-img-holder").removeClass("active");
+    });
+    el.addClass("active");
+});
+rect.hover(function (e) {
+    const image = jQuery(this).attr("data-image");
+    jQuery(".img-persons").attr('src', image);
+});
+rect.mouseleave(function () {
+    const image = jQuery(".original-img").attr("src");
+    jQuery(".img-persons").attr('src', image);
+});
+jQuery(".close-profile-holder").on("click", function (e) {
+    e.preventDefault();
+    jQuery(".profile-holder").removeClass("active")
 });
