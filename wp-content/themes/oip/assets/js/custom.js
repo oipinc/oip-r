@@ -261,6 +261,10 @@ jQuery(function() {
                     });
                     el.addClass("active");
                 });
+                jQuery(".rect").hover(function (e) {
+                    const image = jQuery(this).attr("data-image");
+                    jQuery(".img-persons").attr('src', image);
+                });
             },
             // Variations for didactical purpose…
             // Better browser support than async/await
